@@ -8,6 +8,7 @@ namespace DAL
 {
     public class DALDangNhap
     {
+        public string madn;
         public DALDangNhap()
         { 
         }
@@ -23,7 +24,7 @@ namespace DAL
                 return 0;
             }            
             TAIKHOAN insertDN = new TAIKHOAN { MANV = user, MAKHAU = pass };
-            using (DataTaiKhoanDataContext db = new DataTaiKhoanDataContext())
+            using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
             {
                 TAIKHOAN checkUSER = db.TAIKHOANs.FirstOrDefault(sv => insertDN.MANV.Equals(sv.MANV));
                 TAIKHOAN checkPASS = db.TAIKHOANs.FirstOrDefault(sv => insertDN.MAKHAU.Equals(sv.MAKHAU));
@@ -34,11 +35,11 @@ namespace DAL
                 }
                 else
                 {
-                    using (DataTaiKhoanDataContext dbm = new DataTaiKhoanDataContext())
+                    using (LINQquanLyNhanSuDataContext dbm = new LINQquanLyNhanSuDataContext())
                     {
                         TAIKHOAN layma = dbm.TAIKHOANs.FirstOrDefault(x => x.MANV == user);
                         {
-                            manv = layma.MANV;
+                            madn = layma.MANV;
                             TinhTrang = layma.TRANGTHAI.ToString();
                         }
                     }

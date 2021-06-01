@@ -45,6 +45,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -106,9 +107,19 @@
     <None Include="Resources\Office 360.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\strikeoutdouble_32x32.png" />
+    <None Include="Resources\addchartpane_32x32.png" />
     <Content Include="Resources\LOGO %281%29.png" />
+    <None Include="Resources\newcustomers_16x16.png" />
+    <None Include="Resources\newcustomers_32x32.png" />
     <None Include="Resources\LOGO %281%291.png" />
     <Content Include="Resources\LOGO.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{956FE92E-8BEA-443B-85BF-E836EB732640}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -9,6 +9,7 @@ namespace BLL
 {
     public class DangNhapBLL
     {
+        public string madndll;
         DALDangNhap DN = new DALDangNhap();
 
         public DangNhapBLL()
@@ -20,12 +21,14 @@ namespace BLL
         {
             int kt = 3;
             kt = DN.DangNhap(ma, pass);
+            
             if (kt == 0) // nhap không đầy đủ
             {
                 return 0;
             }
             else if (kt == 1) // đăng nhập thành công
             {
+                madndll = DN.madn;
                 return 1;
             }
             else if (kt == 2) //tk bị khóa

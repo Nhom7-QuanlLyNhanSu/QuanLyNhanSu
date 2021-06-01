@@ -13,6 +13,7 @@ namespace GUI
     public partial class FormDangNhap : Form
     {
         DangNhapBLL dn = new DangNhapBLL();
+        public string madnGUI;
         public FormDangNhap()
         {
             InitializeComponent();
@@ -38,7 +39,8 @@ namespace GUI
                 DialogResult rs = MessageBox.Show("Đăng Nhập Thành Công!!", "Hỏi đáp", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (rs.Equals(DialogResult.Yes))
                 {
-                    MainForm1 f = new MainForm1();
+                    madnGUI = dn.madndll;
+                    MainForm1 f = new MainForm1(madnGUI);
                     f.Show();
                     this.Hide();
                 }
@@ -46,7 +48,7 @@ namespace GUI
             else if (kt == 2) //tk bị khóa
             {
                 DialogResult rs = MessageBox.Show("Tài khoản đã bị khóa, liên hệ phòng nhân sự để mở lại!!", "Hỏi đáp", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    
+                
             }
             else // đăng nhập thất bại!
             {

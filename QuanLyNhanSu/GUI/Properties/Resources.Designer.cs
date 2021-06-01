@@ -63,9 +63,39 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addchartpane_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("addchartpane_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LOGO__1_ {
             get {
                 object obj = ResourceManager.GetObject("LOGO (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap newcustomers_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("newcustomers_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap newcustomers_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("newcustomers_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +116,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap Office_3601 {
             get {
                 object obj = ResourceManager.GetObject("Office 3601", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap strikeoutdouble_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("strikeoutdouble_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
