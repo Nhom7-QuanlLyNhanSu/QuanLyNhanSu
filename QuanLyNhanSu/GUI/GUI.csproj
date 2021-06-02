@@ -56,6 +56,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADAY.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ADAY.Designer.cs">
+      <DependentUpon>ADAY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cons.cs" />
     <Compile Include="FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +77,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ADAY.resx">
+      <DependentUpon>ADAY.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +117,15 @@
     <None Include="Resources\Office 360.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\contact_32x32.png" />
+    <None Include="Resources\assignto_32x321.png" />
+    <None Include="Resources\assignto_32x32.png" />
+    <None Include="Resources\customer_16x16.png" />
+    <None Include="Resources\customer_32x32.png" />
+    <None Include="Resources\today_32x32.png" />
+    <None Include="Resources\switchtimescalesto_32x32.png" />
+    <None Include="Resources\showworktimeonly_32x32.png" />
+    <None Include="Resources\home_32x32.png" />
     <None Include="Resources\strikeoutdouble_32x32.png" />
     <None Include="Resources\addchartpane_32x32.png" />
     <Content Include="Resources\LOGO %281%29.png" />

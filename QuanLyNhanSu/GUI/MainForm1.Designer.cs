@@ -30,6 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm1));
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.officeNavigationBar = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
             this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
@@ -38,10 +46,8 @@
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.barSubItemNavigation = new DevExpress.XtraBars.BarSubItem();
             this.employeesBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.customersBarButtonItem = new DevExpress.XtraBars.BarButtonItem();
-            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.barButtonItemNhanSu = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemPhBan = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemChucVu = new DevExpress.XtraBars.BarButtonItem();
@@ -76,6 +82,12 @@
             this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem28 = new DevExpress.XtraBars.BarButtonItem();
+            this.skinRibbonGalleryBarItem2 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.barButtonItemTK = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem29 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupNavigation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -88,11 +100,42 @@
             this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup17 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup18 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.customersNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.nmNotify = new System.Windows.Forms.NumericUpDown();
+            this.ckbNotify = new System.Windows.Forms.CheckBox();
+            this.btnToDay = new System.Windows.Forms.Button();
+            this.dtpkDate = new System.Windows.Forms.DateTimePicker();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pnlMatrix = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btnPreviours = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnMonDay = new System.Windows.Forms.Button();
             this.navigationPageChamCong = new DevExpress.XtraEditors.LabelControl();
-            this.employeesNavigationPage = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.NavigationPageTaiKhoan = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbNgayVaoLam_TaiKhoan = new System.Windows.Forms.Label();
+            this.lb_NgaySinh = new System.Windows.Forms.Label();
+            this.lbSDT_TaiKhoan = new System.Windows.Forms.Label();
+            this.lbPhongBan_TaiKhoan = new System.Windows.Forms.Label();
+            this.labelTaikhoan_TaiKhoan = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.lb_ChucVu_pageTAIKHOAN = new System.Windows.Forms.Label();
             this.lb_TenNV_pageTAIKHOAN = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -132,12 +175,20 @@
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.customersNavigationPage.SuspendLayout();
-            this.employeesNavigationPage.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panelTop.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmNotify)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.NavigationPageTaiKhoan.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSlider1)).BeginInit();
@@ -162,10 +213,10 @@
             // officeNavigationBar
             // 
             this.officeNavigationBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.officeNavigationBar.Location = new System.Drawing.Point(0, 595);
+            this.officeNavigationBar.Location = new System.Drawing.Point(0, 661);
             this.officeNavigationBar.Name = "officeNavigationBar";
             this.officeNavigationBar.NavigationClient = this.navBarControl;
-            this.officeNavigationBar.Size = new System.Drawing.Size(1268, 45);
+            this.officeNavigationBar.Size = new System.Drawing.Size(1458, 45);
             this.officeNavigationBar.TabIndex = 1;
             this.officeNavigationBar.Text = "officeNavigationBar";
             this.officeNavigationBar.Click += new System.EventHandler(this.officeNavigationBar_Click);
@@ -182,7 +233,7 @@
             this.navBarControl.Name = "navBarControl";
             this.navBarControl.OptionsNavPane.ExpandedWidth = 165;
             this.navBarControl.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarControl.Size = new System.Drawing.Size(165, 452);
+            this.navBarControl.Size = new System.Drawing.Size(165, 518);
             this.navBarControl.TabIndex = 0;
             this.navBarControl.Text = "navBarControl";
             this.navBarControl.ActiveGroupChanged += new DevExpress.XtraNavBar.NavBarGroupEventHandler(this.navBarControl_ActiveGroupChanged);
@@ -208,20 +259,18 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 640);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 706);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1268, 31);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1458, 31);
             // 
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl.ExpandCollapseItem,
-            this.barSubItemNavigation,
             this.employeesBarButtonItem,
             this.customersBarButtonItem,
-            this.skinRibbonGalleryBarItem1,
             this.barButtonItemNhanSu,
             this.barButtonItemPhBan,
             this.barButtonItemChucVu,
@@ -255,32 +304,27 @@
             this.barButtonItem22,
             this.barButtonItem23,
             this.barButtonItem24,
-            this.barButtonItem25});
+            this.barButtonItem25,
+            this.barButtonItem26,
+            this.barButtonItem27,
+            this.barButtonItem28,
+            this.skinRibbonGalleryBarItem2,
+            this.barButtonItemTK,
+            this.barButtonItem29});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 95;
+            this.ribbonControl.MaxItemId = 102;
             this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl.Name = "ribbonControl";
+            this.ribbonControl.PageHeaderItemLinks.Add(this.barButtonItem29);
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage,
             this.ribbonPage1});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl.Size = new System.Drawing.Size(1268, 143);
+            this.ribbonControl.Size = new System.Drawing.Size(1458, 143);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             this.ribbonControl.Click += new System.EventHandler(this.ribbonControl_Click);
-            // 
-            // barSubItemNavigation
-            // 
-            this.barSubItemNavigation.Caption = "Tên Nhân Viên";
-            this.barSubItemNavigation.Id = 15;
-            this.barSubItemNavigation.ImageOptions.Image = global::GUI.Properties.Resources.LOGO__1_;
-            this.barSubItemNavigation.ImageOptions.ImageUri.Uri = "Apply";
-            this.barSubItemNavigation.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barSubItemNavigation.ImageOptions.LargeImage")));
-            this.barSubItemNavigation.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.employeesBarButtonItem),
-            new DevExpress.XtraBars.LinkPersistInfo(this.customersBarButtonItem)});
-            this.barSubItemNavigation.Name = "barSubItemNavigation";
             // 
             // employeesBarButtonItem
             // 
@@ -296,12 +340,6 @@
             this.customersBarButtonItem.Name = "customersBarButtonItem";
             this.customersBarButtonItem.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.customersBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonNavigation_ItemClick);
-            // 
-            // skinRibbonGalleryBarItem1
-            // 
-            this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
-            this.skinRibbonGalleryBarItem1.Id = 48;
-            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
             // 
             // barButtonItemNhanSu
             // 
@@ -571,6 +609,71 @@
             this.barButtonItem25.ImageOptions.Image = global::GUI.Properties.Resources.strikeoutdouble_32x32;
             this.barButtonItem25.Name = "barButtonItem25";
             // 
+            // barButtonItem26
+            // 
+            this.barButtonItem26.Caption = "Thiết lập ca";
+            this.barButtonItem26.Id = 95;
+            this.barButtonItem26.ImageOptions.Image = global::GUI.Properties.Resources.showworktimeonly_32x32;
+            this.barButtonItem26.Name = "barButtonItem26";
+            // 
+            // barButtonItem27
+            // 
+            this.barButtonItem27.Caption = "Phân ca";
+            this.barButtonItem27.Id = 96;
+            this.barButtonItem27.ImageOptions.Image = global::GUI.Properties.Resources.switchtimescalesto_32x32;
+            this.barButtonItem27.Name = "barButtonItem27";
+            // 
+            // barButtonItem28
+            // 
+            this.barButtonItem28.Caption = "Quản lý ngày nghỉ";
+            this.barButtonItem28.Id = 97;
+            this.barButtonItem28.ImageOptions.Image = global::GUI.Properties.Resources.today_32x32;
+            this.barButtonItem28.Name = "barButtonItem28";
+            // 
+            // skinRibbonGalleryBarItem2
+            // 
+            this.skinRibbonGalleryBarItem2.Caption = "skinRibbonGalleryBarItem2";
+            this.skinRibbonGalleryBarItem2.Id = 99;
+            this.skinRibbonGalleryBarItem2.Name = "skinRibbonGalleryBarItem2";
+            // 
+            // barButtonItemTK
+            // 
+            this.barButtonItemTK.Caption = "Tài Khoản";
+            this.barButtonItemTK.Id = 100;
+            this.barButtonItemTK.ImageOptions.Image = global::GUI.Properties.Resources.customer_16x16;
+            this.barButtonItemTK.ImageOptions.LargeImage = global::GUI.Properties.Resources.customer_32x32;
+            this.barButtonItemTK.Name = "barButtonItemTK";
+            toolTipTitleItem1.Text = "Tài Khoản cá nhân";
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "Xem thông tin tài khoản đăng nhập, chỉnh sửa thông tin, thay đổi mật khẩu";
+            toolTipTitleItem2.Appearance.Image = global::GUI.Properties.Resources.contact_32x32;
+            toolTipTitleItem2.Appearance.Options.UseImage = true;
+            toolTipTitleItem2.Image = global::GUI.Properties.Resources.contact_32x32;
+            toolTipTitleItem2.LeftIndent = 6;
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            superToolTip1.Items.Add(toolTipTitleItem2);
+            this.barButtonItemTK.SuperTip = superToolTip1;
+            this.barButtonItemTK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemTK_ItemClick);
+            // 
+            // barButtonItem29
+            // 
+            this.barButtonItem29.Caption = "Đăng Xuất\r\n";
+            this.barButtonItem29.Id = 101;
+            this.barButtonItem29.ImageOptions.Image = global::GUI.Properties.Resources.assignto_32x32;
+            this.barButtonItem29.Name = "barButtonItem29";
+            toolTipTitleItem3.Text = "Đăng Xuất";
+            toolTipItem2.LeftIndent = 6;
+            toolTipItem2.Text = "Thoát đăng nhập tài khoản này!\r\n";
+            toolTipTitleItem4.Appearance.Image = global::GUI.Properties.Resources.assignto_32x321;
+            toolTipTitleItem4.Appearance.Options.UseImage = true;
+            toolTipTitleItem4.Image = global::GUI.Properties.Resources.assignto_32x321;
+            toolTipTitleItem4.LeftIndent = 6;
+            superToolTip2.Items.Add(toolTipTitleItem3);
+            superToolTip2.Items.Add(toolTipItem2);
+            superToolTip2.Items.Add(toolTipTitleItem4);
+            this.barButtonItem29.SuperTip = superToolTip2;
+            // 
             // ribbonPage
             // 
             this.ribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -585,14 +688,14 @@
             // 
             // ribbonPageGroupNavigation
             // 
-            this.ribbonPageGroupNavigation.ItemLinks.Add(this.barSubItemNavigation);
+            this.ribbonPageGroupNavigation.ItemLinks.Add(this.barButtonItemTK);
             this.ribbonPageGroupNavigation.Name = "ribbonPageGroupNavigation";
             this.ribbonPageGroupNavigation.Text = "Module";
             // 
             // ribbonPageGroup
             // 
             this.ribbonPageGroup.AllowTextClipping = false;
-            this.ribbonPageGroup.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
+            this.ribbonPageGroup.ItemLinks.Add(this.skinRibbonGalleryBarItem2);
             this.ribbonPageGroup.Name = "ribbonPageGroup";
             this.ribbonPageGroup.ShowCaptionButton = false;
             this.ribbonPageGroup.Text = "Giao Diện";
@@ -633,7 +736,8 @@
             this.ribbonPageGroup9,
             this.ribbonPageGroup15,
             this.ribbonPageGroup16,
-            this.ribbonPageGroup17});
+            this.ribbonPageGroup17,
+            this.ribbonPageGroup18});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "HRM";
             // 
@@ -666,11 +770,214 @@
             this.ribbonPageGroup17.Name = "ribbonPageGroup17";
             this.ribbonPageGroup17.Text = "Lương";
             // 
+            // ribbonPageGroup18
+            // 
+            this.ribbonPageGroup18.ItemLinks.Add(this.barButtonItem26);
+            this.ribbonPageGroup18.ItemLinks.Add(this.barButtonItem27);
+            this.ribbonPageGroup18.ItemLinks.Add(this.barButtonItem28);
+            this.ribbonPageGroup18.Name = "ribbonPageGroup18";
+            this.ribbonPageGroup18.Text = "Giờ làn việc";
+            // 
             // customersNavigationPage
             // 
+            this.customersNavigationPage.Controls.Add(this.panel6);
             this.customersNavigationPage.Controls.Add(this.navigationPageChamCong);
             this.customersNavigationPage.Name = "customersNavigationPage";
-            this.customersNavigationPage.Size = new System.Drawing.Size(1103, 452);
+            this.customersNavigationPage.Size = new System.Drawing.Size(1293, 518);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.panelTop);
+            this.panel6.Controls.Add(this.panel5);
+            this.panel6.Location = new System.Drawing.Point(20, 9);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1253, 760);
+            this.panel6.TabIndex = 2;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            // 
+            // panelTop
+            // 
+            this.panelTop.Controls.Add(this.panel3);
+            this.panelTop.Controls.Add(this.btnToDay);
+            this.panelTop.Controls.Add(this.dtpkDate);
+            this.panelTop.Location = new System.Drawing.Point(3, 3);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(918, 32);
+            this.panelTop.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.nmNotify);
+            this.panel3.Controls.Add(this.ckbNotify);
+            this.panel3.Location = new System.Drawing.Point(6, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(214, 26);
+            this.panel3.TabIndex = 2;
+            // 
+            // nmNotify
+            // 
+            this.nmNotify.Location = new System.Drawing.Point(89, 3);
+            this.nmNotify.Maximum = new decimal(new int[] {
+            36000,
+            0,
+            0,
+            0});
+            this.nmNotify.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nmNotify.Name = "nmNotify";
+            this.nmNotify.Size = new System.Drawing.Size(120, 21);
+            this.nmNotify.TabIndex = 1;
+            this.nmNotify.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // ckbNotify
+            // 
+            this.ckbNotify.AutoSize = true;
+            this.ckbNotify.Location = new System.Drawing.Point(4, 4);
+            this.ckbNotify.Name = "ckbNotify";
+            this.ckbNotify.Size = new System.Drawing.Size(77, 17);
+            this.ckbNotify.TabIndex = 0;
+            this.ckbNotify.Text = "Thông báo";
+            this.ckbNotify.UseVisualStyleBackColor = true;
+            // 
+            // btnToDay
+            // 
+            this.btnToDay.Location = new System.Drawing.Point(554, 3);
+            this.btnToDay.Name = "btnToDay";
+            this.btnToDay.Size = new System.Drawing.Size(99, 23);
+            this.btnToDay.TabIndex = 1;
+            this.btnToDay.Text = "Hôm nay";
+            this.btnToDay.UseVisualStyleBackColor = true;
+            this.btnToDay.Click += new System.EventHandler(this.btnToDay_Click);
+            // 
+            // dtpkDate
+            // 
+            this.dtpkDate.Location = new System.Drawing.Point(332, 5);
+            this.dtpkDate.Name = "dtpkDate";
+            this.dtpkDate.Size = new System.Drawing.Size(200, 21);
+            this.dtpkDate.TabIndex = 0;
+            this.dtpkDate.ValueChanged += new System.EventHandler(this.dtpkDate_ValueChanged);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.pnlMatrix);
+            this.panel5.Controls.Add(this.panel4);
+            this.panel5.Location = new System.Drawing.Point(3, 41);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1241, 716);
+            this.panel5.TabIndex = 0;
+            // 
+            // pnlMatrix
+            // 
+            this.pnlMatrix.Location = new System.Drawing.Point(80, 58);
+            this.pnlMatrix.Name = "pnlMatrix";
+            this.pnlMatrix.Size = new System.Drawing.Size(1086, 655);
+            this.pnlMatrix.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnNext);
+            this.panel4.Controls.Add(this.button6);
+            this.panel4.Controls.Add(this.button5);
+            this.panel4.Controls.Add(this.btnPreviours);
+            this.panel4.Controls.Add(this.button4);
+            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.button2);
+            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.btnMonDay);
+            this.panel4.Location = new System.Drawing.Point(3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1235, 49);
+            this.panel4.TabIndex = 0;
+            // 
+            // btnNext
+            // 
+            this.btnNext.Location = new System.Drawing.Point(1169, 3);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(63, 42);
+            this.btnNext.TabIndex = 9;
+            this.btnNext.Text = "Tháng sau >>";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(1013, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(150, 42);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Chủ Nhật";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(857, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(150, 42);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Thứ 7";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // btnPreviours
+            // 
+            this.btnPreviours.Location = new System.Drawing.Point(3, 3);
+            this.btnPreviours.Name = "btnPreviours";
+            this.btnPreviours.Size = new System.Drawing.Size(68, 42);
+            this.btnPreviours.TabIndex = 7;
+            this.btnPreviours.Text = "<< Tháng trước";
+            this.btnPreviours.UseVisualStyleBackColor = true;
+            this.btnPreviours.Click += new System.EventHandler(this.btnPreviours_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(701, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(150, 42);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Thứ 6";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(545, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(150, 42);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Thứ 5";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(389, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(150, 42);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Thứ 4";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(233, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 42);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Thứ 3";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnMonDay
+            // 
+            this.btnMonDay.Location = new System.Drawing.Point(77, 3);
+            this.btnMonDay.Name = "btnMonDay";
+            this.btnMonDay.Size = new System.Drawing.Size(150, 42);
+            this.btnMonDay.TabIndex = 0;
+            this.btnMonDay.Text = "Thứ 2";
+            this.btnMonDay.UseVisualStyleBackColor = true;
             // 
             // navigationPageChamCong
             // 
@@ -685,43 +992,173 @@
             this.navigationPageChamCong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navigationPageChamCong.Location = new System.Drawing.Point(0, 0);
             this.navigationPageChamCong.Name = "navigationPageChamCong";
-            this.navigationPageChamCong.Size = new System.Drawing.Size(1103, 452);
+            this.navigationPageChamCong.Size = new System.Drawing.Size(1293, 518);
             this.navigationPageChamCong.TabIndex = 1;
-            this.navigationPageChamCong.Text = "Customers";
             // 
-            // employeesNavigationPage
+            // NavigationPageTaiKhoan
             // 
-            this.employeesNavigationPage.Controls.Add(this.panel2);
-            this.employeesNavigationPage.Controls.Add(this.panel1);
-            this.employeesNavigationPage.Name = "employeesNavigationPage";
-            this.employeesNavigationPage.Size = new System.Drawing.Size(1103, 452);
+            this.NavigationPageTaiKhoan.Controls.Add(this.panel2);
+            this.NavigationPageTaiKhoan.Controls.Add(this.panel1);
+            this.NavigationPageTaiKhoan.Name = "NavigationPageTaiKhoan";
+            this.NavigationPageTaiKhoan.Size = new System.Drawing.Size(1293, 518);
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.simpleButton1);
             this.panel2.Location = new System.Drawing.Point(766, 15);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(324, 419);
+            this.panel2.Size = new System.Drawing.Size(324, 448);
             this.panel2.TabIndex = 5;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.Yellow;
+            this.simpleButton1.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.simpleButton1.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.DarkBlue;
+            this.simpleButton1.Appearance.Options.UseBackColor = true;
+            this.simpleButton1.Appearance.Options.UseBorderColor = true;
+            this.simpleButton1.Appearance.Options.UseForeColor = true;
+            this.simpleButton1.ImageOptions.Image = global::GUI.Properties.Resources.home_32x32;
+            this.simpleButton1.Location = new System.Drawing.Point(21, 18);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(134, 39);
+            this.simpleButton1.TabIndex = 0;
+            this.simpleButton1.Text = "simpleButton1";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lbNgayVaoLam_TaiKhoan);
+            this.panel1.Controls.Add(this.lb_NgaySinh);
+            this.panel1.Controls.Add(this.lbSDT_TaiKhoan);
+            this.panel1.Controls.Add(this.lbPhongBan_TaiKhoan);
+            this.panel1.Controls.Add(this.labelTaikhoan_TaiKhoan);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.lb_ChucVu_pageTAIKHOAN);
             this.panel1.Controls.Add(this.lb_TenNV_pageTAIKHOAN);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.imageSlider1);
-            this.panel1.Location = new System.Drawing.Point(6, 6);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(745, 440);
+            this.panel1.Size = new System.Drawing.Size(745, 518);
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lbNgayVaoLam_TaiKhoan
+            // 
+            this.lbNgayVaoLam_TaiKhoan.AutoSize = true;
+            this.lbNgayVaoLam_TaiKhoan.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.lbNgayVaoLam_TaiKhoan.Location = new System.Drawing.Point(155, 350);
+            this.lbNgayVaoLam_TaiKhoan.Name = "lbNgayVaoLam_TaiKhoan";
+            this.lbNgayVaoLam_TaiKhoan.Size = new System.Drawing.Size(79, 14);
+            this.lbNgayVaoLam_TaiKhoan.TabIndex = 15;
+            this.lbNgayVaoLam_TaiKhoan.Text = "Ngày vào làm";
+            // 
+            // lb_NgaySinh
+            // 
+            this.lb_NgaySinh.AutoSize = true;
+            this.lb_NgaySinh.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.lb_NgaySinh.Location = new System.Drawing.Point(155, 321);
+            this.lb_NgaySinh.Name = "lb_NgaySinh";
+            this.lb_NgaySinh.Size = new System.Drawing.Size(61, 14);
+            this.lb_NgaySinh.TabIndex = 14;
+            this.lb_NgaySinh.Text = "Ngày Sinh";
+            // 
+            // lbSDT_TaiKhoan
+            // 
+            this.lbSDT_TaiKhoan.AutoSize = true;
+            this.lbSDT_TaiKhoan.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.lbSDT_TaiKhoan.Location = new System.Drawing.Point(155, 293);
+            this.lbSDT_TaiKhoan.Name = "lbSDT_TaiKhoan";
+            this.lbSDT_TaiKhoan.Size = new System.Drawing.Size(79, 14);
+            this.lbSDT_TaiKhoan.TabIndex = 13;
+            this.lbSDT_TaiKhoan.Text = "Số điện thoại";
+            // 
+            // lbPhongBan_TaiKhoan
+            // 
+            this.lbPhongBan_TaiKhoan.AutoSize = true;
+            this.lbPhongBan_TaiKhoan.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.lbPhongBan_TaiKhoan.Location = new System.Drawing.Point(155, 264);
+            this.lbPhongBan_TaiKhoan.Name = "lbPhongBan_TaiKhoan";
+            this.lbPhongBan_TaiKhoan.Size = new System.Drawing.Size(66, 14);
+            this.lbPhongBan_TaiKhoan.TabIndex = 12;
+            this.lbPhongBan_TaiKhoan.Text = "Phòng ban";
+            // 
+            // labelTaikhoan_TaiKhoan
+            // 
+            this.labelTaikhoan_TaiKhoan.AutoSize = true;
+            this.labelTaikhoan_TaiKhoan.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.labelTaikhoan_TaiKhoan.Location = new System.Drawing.Point(155, 236);
+            this.labelTaikhoan_TaiKhoan.Name = "labelTaikhoan_TaiKhoan";
+            this.labelTaikhoan_TaiKhoan.Size = new System.Drawing.Size(60, 14);
+            this.labelTaikhoan_TaiKhoan.TabIndex = 11;
+            this.labelTaikhoan_TaiKhoan.Text = "Tài khoản";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label15.Location = new System.Drawing.Point(32, 350);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(79, 14);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "Ngày vào làm";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label14.Location = new System.Drawing.Point(32, 321);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(61, 14);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "Ngày Sinh";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label13.Location = new System.Drawing.Point(32, 293);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(79, 14);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "Số điện thoại";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label12.Location = new System.Drawing.Point(32, 264);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(66, 14);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Phòng ban";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.label11.Location = new System.Drawing.Point(32, 236);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 14);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Tài khoản";
             // 
             // lb_ChucVu_pageTAIKHOAN
             // 
             this.lb_ChucVu_pageTAIKHOAN.AutoSize = true;
+            this.lb_ChucVu_pageTAIKHOAN.Font = new System.Drawing.Font("Tahoma", 9F);
             this.lb_ChucVu_pageTAIKHOAN.Location = new System.Drawing.Point(155, 169);
             this.lb_ChucVu_pageTAIKHOAN.Name = "lb_ChucVu_pageTAIKHOAN";
-            this.lb_ChucVu_pageTAIKHOAN.Size = new System.Drawing.Size(47, 13);
+            this.lb_ChucVu_pageTAIKHOAN.Size = new System.Drawing.Size(54, 14);
             this.lb_ChucVu_pageTAIKHOAN.TabIndex = 5;
             this.lb_ChucVu_pageTAIKHOAN.Text = "Chức Vụ";
             this.lb_ChucVu_pageTAIKHOAN.Click += new System.EventHandler(this.lb_ChucVu_Click);
@@ -742,7 +1179,7 @@
             this.pictureBox1.Image = global::GUI.Properties.Resources.Office_3601;
             this.pictureBox1.Location = new System.Drawing.Point(19, 73);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(129, 164);
+            this.pictureBox1.Size = new System.Drawing.Size(129, 128);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -755,7 +1192,7 @@
             this.imageSlider1.Images.Add(((System.Drawing.Image)(resources.GetObject("imageSlider1.Images1"))));
             this.imageSlider1.Location = new System.Drawing.Point(0, 0);
             this.imageSlider1.Name = "imageSlider1";
-            this.imageSlider1.Size = new System.Drawing.Size(745, 144);
+            this.imageSlider1.Size = new System.Drawing.Size(743, 144);
             this.imageSlider1.TabIndex = 2;
             this.imageSlider1.Text = "imageSlider1";
             // 
@@ -763,7 +1200,7 @@
             // 
             this.navigationFrameMain.Appearance.BackColor = System.Drawing.Color.White;
             this.navigationFrameMain.Appearance.Options.UseBackColor = true;
-            this.navigationFrameMain.Controls.Add(this.employeesNavigationPage);
+            this.navigationFrameMain.Controls.Add(this.NavigationPageTaiKhoan);
             this.navigationFrameMain.Controls.Add(this.customersNavigationPage);
             this.navigationFrameMain.Controls.Add(this.navigationPageBLuong);
             this.navigationFrameMain.Controls.Add(this.navigationPageNhanSu);
@@ -779,7 +1216,7 @@
             this.navigationFrameMain.Location = new System.Drawing.Point(165, 143);
             this.navigationFrameMain.Name = "navigationFrameMain";
             this.navigationFrameMain.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
-            this.employeesNavigationPage,
+            this.NavigationPageTaiKhoan,
             this.customersNavigationPage,
             this.navigationPageBLuong,
             this.navigationPageNhanSu,
@@ -792,8 +1229,8 @@
             this.navigationPageThongBao,
             this.navigationPageTaoThongBao});
             this.navigationFrameMain.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
-            this.navigationFrameMain.SelectedPage = this.employeesNavigationPage;
-            this.navigationFrameMain.Size = new System.Drawing.Size(1103, 452);
+            this.navigationFrameMain.SelectedPage = this.NavigationPageTaiKhoan;
+            this.navigationFrameMain.Size = new System.Drawing.Size(1293, 518);
             this.navigationFrameMain.TabIndex = 0;
             this.navigationFrameMain.Text = "navigationFrame";
             // 
@@ -801,7 +1238,7 @@
             // 
             this.navigationPageBLuong.Controls.Add(this.label1);
             this.navigationPageBLuong.Name = "navigationPageBLuong";
-            this.navigationPageBLuong.Size = new System.Drawing.Size(1103, 452);
+            this.navigationPageBLuong.Size = new System.Drawing.Size(1293, 518);
             // 
             // label1
             // 
@@ -816,7 +1253,7 @@
             // 
             this.navigationPageNhanSu.Controls.Add(this.label2);
             this.navigationPageNhanSu.Name = "navigationPageNhanSu";
-            this.navigationPageNhanSu.Size = new System.Drawing.Size(1103, 452);
+            this.navigationPageNhanSu.Size = new System.Drawing.Size(1293, 518);
             // 
             // label2
             // 
@@ -831,7 +1268,7 @@
             // 
             this.navigationPagePhongBan.Controls.Add(this.label3);
             this.navigationPagePhongBan.Name = "navigationPagePhongBan";
-            this.navigationPagePhongBan.Size = new System.Drawing.Size(1103, 452);
+            this.navigationPagePhongBan.Size = new System.Drawing.Size(1293, 518);
             // 
             // label3
             // 
@@ -846,7 +1283,7 @@
             // 
             this.navigationPageChucVu.Controls.Add(this.label4);
             this.navigationPageChucVu.Name = "navigationPageChucVu";
-            this.navigationPageChucVu.Size = new System.Drawing.Size(1103, 452);
+            this.navigationPageChucVu.Size = new System.Drawing.Size(1293, 518);
             // 
             // label4
             // 
@@ -861,7 +1298,7 @@
             // 
             this.navigationPageDonTu.Controls.Add(this.label5);
             this.navigationPageDonTu.Name = "navigationPageDonTu";
-            this.navigationPageDonTu.Size = new System.Drawing.Size(1103, 452);
+            this.navigationPageDonTu.Size = new System.Drawing.Size(1293, 518);
             // 
             // label5
             // 
@@ -876,7 +1313,7 @@
             // 
             this.navigationPageDonXinNghi.Controls.Add(this.label6);
             this.navigationPageDonXinNghi.Name = "navigationPageDonXinNghi";
-            this.navigationPageDonXinNghi.Size = new System.Drawing.Size(1103, 452);
+            this.navigationPageDonXinNghi.Size = new System.Drawing.Size(1293, 518);
             // 
             // label6
             // 
@@ -891,7 +1328,7 @@
             // 
             this.navigationPageDonVangMat.Controls.Add(this.label7);
             this.navigationPageDonVangMat.Name = "navigationPageDonVangMat";
-            this.navigationPageDonVangMat.Size = new System.Drawing.Size(1103, 452);
+            this.navigationPageDonVangMat.Size = new System.Drawing.Size(1293, 518);
             // 
             // label7
             // 
@@ -906,7 +1343,7 @@
             // 
             this.navigationPageDonCheckInOut.Controls.Add(this.label8);
             this.navigationPageDonCheckInOut.Name = "navigationPageDonCheckInOut";
-            this.navigationPageDonCheckInOut.Size = new System.Drawing.Size(1103, 452);
+            this.navigationPageDonCheckInOut.Size = new System.Drawing.Size(1293, 518);
             // 
             // label8
             // 
@@ -921,7 +1358,7 @@
             // 
             this.navigationPageThongBao.Controls.Add(this.label9);
             this.navigationPageThongBao.Name = "navigationPageThongBao";
-            this.navigationPageThongBao.Size = new System.Drawing.Size(1103, 452);
+            this.navigationPageThongBao.Size = new System.Drawing.Size(1293, 518);
             // 
             // label9
             // 
@@ -936,7 +1373,7 @@
             // 
             this.navigationPageTaoThongBao.Controls.Add(this.label10);
             this.navigationPageTaoThongBao.Name = "navigationPageTaoThongBao";
-            this.navigationPageTaoThongBao.Size = new System.Drawing.Size(1103, 452);
+            this.navigationPageTaoThongBao.Size = new System.Drawing.Size(1293, 518);
             // 
             // label10
             // 
@@ -1023,11 +1460,17 @@
             // 
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             // 
+            // skinRibbonGalleryBarItem1
+            // 
+            this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
+            this.skinRibbonGalleryBarItem1.Id = 48;
+            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
+            // 
             // MainForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1268, 671);
+            this.ClientSize = new System.Drawing.Size(1458, 737);
             this.Controls.Add(this.navigationFrameMain);
             this.Controls.Add(this.navBarControl);
             this.Controls.Add(this.officeNavigationBar);
@@ -1039,12 +1482,21 @@
             this.Ribbon = this.ribbonControl;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Office 360";
+            this.Load += new System.EventHandler(this.MainForm1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             this.customersNavigationPage.ResumeLayout(false);
-            this.employeesNavigationPage.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panelTop.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmNotify)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.NavigationPageTaiKhoan.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1084,7 +1536,6 @@
         private DevExpress.XtraNavBar.NavBarGroup customersNavBarGroup;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
-        private DevExpress.XtraBars.BarSubItem barSubItemNavigation;
         private DevExpress.XtraBars.BarButtonItem employeesBarButtonItem;
         private DevExpress.XtraBars.BarButtonItem customersBarButtonItem;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage;
@@ -1092,7 +1543,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup;
         private DevExpress.XtraBars.Navigation.NavigationPage customersNavigationPage;
         private DevExpress.XtraEditors.LabelControl navigationPageChamCong;
-        private DevExpress.XtraBars.Navigation.NavigationPage employeesNavigationPage;
+        private DevExpress.XtraBars.Navigation.NavigationPage NavigationPageTaiKhoan;
         private DevExpress.XtraBars.Navigation.NavigationFrame navigationFrameMain;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
@@ -1112,7 +1563,6 @@
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPageNhanSu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItemNhanSu;
         private DevExpress.XtraBars.BarButtonItem barButtonItemPhBan;
         private DevExpress.XtraBars.BarButtonItem barButtonItemPhongBan;
@@ -1179,5 +1629,43 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lb_ChucVu_pageTAIKHOAN;
         private System.Windows.Forms.Label lb_TenNV_pageTAIKHOAN;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.Label label15;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem26;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem27;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem28;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup18;
+        private System.Windows.Forms.Label lbNgayVaoLam_TaiKhoan;
+        private System.Windows.Forms.Label lb_NgaySinh;
+        private System.Windows.Forms.Label lbSDT_TaiKhoan;
+        private System.Windows.Forms.Label lbPhongBan_TaiKhoan;
+        private System.Windows.Forms.Label labelTaikhoan_TaiKhoan;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem2;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemTK;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem29;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.NumericUpDown nmNotify;
+        private System.Windows.Forms.CheckBox ckbNotify;
+        private System.Windows.Forms.Button btnToDay;
+        private System.Windows.Forms.DateTimePicker dtpkDate;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pnlMatrix;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnPreviours;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMonDay;
     }
 }

@@ -17,6 +17,7 @@ namespace GUI
         BLLNhanVien NV = new BLLNhanVien();
 
         string manvdn;
+        
         public MainForm1(string ma)
         {
             manvdn = ma;
@@ -28,8 +29,10 @@ namespace GUI
         }
         void barButtonNavigation_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            int barItemIndex = barSubItemNavigation.ItemLinks.IndexOf(e.Link);
-            navBarControl.ActiveGroup = navBarControl.Groups[barItemIndex];
+            //int barItemIndex = barSubItemNavigation.ItemLinks.IndexOf(e.Link);
+            //navBarControl.ActiveGroup = navBarControl.Groups[barItemIndex];
+
+            navigationFrameMain.SelectedPage = NavigationPageTaiKhoan;
         }
 
         private void ribbonControl_Click(object sender, EventArgs e)
@@ -54,7 +57,7 @@ namespace GUI
 
         private void barButtonItemNhanSu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            navigationFrameMain.SelectedPage = navigationPageNhanSu;
+           // navigationFrameMain.SelectedPage = navigationPageNhanSu;
         }
 
         private void barButtonItem2_ItemClick_2(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -133,16 +136,223 @@ namespace GUI
 
         }
 
+        ///================================================================================================================================
+        ///                       Tài khoản                      
+        ///================================================================================================================================
+
         public void LoadThongTAIKHOAN(string ma)
         {
             NV.LoadThongTinNhanVien(ma);
             lb_TenNV_pageTAIKHOAN.Text = NV.BLLtenNV;
             lb_ChucVu_pageTAIKHOAN.Text = NV.BLLchucvu;
+            lb_NgaySinh.Text = NV.BLLngaysinh;
+            labelTaikhoan_TaiKhoan.Text = NV.BLLmaNV;
+            lbPhongBan_TaiKhoan.Text = NV.BLLphongban;
+            lbNgayVaoLam_TaiKhoan.Text = NV.BLLngayvaolam;
+
+        }
+
+        public void LoadTenTK(string ma)
+        {
+           
+            
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
              LoadThongTAIKHOAN(manvdn);
         }
+
+        private void windowsUIButtonPanel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barButtonItemTK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            navigationFrameMain.SelectedPage = NavigationPageTaiKhoan;
+        }
+
+        ///================================================================================================================================
+        ///                       LICH - CHẤM CÔNG                      
+        ///================================================================================================================================
+
+        ////----------------------------------------------khai báo
+
+        #region Peoperties
+       
+        private List<List<ADAY>> matrix1;
+
+        public List<List<ADAY>> Matrix1
+        {
+            get { return matrix1; }
+            set { matrix1 = value; }
+        }
+
+        //--------------- CHUYỀN DATA
+        //private PlanData job;
+
+        //public PlanData Job
+        //{
+        //    get { return job; }
+        //    set { job = value; }
+        //}
+
+        private List<string> dateOfWeek = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+
+        #endregion
+
+        // ////----------------------------------------------hàm phụ
+
+        void LoadMatrix()
+        {
+            Matrix1 = new List<List<ADAY>>();
+
+            ADAY olbaday = new ADAY() { Width = 0, Height = 0, Location = new Point(-Cons.margin, 0) };
+            for (int i = 0; i < Cons.DayOfColumn; i++)
+            {
+                Matrix1.Add(new List<ADAY>());
+                for (int j = 0; j < Cons.DayOfWeek; j++)
+                {
+                    ADAY btn = new ADAY() { Width = Cons.dateButtomWidth, Height = Cons.dateButtomHeight };
+                    btn.Location = new Point(olbaday.Location.X + olbaday.Width + Cons.margin, olbaday.Location.Y);
+
+                    //0--------Click----------------
+                    //btn.Click += btn_Click;
+
+                    pnlMatrix.Controls.Add(btn);
+                    Matrix1[i].Add(btn);
+
+                    olbaday = btn;
+                }
+                olbaday = new ADAY() { Width = -Cons.margin, Height = 0, Location = new Point(0, olbaday.Location.Y + Cons.dateButtomHeight + Cons.margin) };
+            }
+            SetDefaultDate();
+        }
+
+        int DayOfMonth(DateTime date)
+        {
+            switch (date.Month)
+            {
+                case 1:
+                    return 31;
+                case 3:
+                    return 31;
+                case 5:
+                    return 31;
+                case 7:
+                    return 31;
+                case 8:
+                    return 31;
+                case 10:
+                    return 31;
+                case 12:
+                    return 31;
+                case 2:
+                    if ((date.Year % 4 == 0 && date.Year % 100 != 0) || date.Year % 400 == 0)
+                        return 29;
+                    else
+                        return 28;
+
+                default:
+                    return 30;
+            }
+
+        }
+        //sửa cái này nữa nhá
+        void AddNumberInMatrixByDate(DateTime date)
+        {
+            ClearMatrix();
+            DateTime useDate = new DateTime(date.Year, date.Month, 1);
+
+            int line = 0;
+            
+            for (int i = 1; i <= DayOfMonth(date); i++)
+            {
+                int column = dateOfWeek.IndexOf(useDate.DayOfWeek.ToString());
+                ADAY btn = Matrix1[line][column];
+                btn.numberDay(i.ToString());
+
+                if (isEqualDate(useDate, DateTime.Now))
+                {
+                    btn.BackColor = Color.Yellow;
+                }
+
+                if (isEqualDate(useDate, date))
+                {
+                    btn.BackColor = Color.Aqua;
+                }
+
+                if (column >= 6)
+                    line++;
+
+                useDate = useDate.AddDays(1);
+
+            }
+
+
+        }
+
+
+        bool isEqualDate(DateTime dateA, DateTime dateB)
+        {
+
+            return dateA.Year == dateB.Year && dateA.Month == dateB.Month && dateA.Day == dateB.Day;
+        }
+
+        void ClearMatrix()
+        {
+
+            for (int i = 0; i < Matrix1.Count; i++)
+            {
+                for (int j = 0; j < Matrix1[i].Count; j++)
+                {
+                    ADAY btn = Matrix1[i][j];
+                    btn.numberDay("");
+                    btn.BackColor = Color.White;
+                }
+            }
+        }
+
+        void SetDefaultDate()
+        {
+            dtpkDate.Value = DateTime.Now;
+
+        }
+
+        // ////----------------------------------------------Load lịch làm
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+           // LoadMatrix();
+        }
+
+        private void dtpkDate_ValueChanged(object sender, EventArgs e)
+        {
+            AddNumberInMatrixByDate((sender as DateTimePicker).Value);
+            //btnMonDay.Text = "MonDay";
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            dtpkDate.Value = dtpkDate.Value.AddMonths(1);
+        }
+
+        private void btnPreviours_Click(object sender, EventArgs e)
+        {
+            dtpkDate.Value = dtpkDate.Value.AddMonths(-1);
+        }
+
+        private void btnToDay_Click(object sender, EventArgs e)
+        {
+            SetDefaultDate();
+        }
+
+        private void MainForm1_Load(object sender, EventArgs e)
+        {
+            LoadMatrix();
+        }
+
     }
 }
