@@ -62,7 +62,14 @@
     <Compile Include="ADAY.Designer.cs">
       <DependentUpon>ADAY.cs</DependentUpon>
     </Compile>
+    <Compile Include="CaData.cs" />
+    <Compile Include="CaItem.cs" />
     <Compile Include="Cons.cs" />
+    <Compile Include="DataNhanSu.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataNhanSu.dbml</DependentUpon>
+    </Compile>
     <Compile Include="FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,11 +82,15 @@
     <Compile Include="MainForm1.Designer.cs">
       <DependentUpon>MainForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PhanCongItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ADAY.resx">
       <DependentUpon>ADAY.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataNhanSu.dbml.layout">
+      <DependentUpon>DataNhanSu.dbml</DependentUpon>
+    </None>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +108,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DataNhanSu.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataNhanSu.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -139,6 +155,9 @@
       <Project>{956FE92E-8BEA-443B-85BF-E836EB732640}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

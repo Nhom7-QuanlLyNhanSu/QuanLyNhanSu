@@ -191,13 +191,13 @@ namespace GUI
         }
 
         //--------------- CHUYỀN DATA
-        //private PlanData job;
+        private CaData ca;
 
-        //public PlanData Job
-        //{
-        //    get { return job; }
-        //    set { job = value; }
-        //}
+        public CaData Ca
+        {
+            get { return ca; }
+            set { ca = value; }
+        }
 
         private List<string> dateOfWeek = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
 
@@ -263,16 +263,70 @@ namespace GUI
         //sửa cái này nữa nhá
         void AddNumberInMatrixByDate(DateTime date)
         {
+            //ClearMatrix();
+            //DateTime useDate = new DateTime(date.Year, date.Month, 1);
+
+            //int line = 0;
+            
+            //for (int i = 1; i <= DayOfMonth(date); i++)
+            //{
+            //    int column = dateOfWeek.IndexOf(useDate.DayOfWeek.ToString());
+            //    ADAY btn = Matrix1[line][column];
+            //    btn.numberDay(i.ToString());
+
+            //    if (isEqualDate(useDate, DateTime.Now))
+            //    {
+            //        btn.BackColor = Color.Yellow;
+            //    }
+
+            //    if (isEqualDate(useDate, date))
+            //    {
+            //        btn.BackColor = Color.Aqua;
+            //    }
+
+            //    if (column >= 6)
+            //        line++;
+
+            //    useDate = useDate.AddDays(1);
+
+            //}
             ClearMatrix();
             DateTime useDate = new DateTime(date.Year, date.Month, 1);
+            /////////////////////////////////
+            Ca = new CaData();
+            //Ca.Ca = new List<CaItem>();
+            Ca.ListCa();
+
+
+
 
             int line = 0;
-            
+
             for (int i = 1; i <= DayOfMonth(date); i++)
             {
                 int column = dateOfWeek.IndexOf(useDate.DayOfWeek.ToString());
                 ADAY btn = Matrix1[line][column];
+
                 btn.numberDay(i.ToString());
+
+                foreach (var cahomnay in Ca.Ca)
+                {
+                    //if ((cahomnay.DayOfTuan-1) == column && date.Month >= cahomnay.DateBD.Month && date.Day >= cahomnay.DateBD.Day ) ///the nha them nha!!!
+                    //{
+                    //    btn.calamDay(cahomnay.Maca);
+                    //    btn.BackColor = Color.Pink;
+                    //}
+                    if ((cahomnay.DayOfTuan - 1) == column && lonHonDate(useDate, cahomnay.DateBD) && nhoHonDate(useDate, cahomnay.DateKT)) ///the nha them nha!!!
+                    {
+                        btn.calamDay(cahomnay.Maca);
+                        btn.BackColor = Color.Pink;
+                    }
+                    else
+                    {
+                        //btn.removeLableAday();
+                    }
+                }
+
 
                 if (isEqualDate(useDate, DateTime.Now))
                 {
@@ -289,6 +343,7 @@ namespace GUI
 
                 useDate = useDate.AddDays(1);
 
+
             }
 
 
@@ -301,6 +356,18 @@ namespace GUI
             return dateA.Year == dateB.Year && dateA.Month == dateB.Month && dateA.Day == dateB.Day;
         }
 
+        bool nhoHonDate(DateTime dateA, DateTime dateB)
+        {
+
+            return dateA.Year <= dateB.Year && dateA.Month <= dateB.Month && dateA.Day <= dateB.Day;
+        }
+
+        bool lonHonDate(DateTime dateA, DateTime dateB)
+        {
+
+            return dateA.Year >= dateB.Year && dateA.Month >= dateB.Month && dateA.Day >= dateB.Day;
+        }
+
         void ClearMatrix()
         {
 
@@ -310,6 +377,7 @@ namespace GUI
                 {
                     ADAY btn = Matrix1[i][j];
                     btn.numberDay("");
+                    btn.removeLableAday();
                     btn.BackColor = Color.White;
                 }
             }
