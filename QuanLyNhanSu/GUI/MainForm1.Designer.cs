@@ -213,7 +213,7 @@
             // officeNavigationBar
             // 
             this.officeNavigationBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.officeNavigationBar.Location = new System.Drawing.Point(0, 661);
+            this.officeNavigationBar.Location = new System.Drawing.Point(0, 708);
             this.officeNavigationBar.Name = "officeNavigationBar";
             this.officeNavigationBar.NavigationClient = this.navBarControl;
             this.officeNavigationBar.Size = new System.Drawing.Size(1458, 45);
@@ -233,7 +233,7 @@
             this.navBarControl.Name = "navBarControl";
             this.navBarControl.OptionsNavPane.ExpandedWidth = 165;
             this.navBarControl.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarControl.Size = new System.Drawing.Size(165, 518);
+            this.navBarControl.Size = new System.Drawing.Size(165, 565);
             this.navBarControl.TabIndex = 0;
             this.navBarControl.Text = "navBarControl";
             this.navBarControl.ActiveGroupChanged += new DevExpress.XtraNavBar.NavBarGroupEventHandler(this.navBarControl_ActiveGroupChanged);
@@ -259,7 +259,7 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 706);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 753);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
             this.ribbonStatusBar.Size = new System.Drawing.Size(1458, 31);
@@ -783,7 +783,7 @@
             this.customersNavigationPage.Controls.Add(this.panel6);
             this.customersNavigationPage.Controls.Add(this.navigationPageChamCong);
             this.customersNavigationPage.Name = "customersNavigationPage";
-            this.customersNavigationPage.Size = new System.Drawing.Size(1293, 518);
+            this.customersNavigationPage.Size = new System.Drawing.Size(1293, 565);
             // 
             // panel6
             // 
@@ -992,7 +992,7 @@
             this.navigationPageChamCong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navigationPageChamCong.Location = new System.Drawing.Point(0, 0);
             this.navigationPageChamCong.Name = "navigationPageChamCong";
-            this.navigationPageChamCong.Size = new System.Drawing.Size(1293, 518);
+            this.navigationPageChamCong.Size = new System.Drawing.Size(1293, 565);
             this.navigationPageChamCong.TabIndex = 1;
             // 
             // NavigationPageTaiKhoan
@@ -1000,7 +1000,7 @@
             this.NavigationPageTaiKhoan.Controls.Add(this.panel2);
             this.NavigationPageTaiKhoan.Controls.Add(this.panel1);
             this.NavigationPageTaiKhoan.Name = "NavigationPageTaiKhoan";
-            this.NavigationPageTaiKhoan.Size = new System.Drawing.Size(1293, 518);
+            this.NavigationPageTaiKhoan.Size = new System.Drawing.Size(1293, 565);
             // 
             // panel2
             // 
@@ -1048,7 +1048,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(745, 518);
+            this.panel1.Size = new System.Drawing.Size(745, 565);
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -1230,7 +1230,7 @@
             this.navigationPageTaoThongBao});
             this.navigationFrameMain.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
             this.navigationFrameMain.SelectedPage = this.NavigationPageTaiKhoan;
-            this.navigationFrameMain.Size = new System.Drawing.Size(1293, 518);
+            this.navigationFrameMain.Size = new System.Drawing.Size(1293, 565);
             this.navigationFrameMain.TabIndex = 0;
             this.navigationFrameMain.Text = "navigationFrame";
             // 
@@ -1238,7 +1238,7 @@
             // 
             this.navigationPageBLuong.Controls.Add(this.label1);
             this.navigationPageBLuong.Name = "navigationPageBLuong";
-            this.navigationPageBLuong.Size = new System.Drawing.Size(1293, 518);
+            this.navigationPageBLuong.Size = new System.Drawing.Size(1293, 565);
             // 
             // label1
             // 
@@ -1253,7 +1253,7 @@
             // 
             this.navigationPageNhanSu.Controls.Add(this.label2);
             this.navigationPageNhanSu.Name = "navigationPageNhanSu";
-            this.navigationPageNhanSu.Size = new System.Drawing.Size(1293, 518);
+            this.navigationPageNhanSu.Size = new System.Drawing.Size(1293, 565);
             // 
             // label2
             // 
@@ -1268,7 +1268,7 @@
             // 
             this.navigationPagePhongBan.Controls.Add(this.label3);
             this.navigationPagePhongBan.Name = "navigationPagePhongBan";
-            this.navigationPagePhongBan.Size = new System.Drawing.Size(1293, 518);
+            this.navigationPagePhongBan.Size = new System.Drawing.Size(1293, 565);
             // 
             // label3
             // 
@@ -1283,7 +1283,7 @@
             // 
             this.navigationPageChucVu.Controls.Add(this.label4);
             this.navigationPageChucVu.Name = "navigationPageChucVu";
-            this.navigationPageChucVu.Size = new System.Drawing.Size(1293, 518);
+            this.navigationPageChucVu.Size = new System.Drawing.Size(1293, 565);
             // 
             // label4
             // 
@@ -1298,7 +1298,7 @@
             // 
             this.navigationPageDonTu.Controls.Add(this.label5);
             this.navigationPageDonTu.Name = "navigationPageDonTu";
-            this.navigationPageDonTu.Size = new System.Drawing.Size(1293, 518);
+            this.navigationPageDonTu.Size = new System.Drawing.Size(1293, 565);
             // 
             // label5
             // 
@@ -1313,7 +1313,7 @@
             // 
             this.navigationPageDonXinNghi.Controls.Add(this.label6);
             this.navigationPageDonXinNghi.Name = "navigationPageDonXinNghi";
-            this.navigationPageDonXinNghi.Size = new System.Drawing.Size(1293, 518);
+            this.navigationPageDonXinNghi.Size = new System.Drawing.Size(1293, 565);
             // 
             // label6
             // 
@@ -1328,7 +1328,7 @@
             // 
             this.navigationPageDonVangMat.Controls.Add(this.label7);
             this.navigationPageDonVangMat.Name = "navigationPageDonVangMat";
-            this.navigationPageDonVangMat.Size = new System.Drawing.Size(1293, 518);
+            this.navigationPageDonVangMat.Size = new System.Drawing.Size(1293, 565);
             // 
             // label7
             // 
@@ -1343,7 +1343,7 @@
             // 
             this.navigationPageDonCheckInOut.Controls.Add(this.label8);
             this.navigationPageDonCheckInOut.Name = "navigationPageDonCheckInOut";
-            this.navigationPageDonCheckInOut.Size = new System.Drawing.Size(1293, 518);
+            this.navigationPageDonCheckInOut.Size = new System.Drawing.Size(1293, 565);
             // 
             // label8
             // 
@@ -1358,7 +1358,7 @@
             // 
             this.navigationPageThongBao.Controls.Add(this.label9);
             this.navigationPageThongBao.Name = "navigationPageThongBao";
-            this.navigationPageThongBao.Size = new System.Drawing.Size(1293, 518);
+            this.navigationPageThongBao.Size = new System.Drawing.Size(1293, 565);
             // 
             // label9
             // 
@@ -1373,7 +1373,7 @@
             // 
             this.navigationPageTaoThongBao.Controls.Add(this.label10);
             this.navigationPageTaoThongBao.Name = "navigationPageTaoThongBao";
-            this.navigationPageTaoThongBao.Size = new System.Drawing.Size(1293, 518);
+            this.navigationPageTaoThongBao.Size = new System.Drawing.Size(1293, 565);
             // 
             // label10
             // 
@@ -1470,7 +1470,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1458, 737);
+            this.ClientSize = new System.Drawing.Size(1458, 784);
             this.Controls.Add(this.navigationFrameMain);
             this.Controls.Add(this.navBarControl);
             this.Controls.Add(this.officeNavigationBar);

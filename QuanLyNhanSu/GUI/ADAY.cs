@@ -12,6 +12,21 @@ namespace GUI
 {
     public partial class ADAY : UserControl
     {
+        private string Textday;
+        private string Macaa;
+
+        public string Macaa1
+        {
+            get { return Macaa; }
+            set { Macaa = value; }
+        }
+
+        public string Textday1
+        {
+            get { return Textday; }
+            set { Textday = value; }
+        }
+
         public ADAY()
         {
             InitializeComponent();
@@ -19,11 +34,15 @@ namespace GUI
         public void numberDay(string ngay)
         {
             labelADAY.Text = ngay;
+            Textday = ngay;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (viewbtn != null)
+            {
+                viewbtn(this, new EventArgs());
+            }
         }
 
         public void removeLableAday()
@@ -36,6 +55,7 @@ namespace GUI
 
         public void calamDay(string maca)
         {
+            Macaa = maca;
             string tenca;
             DateTime giobd;
             DateTime giokt;
@@ -93,6 +113,31 @@ namespace GUI
             }
 
         }
+        ///////////////////////////////////////////
+        private event EventHandler viewpanel;
+        public event EventHandler Viewpanel
+        {
+            add { viewpanel += value; }
+            remove { viewpanel += value; }
+        }
+
+        private void panelADAY_Click(object sender, EventArgs e)
+        {
+            if (viewpanel != null)
+            {
+                viewpanel(this, new EventArgs());
+            }
+        }
+        /////////////////////////////////////////
+        private event EventHandler viewbtn;
+        public event EventHandler Viewbtn
+        {
+            add { viewbtn += value; }
+            remove { viewbtn += value; }
+        }
+
+
+
 
 
     }

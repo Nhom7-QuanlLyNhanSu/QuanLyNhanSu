@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ACALAM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ACALAM.Designer.cs">
+      <DependentUpon>ACALAM.cs</DependentUpon>
+    </Compile>
     <Compile Include="ADAY.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -65,6 +71,12 @@
     <Compile Include="CaData.cs" />
     <Compile Include="CaItem.cs" />
     <Compile Include="Cons.cs" />
+    <Compile Include="DailyCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyCa.Designer.cs">
+      <DependentUpon>DailyCa.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataNhanSu.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -85,12 +97,18 @@
     <Compile Include="PhanCongItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ACALAM.resx">
+      <DependentUpon>ACALAM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ADAY.resx">
       <DependentUpon>ADAY.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataNhanSu.dbml.layout">
       <DependentUpon>DataNhanSu.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="DailyCa.resx">
+      <DependentUpon>DailyCa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>

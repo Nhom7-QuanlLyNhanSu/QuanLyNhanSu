@@ -48,6 +48,7 @@
             this.panelADAY.Name = "panelADAY";
             this.panelADAY.Size = new System.Drawing.Size(150, 100);
             this.panelADAY.TabIndex = 1;
+            this.panelADAY.Click += new System.EventHandler(this.panelADAY_Click);
             // 
             // button1
             // 

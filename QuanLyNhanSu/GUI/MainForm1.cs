@@ -220,6 +220,8 @@ namespace GUI
 
                     //0--------Click----------------
                     //btn.Click += btn_Click;
+                    //btn.Viewbtn += btn_Viewbtn;
+                    btn.Viewpanel += btn_Viewpanel;
 
                     pnlMatrix.Controls.Add(btn);
                     Matrix1[i].Add(btn);
@@ -229,6 +231,32 @@ namespace GUI
                 olbaday = new ADAY() { Width = -Cons.margin, Height = 0, Location = new Point(0, olbaday.Location.Y + Cons.dateButtomHeight + Cons.margin) };
             }
             SetDefaultDate();
+        }
+
+        void btn_Viewpanel(object sender, EventArgs e)
+        {
+            //////////////SỰ KIỆN MỞ FORM///////////////////
+            //if (string.IsNullOrEmpty((sender as ADAY).Textday1))
+            //    return;
+            //DailyPlan daily = new DailyPlan(new DateTime(dtpkDate.Value.Year, dtpkDate.Value.Month, Convert.ToInt32((sender as ADAY).Textday1)));
+            //daily.Show();
+            /////////////////////////////////////////////////
+        }
+
+        void btn_Viewbtn(object sender, EventArgs e)
+        {
+            //////////////SỰ KIỆN MỞ FORM///////////////////
+            //if (string.IsNullOrEmpty((sender as ADAY).Textday1))
+            //    return;
+            //DailyCa daily = new DailyCa(new DateTime(dtpkDate.Value.Year, dtpkDate.Value.Month, Convert.ToInt32((sender as ADAY).Textday1)), manvdn, "CA001");
+            //daily.Show();
+            /////////////////////////////////////////////////
+
+            if (string.IsNullOrEmpty((sender as ADAY).Textday1))
+                return;
+            DailyCa daily = new DailyCa(new DateTime(dtpkDate.Value.Year, dtpkDate.Value.Month, Convert.ToInt32((sender as ADAY).Textday1)), manvdn, (sender as ADAY).Macaa1);
+            daily.Show();
+
         }
 
         int DayOfMonth(DateTime date)
@@ -320,6 +348,7 @@ namespace GUI
                     {
                         btn.calamDay(cahomnay.Maca);
                         btn.BackColor = Color.Pink;
+                        btn.Viewbtn +=btn_Viewbtn;
                     }
                     else
                     {
