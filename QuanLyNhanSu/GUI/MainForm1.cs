@@ -15,7 +15,7 @@ namespace GUI
     public partial class MainForm1 : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         BLLNhanVien NV = new BLLNhanVien();
-
+        DangNhapBLL DN = new DangNhapBLL();
         string manvdn;
         
         public MainForm1(string ma)
@@ -149,6 +149,21 @@ namespace GUI
             labelTaikhoan_TaiKhoan.Text = NV.BLLmaNV;
             lbPhongBan_TaiKhoan.Text = NV.BLLphongban;
             lbNgayVaoLam_TaiKhoan.Text = NV.BLLngayvaolam;
+            string hinh;
+            hinh = NV.BLLhinh;
+
+//C:\Users\Admin\AppData\Local\GitHubDesktop\app-2.8.2\QuanLyNhanSu\QuanLyNhanSu\GUI\HINH\avatar\avartar.png
+//C:\Users\Admin\AppData\Local\GitHubDesktop\app-2.8.2\QuanLyNhanSu\QuanLyNhanSu\GUI\Resources\son1.png
+            try
+            {
+                pictureBox1.Image = Image.FromFile("C:/Users/Admin/AppData/Local/GitHubDesktop/app-2.8.2/QuanLyNhanSu/QuanLyNhanSu/GUI/Resources/" + hinh);
+            }
+            catch
+            {
+               //pictureBox1.Image = Image.FromFile("C:/Users/Admin/AppData/Local/GitHubDesktop/app-2.8.2/QuanLyNhanSu/QuanLyNhanSu/GUI/HINH/avatar/avartar.png");
+            }
+
+
 
         }
 
@@ -161,7 +176,7 @@ namespace GUI
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-             LoadThongTAIKHOAN(manvdn);
+            // LoadThongTAIKHOAN(manvdn);
         }
 
         private void windowsUIButtonPanel1_Click(object sender, EventArgs e)
@@ -171,6 +186,8 @@ namespace GUI
 
         private void barButtonItemTK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            LoadThongTAIKHOAN(manvdn);
+
             navigationFrameMain.SelectedPage = NavigationPageTaiKhoan;
         }
 
@@ -323,7 +340,7 @@ namespace GUI
             /////////////////////////////////
             Ca = new CaData();
             //Ca.Ca = new List<CaItem>();
-            Ca.ListCa();
+            Ca.ListCa(manvdn);
 
 
 
@@ -449,6 +466,81 @@ namespace GUI
         private void MainForm1_Load(object sender, EventArgs e)
         {
             LoadMatrix();
+            panelEditMK_TaiKhoan.Hide();
+        }
+
+        private void barButtonItem30_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DialogResult rs = MessageBox.Show("Bạn có muốn đăng xuất không?", "Hỏi đáp", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs.Equals(DialogResult.Yes))
+            {
+                this.Visible = false;
+                FormDangNhap f = new FormDangNhap();
+                f.Show();
+                //this.Close();
+            }
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+           
+
+        }
+
+        private void labelXacNhan_MK_TaiKhoan_Click(object sender, EventArgs e)
+        {
+            if (TB_NEWMK_TaiKhoan.Text == null || TB_OLDMK_TaiKhoan.Text == null || TB_REMK_TaiKhoan.Text == null)
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+            }
+
+            if (TB_NEWMK_TaiKhoan.Text != TB_REMK_TaiKhoan.Text)
+                MessageBox.Show("Nhập lại mật khẩu mới, hai mật khẩu không giống nhau!");
+
+            int kt = DN.DangNhap(manvdn, TB_OLDMK_TaiKhoan.Text);
+
+            if (kt == 1)
+            {
+                int i = DN.BLLDoiMK(manvdn, TB_NEWMK_TaiKhoan.Text);
+                if (i == 1)
+                {
+
+                    DialogResult rs = MessageBox.Show("Vui lòng đăng xuất để sử dụng mật khẩu mới?", "Hỏi đáp", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (rs.Equals(DialogResult.Yes))
+                    {
+                        this.Visible = false;
+                        FormDangNhap f = new FormDangNhap();
+                        f.Show();
+                        //this.Close();
+                    }
+                }
+                else
+                    MessageBox.Show("Đổi mật khẩu thấy bại!");
+            }
+            else
+                MessageBox.Show("Mật khẩu sai, vui lòng nhập lại!");
+        }
+
+        private void label_Huy_MK_TaiKhoan_Click(object sender, EventArgs e)
+        {
+            panelEditMK_TaiKhoan.Hide();
+            TB_NEWMK_TaiKhoan.Text = ""; TB_OLDMK_TaiKhoan.Text = ""; TB_REMK_TaiKhoan.Text = "";
+        }
+
+        private void panel8_Click(object sender, EventArgs e)
+        {
+            panelEditMK_TaiKhoan.Hide();
+            TB_NEWMK_TaiKhoan.Text = ""; TB_OLDMK_TaiKhoan.Text = ""; TB_REMK_TaiKhoan.Text = "";
+        }
+
+        private void btn_DoiMK_TaiKhoan_Click(object sender, EventArgs e)
+        {
+            panelEditMK_TaiKhoan.Show();
         }
 
     }

@@ -26,9 +26,11 @@ namespace DAL
             TAIKHOAN insertDN = new TAIKHOAN { MANV = user, MAKHAU = pass };
             using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
             {
-                TAIKHOAN checkUSER = db.TAIKHOANs.FirstOrDefault(sv => insertDN.MANV.Equals(sv.MANV));
-                TAIKHOAN checkPASS = db.TAIKHOANs.FirstOrDefault(sv => insertDN.MAKHAU.Equals(sv.MAKHAU));
-                if (checkUSER == null || checkPASS == null)
+                //TAIKHOAN checkUSER = db.TAIKHOANs.FirstOrDefault(sv => insertDN.MANV.Equals(sv.MANV));
+               // TAIKHOAN checkPASS = db.TAIKHOANs.FirstOrDefault(sv => insertDN.MAKHAU.Equals(sv.MAKHAU));
+                TAIKHOAN checkTK = db.TAIKHOANs.FirstOrDefault(x => x.MANV == user && x.MAKHAU == pass);
+
+                if (checkTK!= null)//checkUSER == null || checkPASS == null
                 {
                     //MessageBox.Show("Mật khẩu hoặc tên đăng nhập không tồn tại");
                     return 3;
@@ -62,6 +64,27 @@ namespace DAL
             }
 
             return 3;
+        }
+
+        public int DoiMK (string manv, string mk)
+        {
+        
+            using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
+            {
+                TAIKHOAN TK = (from r in db.TAIKHOANs
+                               where r.MANV == manv 
+                                      select r).FirstOrDefault();
+                if (TK == null)
+                {
+                    return 0;
+                }
+
+
+                TK.MAKHAU = mk;
+                //db.DANGNHAPs.InsertOnSubmit(dn);
+                db.SubmitChanges();
+                return 1;
+            }
         }
 
 

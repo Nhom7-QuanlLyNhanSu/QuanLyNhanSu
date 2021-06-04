@@ -25,7 +25,7 @@ namespace GUI
             set { phancong = value; }
         }
 
-        public void ListCa()
+        public void ListCa(string manv)
         {
             string mapc;
             DateTime DateBD;
@@ -54,7 +54,7 @@ namespace GUI
                 {
 
                     var chitietca = from CHITIETPHANCONG in db.CHITIETPHANCONGs
-                                .Where(M => M.MAPC.Equals(chitietpc.Mapc) && M.MANV.Equals("NV050"))
+                                .Where(M => M.MAPC.Equals(chitietpc.Mapc) && M.MANV.Equals(manv))
                                     select new
                                     {
                                         MA_PC = CHITIETPHANCONG.MAPC,

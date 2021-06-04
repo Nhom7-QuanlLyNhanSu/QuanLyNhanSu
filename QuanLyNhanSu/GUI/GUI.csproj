@@ -151,6 +151,7 @@
     <None Include="Resources\Office 360.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\son1.png" />
     <None Include="Resources\contact_32x32.png" />
     <None Include="Resources\assignto_32x321.png" />
     <None Include="Resources\assignto_32x32.png" />
@@ -162,6 +163,19 @@
     <None Include="Resources\home_32x32.png" />
     <None Include="Resources\strikeoutdouble_32x32.png" />
     <None Include="Resources\addchartpane_32x32.png" />
+    <Content Include="HINH\avatar\avartar.png" />
+    <Content Include="HINH\avatar\h1.png" />
+    <Content Include="HINH\avatar\h2.png" />
+    <Content Include="HINH\avatar\h3.png" />
+    <Content Include="HINH\avatar\h4.png" />
+    <Content Include="HINH\avatar\h5.png" />
+    <Content Include="HINH\avatar\son1.png" />
+    <Content Include="Resources\avartar.png" />
+    <Content Include="Resources\h1.png" />
+    <Content Include="Resources\h2.png" />
+    <Content Include="Resources\h3.png" />
+    <Content Include="Resources\h4.png" />
+    <Content Include="Resources\h5.png" />
     <Content Include="Resources\LOGO %281%29.png" />
     <None Include="Resources\newcustomers_16x16.png" />
     <None Include="Resources\newcustomers_32x32.png" />

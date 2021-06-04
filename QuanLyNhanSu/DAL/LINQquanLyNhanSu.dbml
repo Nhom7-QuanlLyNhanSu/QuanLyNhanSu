@@ -18,6 +18,7 @@
   </Table>
   <Table Name="dbo.THONGBAO" Member="THONGBAOs">
     <Type Name="THONGBAO">
+      <Column Name="MATB" Type="System.String" DbType="Char(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="NGUOITAO" Type="System.String" DbType="Char(6)" CanBeNull="true" />
       <Column Name="NGAYTAO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="DOITUONGNHAN" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -28,6 +29,12 @@
       <Association Name="NHANVIEN_THONGBAO" Member="NHANVIEN" ThisKey="NGUOITAO" OtherKey="MANV" Type="NHANVIEN" IsForeignKey="true" />
       <Association Name="NHANVIEN_THONGBAO1" Member="NHANVIEN1" ThisKey="MANV" OtherKey="MANV" Type="NHANVIEN" IsForeignKey="true" />
       <Association Name="PHONGBAN_THONGBAO" Member="PHONGBAN" ThisKey="MAPB" OtherKey="MAPH" Type="PHONGBAN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BANGPHU" Member="BANGPHUs">
+    <Type Name="BANGPHU">
+      <Column Name="TENMA" Type="System.String" DbType="Char(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MA" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.CALAMVIEC" Member="CALAMVIECs">
@@ -134,6 +141,7 @@
       <Column Name="TINHTRANG" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Column Name="CHEDOLV" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Column Name="MAHD" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="HINHANH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="NHANVIEN_BANGLUONG" Member="BANGLUONGs" ThisKey="MANV" OtherKey="MANV" Type="BANGLUONG" />
       <Association Name="NHANVIEN_THONGBAO" Member="THONGBAOs" ThisKey="MANV" OtherKey="NGUOITAO" Type="THONGBAO" />
       <Association Name="NHANVIEN_THONGBAO1" Member="THONGBAOs1" ThisKey="MANV" OtherKey="MANV" Type="THONGBAO" />

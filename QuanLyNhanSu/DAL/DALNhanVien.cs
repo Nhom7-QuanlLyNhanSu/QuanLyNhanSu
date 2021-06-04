@@ -20,6 +20,7 @@ namespace DAL
         public string DALtinhtrang;
         public string DALchedolamviec;
         public string DALmahd;
+        public string DALhinh;
 
         public DALNhanVien()
         { 
@@ -46,6 +47,7 @@ namespace DAL
                 DALtinhtrang = thongtin.TINHTRANG;
                 DALchedolamviec = thongtin.CHEDOLV;
                 DALmahd = thongtin.MAHD;
+                DALhinh = thongtin.HINHANH;
 
                 CHUCVU ttChucVu = db.CHUCVUs.SingleOrDefault(NV => NV.MACHUCVU.Equals(machucvu));
                 DALchucvu = ttChucVu.TENCHUVU;

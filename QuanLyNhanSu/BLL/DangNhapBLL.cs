@@ -41,5 +41,13 @@ namespace BLL
             }
             return 3;
         }
+
+        public int BLLDoiMK(string manv, string mk)
+        {
+            int i = DN.DoiMK(manv, mk);
+            if (i == 1)
+                return 1;
+            return 0;
+        }
     }
 }
