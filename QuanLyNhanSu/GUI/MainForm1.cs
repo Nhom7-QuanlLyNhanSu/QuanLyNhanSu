@@ -17,6 +17,7 @@ namespace GUI
         BLLNhanVien NV = new BLLNhanVien();
         DangNhapBLL DN = new DangNhapBLL();
         BLLDonTu DT = new BLLDonTu();
+        BLLChucVu cv = new BLLChucVu();
         string manvdn;
         
         public MainForm1(string ma)
@@ -73,7 +74,9 @@ namespace GUI
 
         private void barButtonItemChucVu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            
             navigationFrameMain.SelectedPage = navigationPageChucVu;
+            dataGridView1.DataSource = cv.loaddgvDSCV();
         }
 
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -574,6 +577,83 @@ namespace GUI
         private void btn_DoiMK_TaiKhoan_Click(object sender, EventArgs e)
         {
             panelEditMK_TaiKhoan.Show();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = cv.loaddgvDSCVTheoMa(txtTK.Text);
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn thêm chức vụ?", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+
+                if (cv.themCV(cv.taoMaTD(), txtTen.Text) == 1)
+                {
+                    MessageBox.Show("Thêm thành công!");
+                    dataGridView1.DataSource = cv.loaddgvDSCV();
+                    txtMa.Text = "";
+                    txtTen.Text = "";
+
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại!");
+                    dataGridView1.DataSource = cv.loaddgvDSCV();
+                }
+            }
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn sửa chức vụ?", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+
+                if (cv.suaCV(txtTen.Text, txtMa.Text) == 1)
+                {
+                    MessageBox.Show("Sửa thành công!");
+                    dataGridView1.DataSource = cv.loaddgvDSCV();
+                    txtMa.Text = "";
+                    txtTen.Text = "";
+
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thất bại!");
+                    dataGridView1.DataSource = cv.loaddgvDSCV();
+                }
+            }
+        }
+
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn xóa chức vụ?", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+
+                if (cv.xoaCV(dataGridView1.CurrentRow.Cells[0].Value.ToString()) == 1)
+                {
+                    MessageBox.Show("Xóa thành công!");
+                    dataGridView1.DataSource = cv.loaddgvDSCV();
+                    txtMa.Text = "";
+                    txtTen.Text = "";
+
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại!");
+                    dataGridView1.DataSource = cv.loaddgvDSCV();
+                }
+            }
+        }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+            txtMa.Text = "";
+            txtTen.Text = "";
         }
 
     }

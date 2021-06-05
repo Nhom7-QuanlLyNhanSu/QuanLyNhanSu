@@ -42,9 +42,13 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DALChamCong.cs" />
+    <Compile Include="DALChucVu.cs" />
     <Compile Include="DALDangNhap.cs" />
     <Compile Include="DALDonTu.cs" />
+    <Compile Include="DALHongDong.cs" />
     <Compile Include="DALNhanVien.cs" />
+    <Compile Include="DALQLNhanVien.cs" />
+    <Compile Include="DALQLPhongBan.cs" />
     <Compile Include="DataQuanLyNhanSu.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

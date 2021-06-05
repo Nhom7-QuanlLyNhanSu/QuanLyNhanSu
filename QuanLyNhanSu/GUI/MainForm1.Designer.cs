@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm1));
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem21 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem22 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem23 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem24 = new DevExpress.Utils.ToolTipTitleItem();
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.officeNavigationBar = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
             this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
@@ -164,7 +164,6 @@
             this.navigationPagePhongBan = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.label3 = new System.Windows.Forms.Label();
             this.navigationPageChucVu = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.label4 = new System.Windows.Forms.Label();
             this.navigationPageDonTu = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -196,6 +195,22 @@
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtTen = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtMa = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtTK = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl)).BeginInit();
@@ -230,6 +245,10 @@
             this.navigationPageDonCheckInOut.SuspendLayout();
             this.navigationPageThongBao.SuspendLayout();
             this.navigationPageTaoThongBao.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabbedView
@@ -670,17 +689,17 @@
             this.barButtonItemTK.ImageOptions.Image = global::GUI.Properties.Resources.customer_16x16;
             this.barButtonItemTK.ImageOptions.LargeImage = global::GUI.Properties.Resources.customer_32x32;
             this.barButtonItemTK.Name = "barButtonItemTK";
-            toolTipTitleItem5.Text = "Tài Khoản cá nhân";
-            toolTipItem3.LeftIndent = 6;
-            toolTipItem3.Text = "Xem thông tin tài khoản đăng nhập, chỉnh sửa thông tin, thay đổi mật khẩu";
-            toolTipTitleItem6.Appearance.Image = global::GUI.Properties.Resources.contact_32x32;
-            toolTipTitleItem6.Appearance.Options.UseImage = true;
-            toolTipTitleItem6.Image = global::GUI.Properties.Resources.contact_32x32;
-            toolTipTitleItem6.LeftIndent = 6;
-            superToolTip3.Items.Add(toolTipTitleItem5);
-            superToolTip3.Items.Add(toolTipItem3);
-            superToolTip3.Items.Add(toolTipTitleItem6);
-            this.barButtonItemTK.SuperTip = superToolTip3;
+            toolTipTitleItem21.Text = "Tài Khoản cá nhân";
+            toolTipItem11.LeftIndent = 6;
+            toolTipItem11.Text = "Xem thông tin tài khoản đăng nhập, chỉnh sửa thông tin, thay đổi mật khẩu";
+            toolTipTitleItem22.Appearance.Image = global::GUI.Properties.Resources.contact_32x32;
+            toolTipTitleItem22.Appearance.Options.UseImage = true;
+            toolTipTitleItem22.Image = global::GUI.Properties.Resources.contact_32x32;
+            toolTipTitleItem22.LeftIndent = 6;
+            superToolTip11.Items.Add(toolTipTitleItem21);
+            superToolTip11.Items.Add(toolTipItem11);
+            superToolTip11.Items.Add(toolTipTitleItem22);
+            this.barButtonItemTK.SuperTip = superToolTip11;
             this.barButtonItemTK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemTK_ItemClick);
             // 
             // barButtonItem29
@@ -689,17 +708,17 @@
             this.barButtonItem29.Id = 101;
             this.barButtonItem29.ImageOptions.Image = global::GUI.Properties.Resources.assignto_32x32;
             this.barButtonItem29.Name = "barButtonItem29";
-            toolTipTitleItem7.Text = "Đăng Xuất";
-            toolTipItem4.LeftIndent = 6;
-            toolTipItem4.Text = "Thoát đăng nhập tài khoản này!\r\n";
-            toolTipTitleItem8.Appearance.Image = global::GUI.Properties.Resources.assignto_32x321;
-            toolTipTitleItem8.Appearance.Options.UseImage = true;
-            toolTipTitleItem8.Image = global::GUI.Properties.Resources.assignto_32x321;
-            toolTipTitleItem8.LeftIndent = 6;
-            superToolTip4.Items.Add(toolTipTitleItem7);
-            superToolTip4.Items.Add(toolTipItem4);
-            superToolTip4.Items.Add(toolTipTitleItem8);
-            this.barButtonItem29.SuperTip = superToolTip4;
+            toolTipTitleItem23.Text = "Đăng Xuất";
+            toolTipItem12.LeftIndent = 6;
+            toolTipItem12.Text = "Thoát đăng nhập tài khoản này!\r\n";
+            toolTipTitleItem24.Appearance.Image = global::GUI.Properties.Resources.assignto_32x321;
+            toolTipTitleItem24.Appearance.Options.UseImage = true;
+            toolTipTitleItem24.Image = global::GUI.Properties.Resources.assignto_32x321;
+            toolTipTitleItem24.LeftIndent = 6;
+            superToolTip12.Items.Add(toolTipTitleItem23);
+            superToolTip12.Items.Add(toolTipItem12);
+            superToolTip12.Items.Add(toolTipTitleItem24);
+            this.barButtonItem29.SuperTip = superToolTip12;
             // 
             // barButtonItem30
             // 
@@ -1471,18 +1490,11 @@
             // 
             // navigationPageChucVu
             // 
-            this.navigationPageChucVu.Controls.Add(this.label4);
+            this.navigationPageChucVu.Controls.Add(this.panel15);
+            this.navigationPageChucVu.Controls.Add(this.groupBox2);
+            this.navigationPageChucVu.Controls.Add(this.groupBox1);
             this.navigationPageChucVu.Name = "navigationPageChucVu";
             this.navigationPageChucVu.Size = new System.Drawing.Size(1293, 565);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 3);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Chức Vụ";
             // 
             // navigationPageDonTu
             // 
@@ -1696,6 +1708,176 @@
             this.skinRibbonGalleryBarItem1.Id = 48;
             this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.simpleButton6);
+            this.groupBox2.Controls.Add(this.simpleButton5);
+            this.groupBox2.Controls.Add(this.simpleButton4);
+            this.groupBox2.Controls.Add(this.simpleButton3);
+            this.groupBox2.Controls.Add(this.simpleButton2);
+            this.groupBox2.Controls.Add(this.txtTen);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.txtMa);
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Location = new System.Drawing.Point(616, 128);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(366, 329);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Thông tin chi tiết";
+            // 
+            // simpleButton6
+            // 
+            this.simpleButton6.Location = new System.Drawing.Point(145, 264);
+            this.simpleButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.simpleButton6.Name = "simpleButton6";
+            this.simpleButton6.Size = new System.Drawing.Size(84, 36);
+            this.simpleButton6.TabIndex = 12;
+            this.simpleButton6.Text = "Thoát";
+            // 
+            // simpleButton5
+            // 
+            this.simpleButton5.Location = new System.Drawing.Point(27, 264);
+            this.simpleButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.simpleButton5.Name = "simpleButton5";
+            this.simpleButton5.Size = new System.Drawing.Size(84, 36);
+            this.simpleButton5.TabIndex = 11;
+            this.simpleButton5.Text = "Clear";
+            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
+            // 
+            // simpleButton4
+            // 
+            this.simpleButton4.Location = new System.Drawing.Point(259, 202);
+            this.simpleButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(84, 36);
+            this.simpleButton4.TabIndex = 10;
+            this.simpleButton4.Text = "Xóa";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Location = new System.Drawing.Point(145, 202);
+            this.simpleButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(84, 36);
+            this.simpleButton3.TabIndex = 9;
+            this.simpleButton3.Text = "Sửa";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(27, 202);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(84, 36);
+            this.simpleButton2.TabIndex = 8;
+            this.simpleButton2.Text = "Thêm";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // txtTen
+            // 
+            this.txtTen.Location = new System.Drawing.Point(27, 134);
+            this.txtTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTen.Multiline = true;
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Size = new System.Drawing.Size(317, 32);
+            this.txtTen.TabIndex = 5;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(24, 110);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(66, 13);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "Tên chức vụ";
+            // 
+            // txtMa
+            // 
+            this.txtMa.Location = new System.Drawing.Point(27, 57);
+            this.txtMa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMa.Multiline = true;
+            this.txtMa.Name = "txtMa";
+            this.txtMa.ReadOnly = true;
+            this.txtMa.Size = new System.Drawing.Size(317, 32);
+            this.txtMa.TabIndex = 3;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(24, 32);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(62, 13);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Mã chức vụ";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.simpleButton1);
+            this.groupBox1.Controls.Add(this.txtTK);
+            this.groupBox1.Location = new System.Drawing.Point(48, 128);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(538, 329);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Danh sách chức vụ";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(42, 80);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(454, 219);
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(410, 24);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(87, 37);
+            this.simpleButton1.TabIndex = 1;
+            this.simpleButton1.Text = "Tìm kiếm";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // txtTK
+            // 
+            this.txtTK.Location = new System.Drawing.Point(42, 30);
+            this.txtTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTK.Multiline = true;
+            this.txtTK.Name = "txtTK";
+            this.txtTK.Size = new System.Drawing.Size(349, 24);
+            this.txtTK.TabIndex = 0;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(19, 12);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(263, 33);
+            this.label21.TabIndex = 7;
+            this.label21.Text = "QUẢN LÍ CHỨC VỤ";
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.OrangeRed;
+            this.panel15.Controls.Add(this.label21);
+            this.panel15.Location = new System.Drawing.Point(3, 3);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(1278, 58);
+            this.panel15.TabIndex = 10;
+            // 
             // MainForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1746,7 +1928,6 @@
             this.navigationPagePhongBan.ResumeLayout(false);
             this.navigationPagePhongBan.PerformLayout();
             this.navigationPageChucVu.ResumeLayout(false);
-            this.navigationPageChucVu.PerformLayout();
             this.navigationPageDonTu.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDonTu_DonTu)).EndInit();
@@ -1762,6 +1943,13 @@
             this.navigationPageThongBao.PerformLayout();
             this.navigationPageTaoThongBao.ResumeLayout(false);
             this.navigationPageTaoThongBao.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1809,7 +1997,6 @@
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPagePhongBan;
         private System.Windows.Forms.Label label3;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPageChucVu;
-        private System.Windows.Forms.Label label4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarSubItem barSubItem1;
@@ -1926,5 +2113,21 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridViewDonTu_DonTu;
         private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton6;
+        private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.TextBox txtTen;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtMa;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.TextBox txtTK;
     }
 }
