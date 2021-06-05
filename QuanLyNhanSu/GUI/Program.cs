@@ -16,7 +16,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm1("NV0050"));
+            Application.Run(new FormDangNhap());
         }
     }
 }

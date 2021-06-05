@@ -18,8 +18,11 @@ namespace GUI
         DangNhapBLL DN = new DangNhapBLL();
         BLLDonTu DT = new BLLDonTu();
         BLLChucVu cv = new BLLChucVu();
+        BLLHopDong hd = new BLLHopDong();
+        BLLQLNhanVien nv = new BLLQLNhanVien();
+        BLLPhongBan pb = new BLLPhongBan();
         string manvdn;
-        
+        protected string fileName = "null";
         public MainForm1(string ma)
         {
             manvdn = ma;
@@ -59,7 +62,7 @@ namespace GUI
 
         private void barButtonItemNhanSu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-           // navigationFrameMain.SelectedPage = navigationPageNhanSu;
+            navigationFrameMain.SelectedPage = navigationPageNhanSu;
         }
 
         private void barButtonItem2_ItemClick_2(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -70,13 +73,14 @@ namespace GUI
         private void barButtonItemPhBan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             navigationFrameMain.SelectedPage = navigationPagePhongBan;
+            dataGridViewPHONGBAN.DataSource = pb.loadDGVDSPB();
         }
 
         private void barButtonItemChucVu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             
             navigationFrameMain.SelectedPage = navigationPageChucVu;
-            dataGridView1.DataSource = cv.loaddgvDSCV();
+            dataGridViewChuVu.DataSource = cv.loaddgvDSCV();
         }
 
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -175,8 +179,20 @@ namespace GUI
             string hinh;
             hinh = NV.BLLhinh;
 
-            if (NV.machuvu != "MAR003" || NV.machuvu != "MAR004")
+            if (NV.machuvu.Equals("MAR003") || NV.machuvu.Equals("MAR004"))
             {
+                barButtonItemTaoBangLuong.Enabled = true;
+                barButtonItemQLngaynghi_hr.Enabled = true;
+                barButtonItemPhanCa_HR.Enabled = true;
+                barButtonItemDuyetPhieuChi.Enabled = true;
+                barButtonItemDuyetPhieuThu.Enabled = true;
+                barButtonItemDuyetDonTu.Enabled = true;
+                barButtonItemNhanSu_HR.Enabled = true;
+                barButtonItemThietLapCa.Enabled = true;
+            }
+            else
+            {
+
                 barButtonItemTaoBangLuong.Enabled = false;
                 barButtonItemQLngaynghi_hr.Enabled = false;
                 barButtonItemPhanCa_HR.Enabled = false;
@@ -581,7 +597,7 @@ namespace GUI
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = cv.loaddgvDSCVTheoMa(txtTK.Text);
+            dataGridViewChuVu.DataSource = cv.loaddgvDSCVTheoMa(txtTK.Text);
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
@@ -593,7 +609,7 @@ namespace GUI
                 if (cv.themCV(cv.taoMaTD(), txtTen.Text) == 1)
                 {
                     MessageBox.Show("Thêm thành công!");
-                    dataGridView1.DataSource = cv.loaddgvDSCV();
+                    dataGridViewChuVu.DataSource = cv.loaddgvDSCV();
                     txtMa.Text = "";
                     txtTen.Text = "";
 
@@ -601,7 +617,7 @@ namespace GUI
                 else
                 {
                     MessageBox.Show("Thêm thất bại!");
-                    dataGridView1.DataSource = cv.loaddgvDSCV();
+                    dataGridViewChuVu.DataSource = cv.loaddgvDSCV();
                 }
             }
         }
@@ -615,7 +631,7 @@ namespace GUI
                 if (cv.suaCV(txtTen.Text, txtMa.Text) == 1)
                 {
                     MessageBox.Show("Sửa thành công!");
-                    dataGridView1.DataSource = cv.loaddgvDSCV();
+                    dataGridViewChuVu.DataSource = cv.loaddgvDSCV();
                     txtMa.Text = "";
                     txtTen.Text = "";
 
@@ -623,7 +639,7 @@ namespace GUI
                 else
                 {
                     MessageBox.Show("Sửa thất bại!");
-                    dataGridView1.DataSource = cv.loaddgvDSCV();
+                    dataGridViewChuVu.DataSource = cv.loaddgvDSCV();
                 }
             }
         }
@@ -634,10 +650,10 @@ namespace GUI
             if (dialogResult == DialogResult.Yes)
             {
 
-                if (cv.xoaCV(dataGridView1.CurrentRow.Cells[0].Value.ToString()) == 1)
+                if (cv.xoaCV(dataGridViewChuVu.CurrentRow.Cells[0].Value.ToString()) == 1)
                 {
                     MessageBox.Show("Xóa thành công!");
-                    dataGridView1.DataSource = cv.loaddgvDSCV();
+                    dataGridViewChuVu.DataSource = cv.loaddgvDSCV();
                     txtMa.Text = "";
                     txtTen.Text = "";
 
@@ -645,7 +661,7 @@ namespace GUI
                 else
                 {
                     MessageBox.Show("Xóa thất bại!");
-                    dataGridView1.DataSource = cv.loaddgvDSCV();
+                    dataGridViewChuVu.DataSource = cv.loaddgvDSCV();
                 }
             }
         }
@@ -654,6 +670,363 @@ namespace GUI
         {
             txtMa.Text = "";
             txtTen.Text = "";
+        }
+
+        private void simpleButtonSEARCH_HD_Click(object sender, EventArgs e)
+        {
+            dgvDSHD.DataSource = hd.loadDGVDSHDTheoMa(txtTK_HD.Text);
+        }
+
+        private void barButtonItemHopDong_HR_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            navigationFrameMain.SelectedPage = navigationPageHopDong_HR;
+            dgvDSHD.DataSource = hd.loadDGVDSHD();
+
+        }
+
+        private void navigationPage1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void simpleButtonXEMTATCA_HD_Click(object sender, EventArgs e)
+        {
+            dgvDSHD.DataSource = hd.loadDGVDSHD();
+
+        }
+
+        private void btnThem_HD_Click(object sender, EventArgs e)
+        {
+
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn thêm hợp đồng?", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                DateTime dtBD = dtpNgayBD_HD.Value;
+                DateTime dtKT = dtpNgayKT_HD.Value;
+                DateTime dtNK = dtpNK_HD.Value;
+                if (hd.ThemHD(hd.taoMaHDTDBLL(), txtTen_HD.Text, dtBD, dtKT, dtNK, "Còn hiệu lực", txtND_HD.Text).ToString() == "1")
+                {
+                    MessageBox.Show("Thêm thành công!");
+                    dgvDSHD.DataSource = hd.loadDGVDSHD();
+                    txtMa_HD.Text = "";
+                    txtTen_HD.Text = "";
+                    dtpNgayBD_HD.Value = DateTime.Now;
+                    dtpNgayKT_HD.Value = DateTime.Now;
+                    dtpNK_HD.Value = DateTime.Now;
+                    txtND_HD.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại!");
+                    dgvDSHD.DataSource = hd.loadDGVDSHD();
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
+        }
+
+        private void simpleButtonCLEAR_HD_Click(object sender, EventArgs e)
+        {
+            txtMa_HD.Text = "";
+            txtTen_HD.Text = "";
+            dtpNgayBD_HD.Value = DateTime.Now;
+            dtpNgayKT_HD.Value = DateTime.Now;
+            dtpNK_HD.Value = DateTime.Now;
+            txtND_HD.Text = "";
+        }
+
+        private void simpleButtonSUA_HD_Click(object sender, EventArgs e)
+        {
+
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn sửa hợp đồng?", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                DateTime dtBD = dtpNgayBD_HD.Value;
+                DateTime dtKT = dtpNgayKT_HD.Value;
+                DateTime dtNK = dtpNK_HD.Value;
+                if (hd.SuaHD(txtTen_HD.Text, dtBD, dtKT, dtNK, "Còn hiệu lực", txtND_HD.Text, txtMa_HD.Text) == 1)
+                {
+                    MessageBox.Show("Sửa thành công!");
+                    dgvDSHD.DataSource = hd.loadDGVDSHD();
+                    txtMa_HD.Text = "";
+                    txtTen_HD.Text = "";
+                    dtpNgayBD_HD.Value = DateTime.Now;
+                    dtpNgayKT_HD.Value = DateTime.Now;
+                    dtpNK_HD.Value = DateTime.Now;
+                    txtND_HD.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thất bại!");
+                    dgvDSHD.DataSource = hd.loadDGVDSHD();
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
+        }
+
+        private void simpleButton_XOA_HD_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn xóa hợp đồng?", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+
+                if (hd.XoaHD(dgvDSHD.CurrentRow.Cells[0].Value.ToString()) == 1)
+                {
+                    MessageBox.Show("Xóa thành công!");
+                    dgvDSHD.DataSource = hd.loadDGVDSHD();
+                    txtMa_HD.Text = "";
+                    txtTen_HD.Text = "";
+                    dtpNgayBD_HD.Value = DateTime.Now;
+                    dtpNgayKT_HD.Value = DateTime.Now;
+                    dtpNK_HD.Value = DateTime.Now;
+                    txtND_HD.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại!");
+                    dgvDSHD.DataSource = hd.loadDGVDSHD();
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
+        }
+
+        private void navigationPageNhanSu_Paint(object sender, PaintEventArgs e)
+        {
+
+             navigationFrameMain.SelectedPage = navigationPageNhanSu;
+
+        }
+
+        private void btnShowAll_QLNV_Click(object sender, EventArgs e)
+        {
+            dataGridViewNhanSu.DataSource = nv.loadDSNV();
+
+        }
+
+        private void btnTimKiem_QLNV_Click(object sender, EventArgs e)
+        {
+            dataGridViewNhanSu.DataSource = nv.loadDSNVTheoMa(txtTimKiem_QLNV.Text);
+        }
+
+        private void barButtonItemNhanSu_HR_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            navigationFrameMain.SelectedPage = navigationPageNhanSu;
+
+            dataGridViewNhanSu.DataSource = nv.loadDSNV();
+            cbbPhongBan_QLNV.DataSource = nv.loadCBBPhongban();
+            cbbPhongBan_QLNV.DisplayMember = "TENPH";
+            cbbPhongBan_QLNV.ValueMember = "MAPH";
+        }
+
+        private void bnbrowse_QLNV_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+
+
+                fileName = dlg.FileName;
+
+            }
+        }
+
+        private void btnThem_QLNV_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn thêm nhân viên?", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                DateTime dtpNS = dtpNgaySinh_QLNV.Value;
+                DateTime dtpNVL = dtpNgayVL_QLNV.Value;
+
+                if (nv.themNV(nv.taoMaTD(), txtTen_QLNV.Text, cbbGioiTinh_QLNV.Text, dtpNS, txtSDT_QLNV.Text, cbbPB_QLNV.SelectedValue.ToString(), cbbChucVu_QLNV.SelectedValue.ToString(), txtMaLuong_QLNV.Text, dtpNVL, txtTinhTrang_QLNV.Text, cbbChedolam_QLNV.Text, txtMaHD_QLNV.Text, fileName) == 1)
+                {
+                    MessageBox.Show("Thêm thành công!");
+                    dataGridViewNhanSu.DataSource = nv.loadDSNV();
+                    btnThem_QLNV.Enabled = false;
+                    txtMa_QLNV.Text = "";
+                    txtTen_QLNV.Text = "";
+                    dtpNgaySinh_QLNV.Value = DateTime.Now;
+                    txtSDT_QLNV.Text = "";
+                    txtMaLuong_QLNV.Text = "";
+                    txtTinhTrang_QLNV.Text = "";
+                    txtMaHD_QLNV.Text = "";
+                    dtpNgayVL_QLNV.Value = DateTime.Now;
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại!");
+                    dataGridViewChuVu.DataSource = nv.loadDSNV();
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
+        }
+
+        private void btnSua_QLNV_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn sửa nhân viên?", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                DateTime dtpNS = dtpNgaySinh_QLNV.Value;
+                DateTime dtpNVL = dtpNgayVL_QLNV.Value;
+
+                if (nv.suaNV(txtTen_QLNV.Text, cbbGioiTinh_QLNV.Text, dtpNS, txtSDT_QLNV.Text, cbbPB_QLNV.SelectedValue.ToString(), cbbChucVu_QLNV.SelectedValue.ToString(), txtMaLuong_QLNV.Text, dtpNVL, txtTinhTrang_QLNV.Text, cbbChedolam_QLNV.Text, txtMaHD_QLNV.Text, fileName, txtMa_QLNV.Text) == 1)
+                {
+                    MessageBox.Show("Sửa thành công!");
+                    dataGridViewNhanSu.DataSource = nv.loadDSNV();
+                    btnThem_QLNV.Enabled = false;
+                    txtMa_QLNV.Text = "";
+                    txtTen_QLNV.Text = "";
+                    dtpNgaySinh_QLNV.Value = DateTime.Now;
+                    txtSDT_QLNV.Text = "";
+                    txtMaLuong_QLNV.Text = "";
+                    txtTinhTrang_QLNV.Text = "";
+                    txtMaHD_QLNV.Text = "";
+                    dtpNgayVL_QLNV.Value = DateTime.Now;
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thất bại!");
+                    dataGridViewChuVu.DataSource = nv.loadDSNV();
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
+        }
+
+        private void btnXoa_QLNV_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn xóa nhân viên?", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+
+                if (nv.xoaNV(txtMa_QLNV.Text) == 1)
+                {
+                    MessageBox.Show("Xóa thành công!");
+                    dataGridViewNhanSu.DataSource = nv.loadDSNV();
+                    btnThem_QLNV.Enabled = false;
+                    txtMa_QLNV.Text = "";
+                    txtTen_QLNV.Text = "";
+                    dtpNgaySinh_QLNV.Value = DateTime.Now;
+                    txtSDT_QLNV.Text = "";
+                    txtMaLuong_QLNV.Text = "";
+                    txtTinhTrang_QLNV.Text = "";
+                    txtMaHD_QLNV.Text = "";
+                    dtpNgayVL_QLNV.Value = DateTime.Now;
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại!");
+                    dataGridViewChuVu.DataSource = nv.loadDSNV();
+                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
+        }
+
+        private void btnClear_QLNV_Click(object sender, EventArgs e)
+        {
+            btnThem_QLNV.Enabled = false;
+            txtMa_QLNV.Text = "";
+            txtTen_QLNV.Text = "";
+            dtpNgaySinh_QLNV.Value = DateTime.Now;
+            txtSDT_QLNV.Text = "";
+            txtMaLuong_QLNV.Text = "";
+            txtTinhTrang_QLNV.Text = "";
+            txtMaHD_QLNV.Text = "";
+            dtpNgayVL_QLNV.Value = DateTime.Now;
+        }
+
+        private void simpleButtonTim__PB_Click(object sender, EventArgs e)
+        {
+            dataGridViewPHONGBAN.DataSource = pb.loadDGVTheoMa(txtTK_PB.Text);
+        }
+
+        private void simpleButtonThem_PB_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn thêm phòng ban?", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+
+                if (pb.themPB(pb.taoMaTD(), txtTen_PB.Text, txtTruongPhong_PB.Text) == 1)
+                {
+                    MessageBox.Show("Thêm thành công!");
+                    dataGridViewPHONGBAN.DataSource = pb.loadDGVDSPB();
+                    txtMa_PB.Text = "";
+                    txtTen_PB.Text = "";
+                    txtTruongPhong_PB.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại!");
+                    dataGridViewPHONGBAN.DataSource = pb.loadDGVDSPB();
+                }
+            }
+        }
+
+        private void simpleButtonSua_PB_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn sửa phòng ban?", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+
+                if (pb.suaPB(txtTen_PB.Text, txtTruongPhong_PB.Text, txtMa_PB.Text) == 1)
+                {
+                    MessageBox.Show("Sửa thành công!");
+                    dataGridViewPHONGBAN.DataSource = pb.loadDGVDSPB();
+                    txtMa_PB.Text = "";
+                    txtTen_PB.Text = "";
+                    txtTruongPhong_PB.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thất bại!");
+                    dataGridViewPHONGBAN.DataSource = pb.loadDGVDSPB();
+                }
+            }
+        }
+
+        private void simpleButtonXoa_PB_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn muốn xóa phòng ban?", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+
+                if (pb.xoaPB(dataGridViewPHONGBAN.CurrentRow.Cells[0].Value.ToString()) == 1)
+                {
+                    MessageBox.Show("Xóa thành công!");
+                    dataGridViewPHONGBAN.DataSource = pb.loadDGVDSPB();
+                    txtMa_PB.Text = "";
+                    txtTen_PB.Text = "";
+                    txtTruongPhong_PB.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Xóa thất bại!");
+                    dataGridViewPHONGBAN.DataSource = pb.loadDGVDSPB();
+                }
+            }
+        }
+
+        private void simpleButtonClear_PB_Click(object sender, EventArgs e)
+        {
+            txtMa_PB.Text = "";
+            txtTen_PB.Text = "";
+            txtTruongPhong_PB.Text = "";
         }
 
     }
