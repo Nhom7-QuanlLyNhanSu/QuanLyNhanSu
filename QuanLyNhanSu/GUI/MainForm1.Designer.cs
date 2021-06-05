@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm1));
-            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem9 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem10 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem11 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem12 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.officeNavigationBar = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
             this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
@@ -71,20 +71,20 @@
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemThongBao = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemTaoThongBao = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemNhanSu_HR = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemPhieuThu = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemPhieuChi = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemDuyetDonTu = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemDuyetPhieuThu = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemDuyetPhieuChi = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemTaoBangLuong = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem28 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemThietLapCa = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemPhanCa_HR = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemQLngaynghi_hr = new DevExpress.XtraBars.BarButtonItem();
             this.skinRibbonGalleryBarItem2 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.barButtonItemTK = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem29 = new DevExpress.XtraBars.BarButtonItem();
@@ -166,6 +166,10 @@
             this.navigationPageChucVu = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.label4 = new System.Windows.Forms.Label();
             this.navigationPageDonTu = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.dataGridViewDonTu_DonTu = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.navigationPageDonXinNghi = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.label6 = new System.Windows.Forms.Label();
@@ -218,6 +222,9 @@
             this.navigationPagePhongBan.SuspendLayout();
             this.navigationPageChucVu.SuspendLayout();
             this.navigationPageDonTu.SuspendLayout();
+            this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDonTu_DonTu)).BeginInit();
+            this.panel2.SuspendLayout();
             this.navigationPageDonXinNghi.SuspendLayout();
             this.navigationPageDonVangMat.SuspendLayout();
             this.navigationPageDonCheckInOut.SuspendLayout();
@@ -313,20 +320,20 @@
             this.barButtonItem16,
             this.barButtonItemThongBao,
             this.barButtonItemTaoThongBao,
-            this.barButtonItem17,
+            this.barButtonItemNhanSu_HR,
             this.barButtonItem19,
             this.barButtonItemPhieuThu,
             this.barButtonItemPhieuChi,
             this.barButtonItem20,
-            this.barButtonItem18,
-            this.barButtonItem21,
-            this.barButtonItem22,
+            this.barButtonItemDuyetDonTu,
+            this.barButtonItemDuyetPhieuThu,
+            this.barButtonItemDuyetPhieuChi,
             this.barButtonItem23,
-            this.barButtonItem24,
+            this.barButtonItemTaoBangLuong,
             this.barButtonItem25,
-            this.barButtonItem26,
-            this.barButtonItem27,
-            this.barButtonItem28,
+            this.barButtonItemThietLapCa,
+            this.barButtonItemPhanCa_HR,
+            this.barButtonItemQLngaynghi_hr,
             this.skinRibbonGalleryBarItem2,
             this.barButtonItemTK,
             this.barButtonItem29,
@@ -543,13 +550,13 @@
             this.barButtonItemTaoThongBao.Name = "barButtonItemTaoThongBao";
             this.barButtonItemTaoThongBao.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem18_ItemClick);
             // 
-            // barButtonItem17
+            // barButtonItemNhanSu_HR
             // 
-            this.barButtonItem17.Caption = "Nhân Sự";
-            this.barButtonItem17.Id = 83;
-            this.barButtonItem17.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.ImageOptions.Image")));
-            this.barButtonItem17.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.ImageOptions.LargeImage")));
-            this.barButtonItem17.Name = "barButtonItem17";
+            this.barButtonItemNhanSu_HR.Caption = "Nhân Sự";
+            this.barButtonItemNhanSu_HR.Id = 83;
+            this.barButtonItemNhanSu_HR.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemNhanSu_HR.ImageOptions.Image")));
+            this.barButtonItemNhanSu_HR.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemNhanSu_HR.ImageOptions.LargeImage")));
+            this.barButtonItemNhanSu_HR.Name = "barButtonItemNhanSu_HR";
             // 
             // barButtonItem19
             // 
@@ -583,29 +590,29 @@
             this.barButtonItem20.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem20.ImageOptions.LargeImage")));
             this.barButtonItem20.Name = "barButtonItem20";
             // 
-            // barButtonItem18
+            // barButtonItemDuyetDonTu
             // 
-            this.barButtonItem18.Caption = "Duyệt Đơn Từ";
-            this.barButtonItem18.Id = 88;
-            this.barButtonItem18.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem18.ImageOptions.Image")));
-            this.barButtonItem18.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem18.ImageOptions.LargeImage")));
-            this.barButtonItem18.Name = "barButtonItem18";
+            this.barButtonItemDuyetDonTu.Caption = "Duyệt Đơn Từ";
+            this.barButtonItemDuyetDonTu.Id = 88;
+            this.barButtonItemDuyetDonTu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemDuyetDonTu.ImageOptions.Image")));
+            this.barButtonItemDuyetDonTu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemDuyetDonTu.ImageOptions.LargeImage")));
+            this.barButtonItemDuyetDonTu.Name = "barButtonItemDuyetDonTu";
             // 
-            // barButtonItem21
+            // barButtonItemDuyetPhieuThu
             // 
-            this.barButtonItem21.Caption = "Duyệt Phiếu Thu";
-            this.barButtonItem21.Id = 89;
-            this.barButtonItem21.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem21.ImageOptions.Image")));
-            this.barButtonItem21.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem21.ImageOptions.LargeImage")));
-            this.barButtonItem21.Name = "barButtonItem21";
+            this.barButtonItemDuyetPhieuThu.Caption = "Duyệt Phiếu Thu";
+            this.barButtonItemDuyetPhieuThu.Id = 89;
+            this.barButtonItemDuyetPhieuThu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemDuyetPhieuThu.ImageOptions.Image")));
+            this.barButtonItemDuyetPhieuThu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemDuyetPhieuThu.ImageOptions.LargeImage")));
+            this.barButtonItemDuyetPhieuThu.Name = "barButtonItemDuyetPhieuThu";
             // 
-            // barButtonItem22
+            // barButtonItemDuyetPhieuChi
             // 
-            this.barButtonItem22.Caption = "Duyệt Phiếu Chi";
-            this.barButtonItem22.Id = 90;
-            this.barButtonItem22.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem22.ImageOptions.Image")));
-            this.barButtonItem22.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem22.ImageOptions.LargeImage")));
-            this.barButtonItem22.Name = "barButtonItem22";
+            this.barButtonItemDuyetPhieuChi.Caption = "Duyệt Phiếu Chi";
+            this.barButtonItemDuyetPhieuChi.Id = 90;
+            this.barButtonItemDuyetPhieuChi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemDuyetPhieuChi.ImageOptions.Image")));
+            this.barButtonItemDuyetPhieuChi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemDuyetPhieuChi.ImageOptions.LargeImage")));
+            this.barButtonItemDuyetPhieuChi.Name = "barButtonItemDuyetPhieuChi";
             // 
             // barButtonItem23
             // 
@@ -615,12 +622,12 @@
             this.barButtonItem23.ImageOptions.LargeImage = global::GUI.Properties.Resources.newcustomers_32x32;
             this.barButtonItem23.Name = "barButtonItem23";
             // 
-            // barButtonItem24
+            // barButtonItemTaoBangLuong
             // 
-            this.barButtonItem24.Caption = "Tạo Bảng Lương";
-            this.barButtonItem24.Id = 93;
-            this.barButtonItem24.ImageOptions.Image = global::GUI.Properties.Resources.addchartpane_32x32;
-            this.barButtonItem24.Name = "barButtonItem24";
+            this.barButtonItemTaoBangLuong.Caption = "Tạo Bảng Lương";
+            this.barButtonItemTaoBangLuong.Id = 93;
+            this.barButtonItemTaoBangLuong.ImageOptions.Image = global::GUI.Properties.Resources.addchartpane_32x32;
+            this.barButtonItemTaoBangLuong.Name = "barButtonItemTaoBangLuong";
             // 
             // barButtonItem25
             // 
@@ -629,26 +636,26 @@
             this.barButtonItem25.ImageOptions.Image = global::GUI.Properties.Resources.strikeoutdouble_32x32;
             this.barButtonItem25.Name = "barButtonItem25";
             // 
-            // barButtonItem26
+            // barButtonItemThietLapCa
             // 
-            this.barButtonItem26.Caption = "Thiết lập ca";
-            this.barButtonItem26.Id = 95;
-            this.barButtonItem26.ImageOptions.Image = global::GUI.Properties.Resources.showworktimeonly_32x32;
-            this.barButtonItem26.Name = "barButtonItem26";
+            this.barButtonItemThietLapCa.Caption = "Thiết lập ca";
+            this.barButtonItemThietLapCa.Id = 95;
+            this.barButtonItemThietLapCa.ImageOptions.Image = global::GUI.Properties.Resources.showworktimeonly_32x32;
+            this.barButtonItemThietLapCa.Name = "barButtonItemThietLapCa";
             // 
-            // barButtonItem27
+            // barButtonItemPhanCa_HR
             // 
-            this.barButtonItem27.Caption = "Phân ca";
-            this.barButtonItem27.Id = 96;
-            this.barButtonItem27.ImageOptions.Image = global::GUI.Properties.Resources.switchtimescalesto_32x32;
-            this.barButtonItem27.Name = "barButtonItem27";
+            this.barButtonItemPhanCa_HR.Caption = "Phân ca";
+            this.barButtonItemPhanCa_HR.Id = 96;
+            this.barButtonItemPhanCa_HR.ImageOptions.Image = global::GUI.Properties.Resources.switchtimescalesto_32x32;
+            this.barButtonItemPhanCa_HR.Name = "barButtonItemPhanCa_HR";
             // 
-            // barButtonItem28
+            // barButtonItemQLngaynghi_hr
             // 
-            this.barButtonItem28.Caption = "Quản lý ngày nghỉ";
-            this.barButtonItem28.Id = 97;
-            this.barButtonItem28.ImageOptions.Image = global::GUI.Properties.Resources.today_32x32;
-            this.barButtonItem28.Name = "barButtonItem28";
+            this.barButtonItemQLngaynghi_hr.Caption = "Quản lý ngày nghỉ";
+            this.barButtonItemQLngaynghi_hr.Id = 97;
+            this.barButtonItemQLngaynghi_hr.ImageOptions.Image = global::GUI.Properties.Resources.today_32x32;
+            this.barButtonItemQLngaynghi_hr.Name = "barButtonItemQLngaynghi_hr";
             // 
             // skinRibbonGalleryBarItem2
             // 
@@ -663,17 +670,17 @@
             this.barButtonItemTK.ImageOptions.Image = global::GUI.Properties.Resources.customer_16x16;
             this.barButtonItemTK.ImageOptions.LargeImage = global::GUI.Properties.Resources.customer_32x32;
             this.barButtonItemTK.Name = "barButtonItemTK";
-            toolTipTitleItem9.Text = "Tài Khoản cá nhân";
-            toolTipItem5.LeftIndent = 6;
-            toolTipItem5.Text = "Xem thông tin tài khoản đăng nhập, chỉnh sửa thông tin, thay đổi mật khẩu";
-            toolTipTitleItem10.Appearance.Image = global::GUI.Properties.Resources.contact_32x32;
-            toolTipTitleItem10.Appearance.Options.UseImage = true;
-            toolTipTitleItem10.Image = global::GUI.Properties.Resources.contact_32x32;
-            toolTipTitleItem10.LeftIndent = 6;
-            superToolTip5.Items.Add(toolTipTitleItem9);
-            superToolTip5.Items.Add(toolTipItem5);
-            superToolTip5.Items.Add(toolTipTitleItem10);
-            this.barButtonItemTK.SuperTip = superToolTip5;
+            toolTipTitleItem5.Text = "Tài Khoản cá nhân";
+            toolTipItem3.LeftIndent = 6;
+            toolTipItem3.Text = "Xem thông tin tài khoản đăng nhập, chỉnh sửa thông tin, thay đổi mật khẩu";
+            toolTipTitleItem6.Appearance.Image = global::GUI.Properties.Resources.contact_32x32;
+            toolTipTitleItem6.Appearance.Options.UseImage = true;
+            toolTipTitleItem6.Image = global::GUI.Properties.Resources.contact_32x32;
+            toolTipTitleItem6.LeftIndent = 6;
+            superToolTip3.Items.Add(toolTipTitleItem5);
+            superToolTip3.Items.Add(toolTipItem3);
+            superToolTip3.Items.Add(toolTipTitleItem6);
+            this.barButtonItemTK.SuperTip = superToolTip3;
             this.barButtonItemTK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemTK_ItemClick);
             // 
             // barButtonItem29
@@ -682,17 +689,17 @@
             this.barButtonItem29.Id = 101;
             this.barButtonItem29.ImageOptions.Image = global::GUI.Properties.Resources.assignto_32x32;
             this.barButtonItem29.Name = "barButtonItem29";
-            toolTipTitleItem11.Text = "Đăng Xuất";
-            toolTipItem6.LeftIndent = 6;
-            toolTipItem6.Text = "Thoát đăng nhập tài khoản này!\r\n";
-            toolTipTitleItem12.Appearance.Image = global::GUI.Properties.Resources.assignto_32x321;
-            toolTipTitleItem12.Appearance.Options.UseImage = true;
-            toolTipTitleItem12.Image = global::GUI.Properties.Resources.assignto_32x321;
-            toolTipTitleItem12.LeftIndent = 6;
-            superToolTip6.Items.Add(toolTipTitleItem11);
-            superToolTip6.Items.Add(toolTipItem6);
-            superToolTip6.Items.Add(toolTipTitleItem12);
-            this.barButtonItem29.SuperTip = superToolTip6;
+            toolTipTitleItem7.Text = "Đăng Xuất";
+            toolTipItem4.LeftIndent = 6;
+            toolTipItem4.Text = "Thoát đăng nhập tài khoản này!\r\n";
+            toolTipTitleItem8.Appearance.Image = global::GUI.Properties.Resources.assignto_32x321;
+            toolTipTitleItem8.Appearance.Options.UseImage = true;
+            toolTipTitleItem8.Image = global::GUI.Properties.Resources.assignto_32x321;
+            toolTipTitleItem8.LeftIndent = 6;
+            superToolTip4.Items.Add(toolTipTitleItem7);
+            superToolTip4.Items.Add(toolTipItem4);
+            superToolTip4.Items.Add(toolTipTitleItem8);
+            this.barButtonItem29.SuperTip = superToolTip4;
             // 
             // barButtonItem30
             // 
@@ -779,7 +786,7 @@
             // 
             // ribbonPageGroup9
             // 
-            this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem17);
+            this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItemNhanSu_HR);
             this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem19);
             this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem20);
             this.ribbonPageGroup9.Name = "ribbonPageGroup9";
@@ -787,9 +794,9 @@
             // 
             // ribbonPageGroup15
             // 
-            this.ribbonPageGroup15.ItemLinks.Add(this.barButtonItem18);
-            this.ribbonPageGroup15.ItemLinks.Add(this.barButtonItem21);
-            this.ribbonPageGroup15.ItemLinks.Add(this.barButtonItem22);
+            this.ribbonPageGroup15.ItemLinks.Add(this.barButtonItemDuyetDonTu);
+            this.ribbonPageGroup15.ItemLinks.Add(this.barButtonItemDuyetPhieuThu);
+            this.ribbonPageGroup15.ItemLinks.Add(this.barButtonItemDuyetPhieuChi);
             this.ribbonPageGroup15.Name = "ribbonPageGroup15";
             this.ribbonPageGroup15.Text = "Xét Duyệt Đơn";
             // 
@@ -801,16 +808,16 @@
             // 
             // ribbonPageGroup17
             // 
-            this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItem24);
+            this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItemTaoBangLuong);
             this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItem25);
             this.ribbonPageGroup17.Name = "ribbonPageGroup17";
             this.ribbonPageGroup17.Text = "Lương";
             // 
             // ribbonPageGroup18
             // 
-            this.ribbonPageGroup18.ItemLinks.Add(this.barButtonItem26);
-            this.ribbonPageGroup18.ItemLinks.Add(this.barButtonItem27);
-            this.ribbonPageGroup18.ItemLinks.Add(this.barButtonItem28);
+            this.ribbonPageGroup18.ItemLinks.Add(this.barButtonItemThietLapCa);
+            this.ribbonPageGroup18.ItemLinks.Add(this.barButtonItemPhanCa_HR);
+            this.ribbonPageGroup18.ItemLinks.Add(this.barButtonItemQLngaynghi_hr);
             this.ribbonPageGroup18.Name = "ribbonPageGroup18";
             this.ribbonPageGroup18.Text = "Giờ làn việc";
             // 
@@ -1479,16 +1486,56 @@
             // 
             // navigationPageDonTu
             // 
-            this.navigationPageDonTu.Controls.Add(this.label5);
+            this.navigationPageDonTu.Controls.Add(this.panel14);
+            this.navigationPageDonTu.Controls.Add(this.panel13);
+            this.navigationPageDonTu.Controls.Add(this.panel2);
             this.navigationPageDonTu.Name = "navigationPageDonTu";
             this.navigationPageDonTu.Size = new System.Drawing.Size(1293, 565);
+            // 
+            // panel14
+            // 
+            this.panel14.Location = new System.Drawing.Point(915, 69);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(366, 486);
+            this.panel14.TabIndex = 38;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.dataGridViewDonTu_DonTu);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel13.Location = new System.Drawing.Point(0, 57);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(899, 508);
+            this.panel13.TabIndex = 37;
+            // 
+            // dataGridViewDonTu_DonTu
+            // 
+            this.dataGridViewDonTu_DonTu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridViewDonTu_DonTu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDonTu_DonTu.Location = new System.Drawing.Point(11, 12);
+            this.dataGridViewDonTu_DonTu.Name = "dataGridViewDonTu_DonTu";
+            this.dataGridViewDonTu_DonTu.Size = new System.Drawing.Size(876, 486);
+            this.dataGridViewDonTu_DonTu.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.OrangeRed;
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1293, 57);
+            this.panel2.TabIndex = 36;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 3);
+            this.label5.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(25, 6);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 13);
+            this.label5.Size = new System.Drawing.Size(135, 41);
             this.label5.TabIndex = 7;
             this.label5.Text = "Đơn từ";
             // 
@@ -1701,7 +1748,10 @@
             this.navigationPageChucVu.ResumeLayout(false);
             this.navigationPageChucVu.PerformLayout();
             this.navigationPageDonTu.ResumeLayout(false);
-            this.navigationPageDonTu.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDonTu_DonTu)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.navigationPageDonXinNghi.ResumeLayout(false);
             this.navigationPageDonXinNghi.PerformLayout();
             this.navigationPageDonVangMat.ResumeLayout(false);
@@ -1793,7 +1843,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
         private DevExpress.XtraBars.BarButtonItem barButtonItemThongBao;
         private DevExpress.XtraBars.BarButtonItem barButtonItemTaoThongBao;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem17;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemNhanSu_HR;
         private DevExpress.XtraBars.BarButtonItem barButtonItem19;
         private DevExpress.XtraBars.BarButtonItem barButtonItemPhieuThu;
         private DevExpress.XtraBars.BarButtonItem barButtonItemPhieuChi;
@@ -1803,13 +1853,13 @@
         private System.Windows.Forms.Label label9;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPageTaoThongBao;
         private System.Windows.Forms.Label label10;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem18;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem21;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem22;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemDuyetDonTu;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemDuyetPhieuThu;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemDuyetPhieuChi;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup16;
         private DevExpress.XtraBars.BarButtonItem barButtonItem23;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem24;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemTaoBangLuong;
         private DevExpress.XtraBars.BarButtonItem barButtonItem25;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup17;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -1824,9 +1874,9 @@
         private System.Windows.Forms.Label label11;
         private DevExpress.XtraEditors.SimpleButton btn_DoiMK_TaiKhoan;
         private System.Windows.Forms.Label label15;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem26;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem27;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem28;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemThietLapCa;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemPhanCa_HR;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemQLngaynghi_hr;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup18;
         private System.Windows.Forms.Label lbNgayVaoLam_TaiKhoan;
         private System.Windows.Forms.Label lb_NgaySinh;
@@ -1872,5 +1922,9 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dataGridViewDonTu_DonTu;
+        private System.Windows.Forms.Panel panel14;
     }
 }

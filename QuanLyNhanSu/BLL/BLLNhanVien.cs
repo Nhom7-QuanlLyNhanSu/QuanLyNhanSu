@@ -23,6 +23,7 @@ namespace BLL
         public string BLLchedolamviec;
         public string BLLmahd;
         public string BLLhinh;
+        public string machuvu;
 
         public BLLNhanVien()
         { 
@@ -45,6 +46,7 @@ namespace BLL
             BLLchedolamviec = NV.DALtinhtrang;
             BLLmahd = NV.DALmahd;
             BLLhinh = NV.DALhinh;
+            machuvu = NV.machucvu;
         }
     }
 }

@@ -21,7 +21,7 @@ namespace DAL
         public string DALchedolamviec;
         public string DALmahd;
         public string DALhinh;
-
+        public string machucvu;
         public DALNhanVien()
         { 
         
@@ -31,7 +31,7 @@ namespace DAL
         {
             using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
             { 
-                string machucvu;
+                
                 NHANVIEN thongtin = db.NHANVIENs.SingleOrDefault(NV => NV.MANV.Equals(ma));
                 DALtenNV = thongtin.TENNV;
                 DALmaNV = thongtin.MANV;

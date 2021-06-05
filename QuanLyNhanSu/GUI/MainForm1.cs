@@ -16,6 +16,7 @@ namespace GUI
     {
         BLLNhanVien NV = new BLLNhanVien();
         DangNhapBLL DN = new DangNhapBLL();
+        BLLDonTu DT = new BLLDonTu();
         string manvdn;
         
         public MainForm1(string ma)
@@ -78,6 +79,25 @@ namespace GUI
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             navigationFrameMain.SelectedPage = navigationPageDonTu;
+           // DataTable datadon
+            dataGridViewDonTu_DonTu.DataSource = DT.loadDonTuByMANVofBLL(manvdn);
+
+           // for (int i = 0; i < datadon.Rows.Count; i++)
+           // {
+           //     DataRow dr = datadon.Rows[i];
+           //     ListViewItem item = new ListViewItem(dr[1].ToString());
+           //     ListViewItem.ListViewSubItem subitem = new ListViewItem.ListViewSubItem(item, datadon.Rows[i][0].ToString());
+           //     item.SubItems.Add(dr[2].ToString());
+           //     item.SubItems.Add(dr[3].ToString());
+           //     item.SubItems.Add(dr[4].ToString());
+           //     item.SubItems.Add(subitem);
+           //     listViewDonTu_DonTu.Items.Add(item);
+               
+           // }
+           //listViewDonTu_DonTu.View = View.Details;
+           //listViewDonTu_DonTu.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+           //listViewDonTu_DonTu.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            
         }
 
         private void barButtonItem14_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -151,6 +171,18 @@ namespace GUI
             lbNgayVaoLam_TaiKhoan.Text = NV.BLLngayvaolam;
             string hinh;
             hinh = NV.BLLhinh;
+
+            if (NV.machuvu != "MAR003" || NV.machuvu != "MAR004")
+            {
+                barButtonItemTaoBangLuong.Enabled = false;
+                barButtonItemQLngaynghi_hr.Enabled = false;
+                barButtonItemPhanCa_HR.Enabled = false;
+                barButtonItemDuyetPhieuChi.Enabled = false;
+                barButtonItemDuyetPhieuThu.Enabled = false;
+                barButtonItemDuyetDonTu.Enabled = false;
+                barButtonItemNhanSu_HR.Enabled = false;
+                barButtonItemThietLapCa.Enabled = false;
+            }
 
 //C:\Users\Admin\AppData\Local\GitHubDesktop\app-2.8.2\QuanLyNhanSu\QuanLyNhanSu\GUI\HINH\avatar\avartar.png
 //C:\Users\Admin\AppData\Local\GitHubDesktop\app-2.8.2\QuanLyNhanSu\QuanLyNhanSu\GUI\Resources\son1.png
@@ -465,6 +497,7 @@ namespace GUI
 
         private void MainForm1_Load(object sender, EventArgs e)
         {
+            LoadThongTAIKHOAN(manvdn);
             LoadMatrix();
             panelEditMK_TaiKhoan.Hide();
         }

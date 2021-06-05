@@ -43,6 +43,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="DALChamCong.cs" />
     <Compile Include="DALDangNhap.cs" />
+    <Compile Include="DALDonTu.cs" />
     <Compile Include="DALNhanVien.cs" />
     <Compile Include="DataQuanLyNhanSu.Designer.cs">
       <AutoGen>True</AutoGen>
