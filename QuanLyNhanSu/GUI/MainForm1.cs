@@ -821,9 +821,10 @@ namespace GUI
             navigationFrameMain.SelectedPage = navigationPageNhanSu;
 
             dataGridViewNhanSu.DataSource = nv.loadDSNV();
-            cbbPhongBan_QLNV.DataSource = nv.loadCBBPhongban();
+            
             cbbPhongBan_QLNV.DisplayMember = "TENPH";
             cbbPhongBan_QLNV.ValueMember = "MAPH";
+            cbbPhongBan_QLNV.DataSource = nv.loadCBBPhongban();
         }
 
         private void bnbrowse_QLNV_Click(object sender, EventArgs e)
@@ -1027,6 +1028,58 @@ namespace GUI
             txtMa_PB.Text = "";
             txtTen_PB.Text = "";
             txtTruongPhong_PB.Text = "";
+        }
+
+        private void cbbPB_QLNV_DropDown(object sender, EventArgs e)
+        {
+            cbbPB_QLNV.DataSource = nv.loadCBBPhongban();
+            cbbPB_QLNV.DisplayMember = "TENPH";
+            cbbPB_QLNV.ValueMember = "MAPH";
+        }
+
+        private void cbbChucVu_QLNV_DropDown(object sender, EventArgs e)
+        {
+            cbbChucVu_QLNV.DataSource = nv.loadCBBChucVu();
+            cbbChucVu_QLNV.DisplayMember = "TENCHUVU";
+            cbbChucVu_QLNV.ValueMember = "MACHUCVU";
+        }
+
+        private void dataGridViewNhanSu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMa_QLNV.Text = dataGridViewNhanSu.CurrentRow.Cells[0].Value.ToString();
+            txtTen_QLNV.Text = dataGridViewNhanSu.CurrentRow.Cells[1].Value.ToString();
+            cbbGioiTinh_QLNV.Text = dataGridViewNhanSu.CurrentRow.Cells[2].Value.ToString();
+            dtpNgaySinh_QLNV.Text = dataGridViewNhanSu.CurrentRow.Cells[3].Value.ToString();
+            txtSDT_QLNV.Text = dataGridViewNhanSu.CurrentRow.Cells[4].Value.ToString();
+            cbbPB_QLNV.DataSource = nv.loadCBBPBTheoMaPH(dataGridViewNhanSu.CurrentRow.Cells[5].Value.ToString());
+            cbbPB_QLNV.DisplayMember = "TENPH";
+            cbbPB_QLNV.ValueMember = "MAPH";
+            cbbChucVu_QLNV.DataSource = nv.loadCBBCVTheoMaCV(dataGridViewNhanSu.CurrentRow.Cells[6].Value.ToString());
+            cbbChucVu_QLNV.DisplayMember = "TENCHUVU";
+            cbbChucVu_QLNV.ValueMember = "MACHUCVU";
+            txtMaLuong_QLNV.Text = dataGridViewNhanSu.CurrentRow.Cells[7].Value.ToString();
+            dtpNgayVL_QLNV.Text = dataGridViewNhanSu.CurrentRow.Cells[8].Value.ToString();
+            txtTinhTrang_QLNV.Text = dataGridViewNhanSu.CurrentRow.Cells[9].Value.ToString();
+            cbbChedolam_QLNV.Text = dataGridViewNhanSu.CurrentRow.Cells[10].Value.ToString();
+            txtMaHD_QLNV.Text = dataGridViewNhanSu.CurrentRow.Cells[11].Value.ToString();
+        }
+
+        private void dataGridViewPHONGBAN_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMa_PB.Text = dataGridViewPHONGBAN.CurrentRow.Cells[0].Value.ToString();
+            txtTen_PB.Text = dataGridViewPHONGBAN.CurrentRow.Cells[1].Value.ToString();
+            txtTruongPhong_PB.Text = dataGridViewPHONGBAN.CurrentRow.Cells[2].Value.ToString();
+        }
+
+        private void dataGridViewChuVu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMa.Text = dataGridViewChuVu.CurrentRow.Cells[0].Value.ToString();
+            txtTen.Text = dataGridViewChuVu.CurrentRow.Cells[1].Value.ToString();
+        }
+
+        private void dataGridViewNhanSu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
     }

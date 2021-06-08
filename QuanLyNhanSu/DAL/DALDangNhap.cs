@@ -30,7 +30,7 @@ namespace DAL
                // TAIKHOAN checkPASS = db.TAIKHOANs.FirstOrDefault(sv => insertDN.MAKHAU.Equals(sv.MAKHAU));
                 TAIKHOAN checkTK = db.TAIKHOANs.FirstOrDefault(x => x.MANV == user && x.MAKHAU == pass);
 
-                if (checkTK!= null)//checkUSER == null || checkPASS == null
+                if (checkTK == null)//checkUSER == null || checkPASS == null
                 {
                     //MessageBox.Show("Mật khẩu hoặc tên đăng nhập không tồn tại");
                     return 3;
@@ -63,7 +63,7 @@ namespace DAL
                 }
             }
 
-            return 3;
+            //return 3;
         }
 
         public int DoiMK (string manv, string mk)
