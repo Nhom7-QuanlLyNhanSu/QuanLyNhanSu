@@ -85,26 +85,33 @@ namespace GUI
 
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            
             navigationFrameMain.SelectedPage = navigationPageDonTu;
            // DataTable datadon
-            dataGridViewDonTu_DonTu.DataSource = DT.loadDonTuByMANVofBLL(manvdn);
+            dataGridViewDonTu_DonTuView.DataSource = DT.loadDonTuByMANVofBLL(manvdn);
 
-           // for (int i = 0; i < datadon.Rows.Count; i++)
-           // {
-           //     DataRow dr = datadon.Rows[i];
-           //     ListViewItem item = new ListViewItem(dr[1].ToString());
-           //     ListViewItem.ListViewSubItem subitem = new ListViewItem.ListViewSubItem(item, datadon.Rows[i][0].ToString());
-           //     item.SubItems.Add(dr[2].ToString());
-           //     item.SubItems.Add(dr[3].ToString());
-           //     item.SubItems.Add(dr[4].ToString());
-           //     item.SubItems.Add(subitem);
-           //     listViewDonTu_DonTu.Items.Add(item);
-               
-           // }
-           //listViewDonTu_DonTu.View = View.Details;
-           //listViewDonTu_DonTu.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-           //listViewDonTu_DonTu.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            loadDonTuView();
+           
             
+        }
+
+        public void loadDonTuView()
+        {
+            listViewDEMO.Items.Clear();
+            DT.ListDonTuOfManvBLL(manvdn);
+
+            foreach (var demo in DT.dsdontu)
+            {
+                listViewDEMO.Items.Add(new ListViewItem(new string[] { demo.Madon1, demo.Tennv1.ToString(), demo.Loaidon1, demo.Ngaytao1.ToString(), demo.Nguoiduyet1, demo.Trangthai1.ToString() }));
+            }
+            ////////////
+            ClearThongTinDonTuView();
+            panelSuaThongTinDonTu_DonTu_View.Hide();
+            /////////////
+            //comboBoxNguoiDuyet_Sua_DonTu_View
+            comboBoxNguoiDuyet_Sua_DonTu_View.DisplayMember = "TENNV";
+            comboBoxNguoiDuyet_Sua_DonTu_View.ValueMember = "MANV";
+            comboBoxNguoiDuyet_Sua_DonTu_View.DataSource = NV.LoadMaTenNVBLL();
         }
 
         private void barButtonItem14_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -1082,5 +1089,250 @@ namespace GUI
 
         }
 
-    }
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            listViewDEMO.Items.Clear();
+            DateTime date = new DateTime(dateTimePicker_DonTu_View.Value.Year, dateTimePicker_DonTu_View.Value.Month, dateTimePicker_DonTu_View.Value.Day);
+
+            dataGridViewDonTu_DonTuView.DataSource = DT.loadDonTuByNGAYTAOofBLL(date);
+
+            DT.ListDonTuOfDayBLL(date);
+
+            foreach (var demo in DT.dsdontu)
+            {
+                listViewDEMO.Items.Add(new ListViewItem(new string[] { demo.Madon1, demo.Tennv1.ToString(), demo.Loaidon1, demo.Ngaytao1.ToString(), demo.Nguoiduyet1, demo.Trangthai1.ToString() }));
+            }
+            
+        }
+
+        private void panel13_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonViewAll_DonTu_View_Click(object sender, EventArgs e)
+        {
+            dataGridViewDonTu_DonTuView.DataSource = DT.loadDonTuByMANVofBLL(manvdn);
+            //loadDonTuByNGAYTAOofBLL
+
+            listViewDEMO.Items.Clear();
+
+            DT.ListDonTuOfManvBLL(manvdn);
+
+            foreach (var demo in DT.dsdontu)
+            {
+                listViewDEMO.Items.Add(new ListViewItem(new string[] { demo.Madon1, demo.Tennv1.ToString(), demo.Loaidon1, demo.Ngaytao1.ToString(), demo.Nguoiduyet1, demo.Trangthai1.ToString() }));
+            }
+        }
+
+        private void dataGridViewDonTu_DonTuView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label55_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listViewDEMO_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string madon = null;
+
+            if (listViewDEMO.SelectedItems.Count > 0)
+            {
+                madon = listViewDEMO.SelectedItems[0].SubItems[0].Text;
+                try
+                {
+                    DT.ChiTietDonTuBLL(madon);
+                    DT.ThongTinDonTuBLL(madon);
+                    //TieuDe
+                    labelGhiChu_TieuDe_DonTu_View.Text = DT.Bghichu;
+                    textBoxTieuDe_Sua_DonTu_View.Text = DT.Bghichu;
+                    //MaDon
+                    labelMaDon_DonTu_View.Text = DT.Bmadon;
+                    labelMaDon_Sua_DonTu_View.Text = DT.Bmadon;
+                    //MaLoai
+                    labelLoaiDon_DonTu_View.Text = DT.tenloaidon;
+                    labelLoaiDon_Sua_DonTu_View.Text = DT.tenloaidon;
+                    //ngaytao
+                    labelNgayTao_Sua_DonTu_View.Text = DT.Bngaytao.Day.ToString() + "/" + DT.Bngaytao.Month.ToString() + "/" + DT.Bngaytao.Year.ToString();
+                    labelNgayTao_DonTu_View.Text = DT.Bngaytao.Day.ToString() + "/" + DT.Bngaytao.Month.ToString() + "/" + DT.Bngaytao.Year.ToString();
+                    //taoho
+                    if(DT.Btaoho == 1)
+                    {
+                        labelTaoHo_DonTu_View.Text = "Tạo hộ";
+                        labelTaoHo_Sua_DonTu_View.Text = "Tạo hộ";
+                    }
+                    else
+                    {
+                        labelTaoHo_DonTu_View.Text = "Tạo cho mình";
+                        labelTaoHo_Sua_DonTu_View.Text = "Tạo cho mình";
+                    }
+                    //mã nhân viên
+                    labelMaNV_DonTu_View.Text = DT.Bmanv;
+                    labelMaNV_Sua_DonTu_View.Text = DT.Bmanv;
+                    //tên nhân viên
+                    labelTenNV_DonTu_View.Text = DT.tennhanvien;
+                    labelTenNV_Sua_DonTu_View.Text = DT.tennhanvien;
+                    ///Tên Người Tạo
+                    labelTenNguoiTao_DonTu_View.Text = DT.tennguoilap;
+                    labelTenNguoiTao_Sua_DonTu_View.Text = DT.tennguoilap;
+                    //lydo
+                    labelLyDo_DonTu_View.Text = DT.Blydo;
+                    comboBoxLyDo_Sua_DonTu_View.Text = DT.Blydo;
+
+                    //NguoiDuyet
+                    labelNguoiDuyet_DonTu_View.Text = DT.tennguoiduyet;
+                    //tý làm nhaaaa
+                    comboBoxNguoiDuyet_Sua_DonTu_View.SelectedIndex = comboBoxNguoiDuyet_Sua_DonTu_View.FindStringExact(DT.tennguoiduyet);
+                    //Ngaybd
+                    dateTimePickerNgayBD_Sua_DonTu_View.Value = DT.Bngaybd;
+                    labelNgayBD_DonTu_View.Text = DT.Bngaybd.Day.ToString() + "/" + DT.Bngaybd.Month.ToString() + "/" + DT.Bngaybd.Year.ToString();
+                    //NgayKT
+                    dateTimePickerNgayKT_Sua_DonTu_View.Value = DT.Bngaykt;
+                    labelNgayKT_DonTu_View.Text = DT.Bngaykt.Day.ToString() + "/" + DT.Bngaykt.Month.ToString() + "/" + DT.Bngaykt.Year.ToString();
+                    //
+                    if (DT.Bloaidon == "DTXN  ")
+                    {
+                        labelGioBD_DonTu_View.Text = "";
+                        labelGioKT_DonTu_View.Text = "";
+                        
+                    }
+                    else
+                    {
+                        labelGioBD_DonTu_View.Text = DT.Bgiobd.Hour.ToString() + ":" + DT.Bgiobd.Minute.ToString();
+                        labelGioKT_DonTu_View.Text = DT.Bgiokt.Hour.ToString() + ":" + DT.Bgiokt.Minute.ToString();
+                    }
+                   
+                    if (DT.Btinhcong == 1)
+                    {
+                        labelTinhCong_DonTu_View.Text = "Có tính công";
+                        labelTinhCong_Sua_DonTu_View.Text = "Có tính công";
+                    }
+                    else
+                    {
+                        labelTinhCong_DonTu_View.Text = "Không tính công";
+                        labelTinhCong_Sua_DonTu_View.Text = "Không tính công";
+                    }
+                    labelTrangThai_DonTu_View.Text = DT.Btrangthai;
+                    labelTrangThai_Sua_DonTu_View.Text = DT.Btrangthai;
+                    //MOTA
+                    labelMoTa_DonTu_View.Text = DT.Bmota;
+                    textBoxMoTa_Sua_DonTu_View.Text = DT.Bmota;
+                }
+                catch
+                {
+                    MessageBox.Show("Lỗi truy xuất!");
+                }
+                
+            }
+        }
+
+        public void ClearThongTinDonTuView()
+        {
+            labelGhiChu_TieuDe_DonTu_View.Text = "";
+            labelMaDon_DonTu_View.Text = "";
+            labelLoaiDon_DonTu_View.Text = "";
+            labelNgayTao_DonTu_View.Text = "";
+            labelTaoHo_DonTu_View.Text = "";
+            labelMaNV_DonTu_View.Text = "";
+            labelTenNV_DonTu_View.Text = "";
+            labelTenNguoiTao_DonTu_View.Text = "";
+            labelLyDo_DonTu_View.Text = "";
+            labelNguoiDuyet_DonTu_View.Text = "";
+            labelNgayBD_DonTu_View.Text = "";
+            labelNgayKT_DonTu_View.Text = "";
+            labelGioBD_DonTu_View.Text = "";
+            labelGioKT_DonTu_View.Text = "";
+            labelTinhCong_DonTu_View.Text = "";
+            labelTrangThai_DonTu_View.Text = "";
+            labelMoTa_DonTu_View.Text = "";
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            panelSuaThongTinDonTu_DonTu_View.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            panelSuaThongTinDonTu_DonTu_View.Hide();
+        }
+
+        private void buttonLuu_Sua_DonTu_View_Click(object sender, EventArgs e)
+        {
+            DateTime giobd = new DateTime();
+            DateTime giokt = new DateTime();
+            if (DT.Bloaidon == "DTXN  ")
+            {
+
+                giobd = new DateTime(2000, 1, 1, 0, 0, 0);
+                giokt = new DateTime(2000, 1, 1, 0, 0, 0);
+
+            }
+            else
+            {
+                giobd = new DateTime(2000, 1, 1, Convert.ToInt32(comboBoxGioBD_Sua_DonTu_View.Text), Convert.ToInt32(comboBoxPhutBD_Sua_DonTu_View.Text), 0);
+                giokt = new DateTime(2000, 1, 1, Convert.ToInt32(comboBoxGioKT_Sua_DonTu_View.Text), Convert.ToInt32(comboBoxPhutKT_Sua_DonTu_View.Text), 0);
+            }
+            
+            try
+            {
+                int kt = DT.SuaDonTuBLL(labelMaDon_Sua_DonTu_View.Text, textBoxTieuDe_Sua_DonTu_View.Text, comboBoxNguoiDuyet_Sua_DonTu_View.SelectedValue.ToString(), (DateTime)dateTimePickerNgayBD_Sua_DonTu_View.Value, dateTimePickerNgayKT_Sua_DonTu_View.Value, giobd, giokt, textBoxMoTa_Sua_DonTu_View.Text, comboBoxLyDo_Sua_DonTu_View.Text);
+                if (kt == 1)
+                {
+                    MessageBox.Show("Đã Sửa Thành Công");
+                }
+                else
+                {
+                    MessageBox.Show("Sửa Thất Bại!");
+                }
+            
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi truy xuất!");
+            }
+            loadDonTuView();
+            panelSuaThongTinDonTu_DonTu_View.Hide();
+        }
+
+        ///xoa don tu
+        private void buttonXoa_DonTu_View_Click(object sender, EventArgs e)
+        {
+            if (labelMaDon_DonTu_View.Text == "")
+            {
+                MessageBox.Show("chọn một đơn cần xóa");
+                return;
+            }
+
+            DialogResult dialogResult = MessageBox.Show("Bạn xóa đơn này không?", "Thông báo", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    int kt = DT.XoaDonTuBLL(labelMaDon_Sua_DonTu_View.Text);
+                    if (kt == 1)
+                    {
+                        MessageBox.Show("Đã Xóa Thành Công");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa Thất Bại!");
+                    }
+
+                }
+                catch
+                {
+                    MessageBox.Show("Lỗi truy xuất!");
+                }
+                loadDonTuView();
+            }
+        }
+
+
+
+
+    }///////////////////////////////////
 }

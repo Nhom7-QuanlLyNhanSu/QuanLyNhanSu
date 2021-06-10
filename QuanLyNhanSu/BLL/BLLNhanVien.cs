@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using System.Data;
 
 namespace BLL
 {
@@ -47,6 +48,14 @@ namespace BLL
             BLLmahd = NV.DALmahd;
             BLLhinh = NV.DALhinh;
             machuvu = NV.machucvu;
+
         }
-    }
+
+        public DataTable LoadMaTenNVBLL()
+        {
+            return NV.LoadMaTenNVDAL();
+        }
+
+
+    }////
 }

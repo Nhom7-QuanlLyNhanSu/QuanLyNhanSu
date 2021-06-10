@@ -14,13 +14,15 @@ namespace DAL
         DataQuanLyNhanSu qlns = new DataQuanLyNhanSu();
         LOAIDONTUTableAdapter loaidontu = new LOAIDONTUTableAdapter();
         DONTUTableAdapter dontuadapter = new DONTUTableAdapter();
+        DALLoaiDonTu loaidon = new DALLoaiDonTu();
+        DALNhanVien nv = new DALNhanVien();
 
         public string Dmanv;    //MANV CHAR(6),
         public string Dmadon;    //MADON CHAR(6),
         public string Dloaidon;    //MALOAIDON CHAR(6),
         public string Dnguoilap;    //NGUOILAP CHAR(6),
         public int Dtaoho;    //TAOHO INT,
-        public string Dnguouduyet;    //NGUOIDUYET CHAR(6),
+        public string Dnguoiduyet;    //NGUOIDUYET CHAR(6),
         public DateTime Dngaytao;    //NGAYTAO DATETIME,
         public string Dtrangthai;    //TRANGTHAI NVARCHAR(30),
         public string Dghichu;    //GHICHU NVARCHAR(50),
@@ -33,6 +35,23 @@ namespace DAL
         public int Dtinhcong;        //TINHCONG INT,
         public string Dmota;        //MOTA NVARCHAR(200),
         public int Dphat;        //PHAT INT,
+        /// <summary>
+        /// thong tin them
+        public string tenloaidon;
+        public string tennhanvien;
+        public string tennguoilap;
+        public string tennguoiduyet;
+        /// </summary>
+
+
+        public List<DonTuItem> dsdontu = new List<DonTuItem>();
+
+        public List<DonTuItem> Dsdontu
+        {
+            get { return dsdontu; }
+            set { dsdontu = value; }
+        }
+
 
         public DALDonTu()
         { 
@@ -64,5 +83,202 @@ namespace DAL
         //public int 
         ///
         ///
-    }
+
+        /// list don tu
+        /// 
+        public void ListDonTuOfManvDAL(string manv)
+        {
+            dsdontu = new List<DonTuItem>();
+            using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
+            {
+
+                    var dontu = from DONTU in db.DONTUs
+                                .Where(M => M.MANV.Equals(manv))
+                                    select new
+                                    {
+                                        MA_NV = DONTU.MANV,
+                                        MA_DON = DONTU.MADON,
+                                        LOAI_DON = DONTU.MALOAIDON,
+                                        NGUOI_LAP = DONTU.NGUOILAP,
+                                        TAO_HO  = DONTU.TAOHO,
+                                        NGUOI_DUYET = DONTU.NGUOIDUYET,
+                                        NGAY_TAO = DONTU.NGAYTAO,
+                                        TRANG_THAI = DONTU.TRANGTHAI,
+                                        GHI_CHU = DONTU.GHICHU,
+                                    };
+
+                    int i = 0;
+                    foreach (var chitiet in dontu)
+                    {
+                        //CaItem itemCa = new CaItem();
+
+                        string tendon = loaidon.DALTenLoaiDon(chitiet.LOAI_DON);
+                        string tennv = nv.DALTenNhanVien(chitiet.MA_NV);
+                        string tennvLap = nv.DALTenNhanVien(chitiet.NGUOI_LAP);
+                        string tennvDuyet = nv.DALTenNhanVien(chitiet.NGUOI_DUYET);
+                        //CaItem itemCa = new CaItem();
+                        DonTuItem item = new DonTuItem(chitiet.MA_DON, chitiet.MA_NV, tennv, tendon, tennvLap, Convert.ToInt32(chitiet.TAO_HO), tennvDuyet, (DateTime)chitiet.NGAY_TAO, chitiet.TRANG_THAI, chitiet.GHI_CHU);
+                        dsdontu.Add(item);
+                    }
+            } 
+
+        }
+
+
+
+        public void ListDonTuOfDayDAL(DateTime ngaytao)
+        {
+            dsdontu = new List<DonTuItem>();
+            using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
+            {
+
+                var dontu = from DONTU in db.DONTUs
+                            .Where(M => M.NGAYTAO.Equals(ngaytao))
+                            select new
+                            {
+                                MA_NV = DONTU.MANV,
+                                MA_DON = DONTU.MADON,
+                                LOAI_DON = DONTU.MALOAIDON,
+                                NGUOI_LAP = DONTU.NGUOILAP,
+                                TAO_HO = DONTU.TAOHO,
+                                NGUOI_DUYET = DONTU.NGUOIDUYET,
+                                NGAY_TAO = DONTU.NGAYTAO,
+                                TRANG_THAI = DONTU.TRANGTHAI,
+                                GHI_CHU = DONTU.GHICHU,
+                            };
+
+                int i = 0;
+                foreach (var chitiet in dontu)
+                {
+                    //CaItem itemCa = new CaItem();
+
+                    string tendon = loaidon.DALTenLoaiDon(chitiet.LOAI_DON);
+                    string tennv = nv.DALTenNhanVien(chitiet.MA_NV);
+                    string tennvLap = nv.DALTenNhanVien(chitiet.NGUOI_LAP);
+                    string tennvDuyet = nv.DALTenNhanVien(chitiet.NGUOI_DUYET);
+                    //CaItem itemCa = new CaItem();
+                    DonTuItem item = new DonTuItem(chitiet.MA_DON, chitiet.MA_NV, tennv, tendon, tennvLap, Convert.ToInt32(chitiet.TAO_HO), tennvDuyet, (DateTime)chitiet.NGAY_TAO, chitiet.TRANG_THAI, chitiet.GHI_CHU);
+                    dsdontu.Add(item);
+                }
+            }
+
+        }
+
+        
+        ///Chi tiet đơn từ nè!!!
+        public void ChiTietDonTuDAL(string madon)
+        {
+            using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
+            {
+
+               
+                CHITIETDONTU thongtin = db.CHITIETDONTUs.SingleOrDefault(NV => NV.MADON.Equals(madon));
+                Dmadon = thongtin.MADON;                //public string Dmadt    //MADON CHAR(6),
+                Dlydo = thongtin.LYDO;                  //public string Dlydo;    //LYDO NVARCHAR(60),
+                Dngaybd = (DateTime)thongtin.NGAYBD;    //public DateTime Dngaybd;        //NGAYBD DATETIME,
+                Dngaykt = (DateTime)thongtin.NGAYKT;    //public DateTime Dngaykt;        //NGAYKT DATETIME,
+                if (thongtin.GIOBD != null)
+                {
+                    Dgiobd = (DateTime)thongtin.GIOBD;      //public DateTime Dgiobd;        //GIOBD DATETIME,
+                    Dgiobd = (DateTime)thongtin.GIOKT;      //public DateTime Dgiokt;        //GIOKT DATETIME,
+                }
+                Dtinhcong =Convert.ToInt32( thongtin.TINHCONG);          //public int Dtinhcong;        //TINHCONG INT,
+                Dmota = thongtin.MOTA;                   //public string Dmota;        //MOTA NVARCHAR(200),
+                Dphat = Convert.ToInt32(thongtin.PHAT);  //public int Dphat;        //PHAT INT,
+              
+            }
+
+        }
+
+        /// THONG TIN CHUNG DO TU
+        public void ThongTinDonTuDAL(string madon)
+        {
+            using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
+            {
+                DONTU thongtin = db.DONTUs.SingleOrDefault(NV => NV.MADON.Equals(madon));
+                Dmanv = thongtin.MANV;                //public string Dmanv;    //MANV CHAR(6),
+                Dmadon = thongtin.MADON;                //public string Dmadon;    //MADON CHAR(6),
+                Dloaidon = thongtin.MALOAIDON;                //public string Dloaidon;    //MALOAIDON CHAR(6),
+                Dnguoilap = thongtin.NGUOILAP;                //public string Dnguoilap;    //NGUOILAP CHAR(6),
+                Dtaoho = Convert.ToInt32(thongtin.TAOHO);                //public int Dtaoho;    //TAOHO INT,
+                Dnguoiduyet = thongtin.NGUOIDUYET;                //public string Dnguoiduyet;    //NGUOIDUYET CHAR(6),
+                Dngaytao = (DateTime)thongtin.NGAYTAO;                 //public DateTime Dngaytao;    //NGAYTAO DATETIME,
+                Dtrangthai = thongtin.TRANGTHAI;                //public string Dtrangthai;    //TRANGTHAI NVARCHAR(30),
+                Dghichu = thongtin.GHICHU;                //public string Dghichu;    //GHICHU NVARCHAR(50)
+                /////
+                tenloaidon = loaidon.DALTenLoaiDon(thongtin.MALOAIDON);
+                tennhanvien = nv.DALTenNhanVien(thongtin.MANV);
+                tennguoilap = nv.DALTenNhanVien(thongtin.NGUOILAP);
+                tennguoiduyet = nv.DALTenNhanVien(thongtin.NGUOIDUYET);
+            }
+
+        }
+
+        ////SUA return 0 that bai / return 1 thanh cong
+        public int SuaDonTuDAL(string madon ,string tieude, string nguoiduyet, DateTime ngaybd, DateTime ngaykt, DateTime giobd, DateTime giokt, string mota, string lydo)
+        {
+            using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
+            {
+                
+                DONTU DTmoi = db.DONTUs
+                    .Where(r => r.MADON == madon)
+                    .First();
+
+                DTmoi.GHICHU = tieude;
+                DTmoi.NGUOIDUYET = nguoiduyet;
+
+                db.SubmitChanges();
+
+                CHITIETDONTU CTmoi = db.CHITIETDONTUs
+                    .Where(r => r.MADON == madon)
+                    .First();
+
+                CTmoi.NGAYBD = ngaybd;
+                CTmoi.NGAYKT =ngaykt;
+                CTmoi.GIOBD = giobd;
+                CTmoi.GIOKT = giokt;
+                CTmoi.MOTA = mota;
+                CTmoi.LYDO = lydo;
+
+                db.SubmitChanges();
+                return 1;
+            }
+
+            return 0;
+        }
+
+
+
+        ///XOA
+        public int XoaDonTuDAL(string madon)
+        {
+            using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
+            {
+                try
+                {
+                    DONTU DTmoi = db.DONTUs
+                        .Where(r => r.MADON == madon)
+                        .First();
+                    db.DONTUs.DeleteOnSubmit(DTmoi);
+
+                    CHITIETDONTU CTmoi = db.CHITIETDONTUs
+                    .Where(r => r.MADON == madon)
+                    .First();
+                    db.CHITIETDONTUs.DeleteOnSubmit(CTmoi);
+                    db.SubmitChanges();
+
+                    return 1;
+                }
+                catch
+                {
+                    return 0;
+                }
+            }
+            
+        }
+
+
+
+
+    }////////////////////////////////////////
 }

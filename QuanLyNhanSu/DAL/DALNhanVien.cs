@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL.DataQuanLyNhanSuTableAdapters;
 
 namespace DAL
 {
     public class DALNhanVien
     {
+        NHANVIENTableAdapter nhanvien = new NHANVIENTableAdapter();
+
         public string DALtenNV;
         public string DALmaNV;
         public string DALchucvu;
@@ -63,6 +67,22 @@ namespace DAL
                                 
                                 
             }
+        }
+
+        public string DALTenNhanVien(string ma)
+        {
+            using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
+            {
+
+                NHANVIEN thongtin = db.NHANVIENs.SingleOrDefault(NV => NV.MANV.Equals(ma));
+                return thongtin.TENNV;
+                
+            }
+        }
+
+        public DataTable LoadMaTenNVDAL()
+        {
+            return nhanvien.GetMATENNV();
         }
         
     }

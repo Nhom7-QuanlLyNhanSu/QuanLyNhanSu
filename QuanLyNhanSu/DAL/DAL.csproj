@@ -46,6 +46,7 @@
     <Compile Include="DALDangNhap.cs" />
     <Compile Include="DALDonTu.cs" />
     <Compile Include="DALHongDong.cs" />
+    <Compile Include="DALLoaiDonTu.cs" />
     <Compile Include="DALNhanVien.cs" />
     <Compile Include="DALQLNhanVien.cs" />
     <Compile Include="DALQLPhongBan.cs" />
@@ -54,6 +55,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataQuanLyNhanSu.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DonTuItem.cs" />
     <Compile Include="LINQquanLyNhanSu.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
