@@ -50,6 +50,7 @@
     <Compile Include="BLLNhanVien.cs" />
     <Compile Include="BLLPhongBan.cs" />
     <Compile Include="BLLQLNhanVien.cs" />
+    <Compile Include="BLLThongBao.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DangNhapBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

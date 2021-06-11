@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Linq.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,8 +10,18 @@ namespace DAL
     public class DALDangNhap
     {
         public string madn;
+        public string pass;
+        public int hoatdong;
         public DALDangNhap()
         { 
+        }
+
+        private List<TaiKhanItem> dstaikhoan = new List<TaiKhanItem>();
+
+        public List<TaiKhanItem> Dstaikhoan
+        {
+            get { return dstaikhoan; }
+            set { dstaikhoan = value; }
         }
 
         public int DangNhap(string manv, string makhau) // return 0: chua nhap text ; return 1: Dang nhap thanh cong; return 2: tk bi khoa; return 3: user mat khau sai
@@ -88,5 +99,105 @@ namespace DAL
         }
 
 
-    }
+        public void ListTaiKhoanDAL()
+        {
+            dstaikhoan = new List<TaiKhanItem>();
+            using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
+            {
+
+                var tk = from TAIKHOAN in db.TAIKHOANs
+
+                            select new
+                            {
+                                MA_NV = TAIKHOAN.MANV,
+                                PAS_S = TAIKHOAN.MAKHAU,
+                                H_DONG = TAIKHOAN.TRANGTHAI,
+                               
+                            };
+
+                int i = 0;
+                foreach (var chitiet in tk)
+                {
+                    //CaItem itemCa = new CaItem();
+                    TaiKhanItem item = new TaiKhanItem(chitiet.MA_NV, chitiet.PAS_S, Convert.ToInt32(chitiet.H_DONG));
+                    dstaikhoan.Add(item);
+                }
+            }
+        }
+        //tìm theo ma dang nhap
+        public void ListTaiKhoanByMaDNDAL(string madn)
+        {
+            dstaikhoan = new List<TaiKhanItem>();
+            using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
+            {
+
+                var tk = from TAIKHOAN in db.TAIKHOANs
+                         where SqlMethods.Like(TAIKHOAN.MANV, "%" + madn + "%")
+                         select new
+                         {
+                             MA_NV = TAIKHOAN.MANV,
+                             PAS_S = TAIKHOAN.MAKHAU,
+                             H_DONG = TAIKHOAN.TRANGTHAI,
+
+                         };
+
+                int i = 0;
+                foreach (var chitiet in tk)
+                {
+                    //CaItem itemCa = new CaItem();
+                    TaiKhanItem item = new TaiKhanItem(chitiet.MA_NV, chitiet.PAS_S, Convert.ToInt32(chitiet.H_DONG));
+                    dstaikhoan.Add(item);
+                }
+            }
+        }
+
+        ///load thong tin mot taikhoan
+        ///Chi tiet đơn từ nè!!!
+        public void LoadThongTinTaiKhoanDAL(string madn)
+        {
+            using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
+            {
+                TAIKHOAN thongtin = db.TAIKHOANs.SingleOrDefault(NV => NV.MANV.Equals(madn));
+                madn = thongtin.MANV;
+                pass = thongtin.MAKHAU;
+                hoatdong = Convert.ToInt32(thongtin.TRANGTHAI);
+
+            }
+
+        }
+
+        ////SUA return 0 that bai / return 1 thanh cong
+        public int SuaTaiKhoanDAL(string madn, int trangthai)
+        {
+            using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
+            {
+
+                TAIKHOAN TKmoi = db.TAIKHOANs
+                    .Where(r => r.MANV == madn)
+                    .First();
+
+                TKmoi.TRANGTHAI = trangthai;
+               
+
+                db.SubmitChanges();
+                return 1;
+            }
+
+            return 0;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }///////////////////////////////////////////
 }

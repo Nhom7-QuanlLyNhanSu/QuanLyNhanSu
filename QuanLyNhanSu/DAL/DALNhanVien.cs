@@ -85,6 +85,22 @@ namespace DAL
             }
         }
 
+        public string DALHinhNhanVien(string ma)
+        {
+            using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
+            {
+                try
+                {
+                    NHANVIEN thongtin = db.NHANVIENs.SingleOrDefault(NV => NV.MANV.Equals(ma));
+                    return thongtin.HINHANH;
+                }
+                catch
+                {
+                    return "avartar.png";
+                }
+            }
+        }
+
         public DataTable LoadMaTenNVDAL()
         {
             return nhanvien.GetMATENNV();

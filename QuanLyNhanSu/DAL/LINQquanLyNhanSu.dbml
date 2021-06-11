@@ -26,6 +26,7 @@
       <Column Name="MANV" Type="System.String" DbType="Char(6)" CanBeNull="true" />
       <Column Name="TIEUDE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="NOIDUNG" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Association Name="THONGBAO_CHITIETTHONGBAO" Member="CHITIETTHONGBAOs" ThisKey="MATB" OtherKey="MATB" Type="CHITIETTHONGBAO" />
       <Association Name="NHANVIEN_THONGBAO" Member="NHANVIEN" ThisKey="NGUOITAO" OtherKey="MANV" Type="NHANVIEN" IsForeignKey="true" />
       <Association Name="NHANVIEN_THONGBAO1" Member="NHANVIEN1" ThisKey="MANV" OtherKey="MANV" Type="NHANVIEN" IsForeignKey="true" />
       <Association Name="PHONGBAN_THONGBAO" Member="PHONGBAN" ThisKey="MAPB" OtherKey="MAPH" Type="PHONGBAN" IsForeignKey="true" />
@@ -81,6 +82,14 @@
       <Association Name="CALAMVIEC_CHITIETPHANCONG" Member="CALAMVIEC" ThisKey="MACA" OtherKey="MACA" Type="CALAMVIEC" IsForeignKey="true" />
       <Association Name="NHANVIEN_CHITIETPHANCONG" Member="NHANVIEN" ThisKey="MANV" OtherKey="MANV" Type="NHANVIEN" IsForeignKey="true" />
       <Association Name="PHANCONG_CHITIETPHANCONG" Member="PHANCONG" ThisKey="MAPC" OtherKey="MAPC" Type="PHANCONG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHITIETTHONGBAO" Member="CHITIETTHONGBAOs">
+    <Type Name="CHITIETTHONGBAO">
+      <Column Name="MATB" Type="System.String" DbType="Char(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MANV" Type="System.String" DbType="Char(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="THONGBAO_CHITIETTHONGBAO" Member="THONGBAO" ThisKey="MATB" OtherKey="MATB" Type="THONGBAO" IsForeignKey="true" />
+      <Association Name="NHANVIEN_CHITIETTHONGBAO" Member="NHANVIEN" ThisKey="MANV" OtherKey="MANV" Type="NHANVIEN" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.CHUCVU" Member="CHUCVUs">
@@ -147,6 +156,7 @@
       <Association Name="NHANVIEN_THONGBAO1" Member="THONGBAOs1" ThisKey="MANV" OtherKey="MANV" Type="THONGBAO" />
       <Association Name="NHANVIEN_CHAMCONG" Member="CHAMCONGs" ThisKey="MANV" OtherKey="MANV" Type="CHAMCONG" />
       <Association Name="NHANVIEN_CHITIETPHANCONG" Member="CHITIETPHANCONGs" ThisKey="MANV" OtherKey="MANV" Type="CHITIETPHANCONG" />
+      <Association Name="NHANVIEN_CHITIETTHONGBAO" Member="CHITIETTHONGBAOs" ThisKey="MANV" OtherKey="MANV" Type="CHITIETTHONGBAO" />
       <Association Name="NHANVIEN_DONTU" Member="DONTUs" ThisKey="MANV" OtherKey="MANV" Type="DONTU" />
       <Association Name="NHANVIEN_DONTU1" Member="DONTUs1" ThisKey="MANV" OtherKey="NGUOIDUYET" Type="DONTU" />
       <Association Name="NHANVIEN_DONTU2" Member="DONTUs2" ThisKey="MANV" OtherKey="NGUOILAP" Type="DONTU" />
@@ -154,7 +164,7 @@
       <Association Name="NHANVIEN_PHANCONG1" Member="PHANCONGs1" ThisKey="MANV" OtherKey="MANVTAO" Type="PHANCONG" />
       <Association Name="NHANVIEN_PHONGBAN" Member="PHONGBANs" ThisKey="MANV" OtherKey="TRUONGPHONG" Type="PHONGBAN" />
       <Association Name="NHANVIEN_QUATRINHLUONG" Member="QUATRINHLUONGs" ThisKey="MANV" OtherKey="MANV" Type="QUATRINHLUONG" />
-      <Association Name="NHANVIEN_TAIKHOAN" Member="TAIKHOAN" ThisKey="MANV" OtherKey="MANV" Type="TAIKHOAN" Cardinality="One" />
+      <Association Name="NHANVIEN_TAIKHOAN" Member="TAIKHOANs" ThisKey="MANV" OtherKey="MANV" Type="TAIKHOAN" />
       <Association Name="CHUCVU_NHANVIEN" Member="CHUCVU" ThisKey="MACHUCVU" OtherKey="MACHUCVU" Type="CHUCVU" IsForeignKey="true" />
       <Association Name="HOPDONG_NHANVIEN" Member="HOPDONG" ThisKey="MAHD" OtherKey="MAHD" Type="HOPDONG" IsForeignKey="true" />
       <Association Name="PHONGBAN_NHANVIEN" Member="PHONGBAN" ThisKey="MAPH" OtherKey="MAPH" Type="PHONGBAN" IsForeignKey="true" />
@@ -200,7 +210,7 @@
   <Table Name="dbo.TAIKHOAN" Member="TAIKHOANs">
     <Type Name="TAIKHOAN">
       <Column Name="MANV" Type="System.String" DbType="Char(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MAKHAU" Type="System.String" DbType="Char(6)" CanBeNull="true" />
+      <Column Name="MAKHAU" Type="System.String" DbType="Char(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TRANGTHAI" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="NHANVIEN_TAIKHOAN" Member="NHANVIEN" ThisKey="MANV" OtherKey="MANV" Type="NHANVIEN" IsForeignKey="true" />
     </Type>

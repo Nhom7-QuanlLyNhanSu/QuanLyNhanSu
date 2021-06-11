@@ -68,6 +68,12 @@
     <Compile Include="ADAY.Designer.cs">
       <DependentUpon>ADAY.cs</DependentUpon>
     </Compile>
+    <Compile Include="AThongBao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AThongBao.Designer.cs">
+      <DependentUpon>AThongBao.cs</DependentUpon>
+    </Compile>
     <Compile Include="CaData.cs" />
     <Compile Include="CaItem.cs" />
     <Compile Include="Cons.cs" />
@@ -106,6 +112,9 @@
     <None Include="DataNhanSu.dbml.layout">
       <DependentUpon>DataNhanSu.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="AThongBao.resx">
+      <DependentUpon>AThongBao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DailyCa.resx">
       <DependentUpon>DailyCa.cs</DependentUpon>
     </EmbeddedResource>

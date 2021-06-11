@@ -84,7 +84,7 @@ namespace DAL
         ///
         ///
 
-        /// list don tu
+        /// list don tu theo manv
         /// 
         public void ListDonTuOfManvDAL(string manv)
         {
@@ -93,7 +93,7 @@ namespace DAL
             {
 
                     var dontu = from DONTU in db.DONTUs
-                                .Where(M => M.MANV.Equals(manv))
+                                .Where(M => M.NGUOILAP.Equals(manv))
                                     select new
                                     {
                                         MA_NV = DONTU.MANV,
@@ -124,16 +124,16 @@ namespace DAL
 
         }
 
-
-
-        public void ListDonTuOfDayDAL(DateTime ngaytao)
+        /// list don tu all
+        /// 
+        public void ListDonTuAllDAL()
         {
             dsdontu = new List<DonTuItem>();
             using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
             {
 
                 var dontu = from DONTU in db.DONTUs
-                            .Where(M => M.NGAYTAO.Equals(ngaytao))
+                            orderby DONTU.NGAYTAO descending
                             select new
                             {
                                 MA_NV = DONTU.MANV,
@@ -164,6 +164,102 @@ namespace DAL
 
         }
 
+
+        // list dontu theo ngay 
+        public bool isEqualDate(DateTime dateA, DateTime dateB)
+        {
+
+            return dateA.Year == dateB.Year && dateA.Month == dateB.Month && dateA.Day == dateB.Day;
+        }
+
+        public void ListDonTuOfDayDAL(DateTime ngaytao, string manv)
+        {
+            try
+            {
+                dsdontu = new List<DonTuItem>();
+                using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
+                {
+
+                    var dontu = from DONTU in db.DONTUs
+                                //.Where(M => M.NGAYTAO.Equals(ngaytao))
+                                .Where(M => ((DateTime)M.NGAYTAO).Day.Equals(ngaytao.Day) && ((DateTime)M.NGAYTAO).Month.Equals(ngaytao.Month) && M.NGUOILAP.Equals(manv))
+                                select new
+                                {
+                                    MA_NV = DONTU.MANV,
+                                    MA_DON = DONTU.MADON,
+                                    LOAI_DON = DONTU.MALOAIDON,
+                                    NGUOI_LAP = DONTU.NGUOILAP,
+                                    TAO_HO = DONTU.TAOHO,
+                                    NGUOI_DUYET = DONTU.NGUOIDUYET,
+                                    NGAY_TAO = DONTU.NGAYTAO,
+                                    TRANG_THAI = DONTU.TRANGTHAI,
+                                    GHI_CHU = DONTU.GHICHU,
+                                };
+
+                    int i = 0;
+                    foreach (var chitiet in dontu)
+                    {
+                        //CaItem itemCa = new CaItem();
+
+                        string tendon = loaidon.DALTenLoaiDon(chitiet.LOAI_DON);
+                        string tennv = nv.DALTenNhanVien(chitiet.MA_NV);
+                        string tennvLap = nv.DALTenNhanVien(chitiet.NGUOI_LAP);
+                        string tennvDuyet = nv.DALTenNhanVien(chitiet.NGUOI_DUYET);
+                        //CaItem itemCa = new CaItem();
+                        DonTuItem item = new DonTuItem(chitiet.MA_DON, chitiet.MA_NV, tennv, tendon, tennvLap, Convert.ToInt32(chitiet.TAO_HO), tennvDuyet, (DateTime)chitiet.NGAY_TAO, chitiet.TRANG_THAI, chitiet.GHI_CHU);
+                        dsdontu.Add(item);
+                    }
+                }
+            }
+            catch { }
+            
+
+        }
+
+        ///list don by day all
+        public void ListDonTuOfDayAllDAL(DateTime ngaytao)
+        {
+            try
+            {
+                dsdontu = new List<DonTuItem>();
+                using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
+                {
+
+                    var dontu = from DONTU in db.DONTUs
+                                    //.Where(M => M.NGAYTAO.Equals(ngaytao))
+                                .Where(M => ((DateTime)M.NGAYTAO).Day.Equals(ngaytao.Day) && ((DateTime)M.NGAYTAO).Month.Equals(ngaytao.Month))
+                                select new
+                                {
+                                    MA_NV = DONTU.MANV,
+                                    MA_DON = DONTU.MADON,
+                                    LOAI_DON = DONTU.MALOAIDON,
+                                    NGUOI_LAP = DONTU.NGUOILAP,
+                                    TAO_HO = DONTU.TAOHO,
+                                    NGUOI_DUYET = DONTU.NGUOIDUYET,
+                                    NGAY_TAO = DONTU.NGAYTAO,
+                                    TRANG_THAI = DONTU.TRANGTHAI,
+                                    GHI_CHU = DONTU.GHICHU,
+                                };
+
+                    int i = 0;
+                    foreach (var chitiet in dontu)
+                    {
+                        //CaItem itemCa = new CaItem();
+
+                        string tendon = loaidon.DALTenLoaiDon(chitiet.LOAI_DON);
+                        string tennv = nv.DALTenNhanVien(chitiet.MA_NV);
+                        string tennvLap = nv.DALTenNhanVien(chitiet.NGUOI_LAP);
+                        string tennvDuyet = nv.DALTenNhanVien(chitiet.NGUOI_DUYET);
+                        //CaItem itemCa = new CaItem();
+                        DonTuItem item = new DonTuItem(chitiet.MA_DON, chitiet.MA_NV, tennv, tendon, tennvLap, Convert.ToInt32(chitiet.TAO_HO), tennvDuyet, (DateTime)chitiet.NGAY_TAO, chitiet.TRANG_THAI, chitiet.GHI_CHU);
+                        dsdontu.Add(item);
+                    }
+                }
+            }
+            catch { }
+
+
+        }
         
         ///Chi tiet đơn từ nè!!!
         public void ChiTietDonTuDAL(string madon)
@@ -340,6 +436,33 @@ namespace DAL
                 }
 
             }
+        }
+        //////dUYET dON
+        ////SUA return 0 that bai / return 1 thanh cong
+        public int DuyetDonTuDAL(string madon, string trangthai)
+        {
+            using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
+            {
+                try
+                {
+                    DONTU DTmoi = db.DONTUs
+                    .Where(r => r.MADON == madon)
+                    .First();
+
+                    DTmoi.TRANGTHAI = trangthai;
+
+                    db.SubmitChanges();
+
+                    return 1;
+                }
+                catch
+                {
+                    return 0;
+                }
+                
+            }
+
+           
         }
 
 

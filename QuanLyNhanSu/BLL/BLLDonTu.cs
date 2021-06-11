@@ -71,7 +71,17 @@ namespace BLL
             set { dsdontu = value; }
         }
 
-       
+        public void ListDonTuAllDAL()
+        {
+            dsdontu = new List<DonTuItem>();
+            dt.ListDonTuAllDAL();
+            int i = 0;
+            foreach (var chitiet in dt.dsdontu)
+            {
+                DonTuItem item = new DonTuItem(chitiet.Madon1, chitiet.Manv1, chitiet.Tennv1, chitiet.Loaidon1, chitiet.Nguoilap1, Convert.ToInt32(chitiet.Taoho1), chitiet.Nguoiduyet1, (DateTime)chitiet.Ngaytao1, chitiet.Trangthai1, chitiet.Ghichu1);
+                dsdontu.Add(item);
+            }
+        }
 
         public void ListDonTuOfManvBLL(string manv)
         {
@@ -86,10 +96,10 @@ namespace BLL
             
         }
 
-        public void ListDonTuOfDayBLL(DateTime ngaytao)
+        public void ListDonTuOfDayBLL(DateTime ngaytao, string manv)
         {
             dsdontu = new List<DonTuItem>();
-            dt.ListDonTuOfDayDAL(ngaytao);
+            dt.ListDonTuOfDayDAL(ngaytao, manv);
             int i = 0;
             foreach (var chitiet in dt.dsdontu)
             {
@@ -99,6 +109,18 @@ namespace BLL
 
         }
 
+        public void ListDonTuOfDayAllBLL(DateTime ngaytao)
+        {
+            dsdontu = new List<DonTuItem>();
+            dt.ListDonTuOfDayAllDAL(ngaytao);
+            int i = 0;
+            foreach (var chitiet in dt.dsdontu)
+            {
+                DonTuItem item = new DonTuItem(chitiet.Madon1, chitiet.Manv1, chitiet.Tennv1, chitiet.Loaidon1, chitiet.Nguoilap1, Convert.ToInt32(chitiet.Taoho1), chitiet.Nguoiduyet1, (DateTime)chitiet.Ngaytao1, chitiet.Trangthai1, chitiet.Ghichu1);
+                dsdontu.Add(item);
+            }
+
+        }
 
         ///Chi tiet đơn từ nè!!!
         public void ChiTietDonTuBLL(string madon)
@@ -142,6 +164,16 @@ namespace BLL
         public int SuaDonTuBLL(string madon, string tieude, string nguoiduyet, DateTime ngaybd, DateTime ngaykt, DateTime giobd, DateTime giokt, string mota, string lydo)
         {
             int kt = dt.SuaDonTuDAL(madon, tieude,  nguoiduyet,  ngaybd,  ngaykt,  giobd,  giokt,  mota, lydo );
+            if (kt == 1)
+                return 1;
+            else
+                return 0;
+        }
+
+
+        public int DuyetDonTuBLL(string madon,  string trangthai)
+        {
+            int kt = dt.DuyetDonTuDAL(madon, trangthai);
             if (kt == 1)
                 return 1;
             else

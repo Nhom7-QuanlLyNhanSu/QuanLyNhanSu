@@ -39,7 +39,7 @@ namespace GUI
                 DialogResult rs = MessageBox.Show("Đăng Nhập Thành Công!!", "Hỏi đáp", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (rs.Equals(DialogResult.Yes))
                 {
-                    madnGUI = dn.madndll;
+                    madnGUI = dn.madnB;
                     MainForm1 f = new MainForm1(madnGUI);
                     f.Show();
                     this.Hide();

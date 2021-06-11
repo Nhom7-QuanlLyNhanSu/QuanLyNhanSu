@@ -22,6 +22,7 @@ namespace GUI
         BLLQLNhanVien nv = new BLLQLNhanVien();
         BLLPhongBan pb = new BLLPhongBan();
         BLLBangPhu BP = new BLLBangPhu();
+        BLLThongBao TB = new BLLThongBao();
 
         string manvdn;
         string chondon;
@@ -1021,7 +1022,7 @@ namespace GUI
 
         private void btnClear_QLNV_Click(object sender, EventArgs e)
         {
-            btnThem_QLNV.Enabled = false;
+            btnThem_QLNV.Enabled = true;
             txtMa_QLNV.Text = "";
             txtTen_QLNV.Text = "";
             dtpNgaySinh_QLNV.Value = DateTime.Now;
@@ -1179,7 +1180,7 @@ namespace GUI
 
             dataGridViewDonTu_DonTuView.DataSource = DT.loadDonTuByNGAYTAOofBLL(date);
 
-            DT.ListDonTuOfDayBLL(date);
+            DT.ListDonTuOfDayBLL(date, manvdn);
 
             foreach (var demo in DT.dsdontu)
             {
@@ -1550,6 +1551,503 @@ namespace GUI
             BP.TangMaBangPhuBLL("MADON ");
 
         }
+
+        ///================================================================================================================================
+        ///                       thông báo                     
+        ///================================================================================================================================
+
+        FlowLayoutPanel fpanelLoadThongBao_ThongBao_view = new FlowLayoutPanel();
+        private void barButtonItemThongBao_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            //navigationPageThongBao
+            navigationFrameMain.SelectedPage = navigationPageThongBao;
+
+            fpanelLoadThongBao_ThongBao_view.Width = panelLoadThongBao_ThongBao_View.Width;
+            fpanelLoadThongBao_ThongBao_view.Height = panelLoadThongBao_ThongBao_View.Width;
+            panelLoadThongBao_ThongBao_View.Controls.Add(fpanelLoadThongBao_ThongBao_view);
+
+
+            ShowListThongBaoByMaNV(manvdn);
+
+        }
+
+        void ShowListThongBaoByMaNV(string manv)
+        {
+            fpanelLoadThongBao_ThongBao_view.Controls.Clear();
+            //////////////////////////////////////
+            TB.ListChiTietThongBaoByMANVBBL(manv);
+
+            foreach (var demo in TB.DsCTthongbaoB)
+            {
+                string matb = demo.ICTmatb1;/////////////////////
+                AThongBao ATB = new AThongBao(matb);
+                fpanelLoadThongBao_ThongBao_view.Controls.Add(ATB);
+            }
+            ////////////////////////
+
+            
+        }
+
+        private void navigationPageDonTu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        ///================================================================================================================================
+        ///                       Duyệt Đơn                     
+        ///================================================================================================================================
+
+        private void barButtonItemDuyetDonTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            navigationFrameMain.SelectedPage = navigationPageDuyetDon_hr;
+
+            loadDuyetDonTuView();
+        }
+
+        public void loadDuyetDonTuView()
+        {
+            listViewDuyetDon_DonTu_HR.Items.Clear();
+            DT.ListDonTuAllDAL();
+
+            foreach (var demo in DT.dsdontu)
+            {
+                listViewDuyetDon_DonTu_HR.Items.Add(new ListViewItem(new string[] { demo.Madon1, demo.Tennv1.ToString(), demo.Loaidon1, demo.Ngaytao1.ToString(), demo.Nguoiduyet1, demo.Trangthai1.ToString() }));
+            }
+            ////////////
+
+            /////////////
+
+        }
+
+        private void listViewDuyetDon_DonTu_HR_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string madon = null;
+
+            if (listViewDuyetDon_DonTu_HR.SelectedItems.Count > 0)
+            {
+                madon = listViewDuyetDon_DonTu_HR.SelectedItems[0].SubItems[0].Text;
+                try
+                {
+                    DT.ChiTietDonTuBLL(madon);
+                    DT.ThongTinDonTuBLL(madon);
+                    //TieuDe
+                    labelTieuDe_DonTu_HR.Text = DT.Bghichu;
+                    //MaDon
+                    labelMaDon_DonTu_HR.Text = DT.Bmadon;
+                    //MaLoai
+                    labelLoaiDon_DonTu_HR.Text = DT.tenloaidon;
+                    //ngaytao
+                    labelNgayTao_DonTu_HR.Text = DT.Bngaytao.Day.ToString() + "/" + DT.Bngaytao.Month.ToString() + "/" + DT.Bngaytao.Year.ToString();
+
+                    //taoho
+                    if (DT.Btaoho == 1)
+                    {
+                        labelTaoHo_DonTu_HR.Text = "Tạo hộ";
+                    }
+                    else
+                    {
+                        labelTaoHo_DonTu_HR.Text = "Tạo cho mình";
+                    }
+                    //mã nhân viên
+                    labelMaNV_DonTu_HR.Text = DT.Bmanv;
+                    //tên nhân viên
+                    labelTenNV_DonTu_HR.Text = DT.tennhanvien;
+                    ///Tên Người Tạo
+                    labelNguoiTao_DonTu_HR.Text = DT.tennguoilap;
+                    //lydo
+                    labelLyDo_DonTu_HR.Text = DT.Blydo;
+
+                    //NguoiDuyet
+                    labelNguoiDuyet_DonTu_HR.Text = DT.tennguoiduyet;
+                    //tý làm nhaaaa
+                    //comboBoxNguoiDuyet_Sua_DonTu_View.SelectedIndex = comboBoxNguoiDuyet_Sua_DonTu_View.FindStringExact(DT.tennguoiduyet);
+                    //Ngaybd
+                    //dateTimePickerNgayBD_Sua_DonTu_View.Value = DT.Bngaybd;
+                    label1NgayBD_DonTu_HR.Text = DT.Bngaybd.Day.ToString() + "/" + DT.Bngaybd.Month.ToString() + "/" + DT.Bngaybd.Year.ToString();
+                    //NgayKT
+                    //dateTimePickerNgayKT_Sua_DonTu_View.Value = DT.Bngaykt;
+                    labelNgayKT_DonTu_HR.Text = DT.Bngaykt.Day.ToString() + "/" + DT.Bngaykt.Month.ToString() + "/" + DT.Bngaykt.Year.ToString();
+                    //
+                    if (DT.Bloaidon == "DTXN  ")
+                    {
+                        label1GioBD_DonTu_HR.Text = "";
+                        labelGioKT_DonTu_HR.Text = "";
+
+                    }
+                    else
+                    {
+                        label1GioBD_DonTu_HR.Text = DT.Bgiobd.Hour.ToString() + ":" + DT.Bgiobd.Minute.ToString();
+                        labelGioKT_DonTu_HR.Text = DT.Bgiokt.Hour.ToString() + ":" + DT.Bgiokt.Minute.ToString();
+                    }
+
+                    if (DT.Btinhcong == 1)
+                    {
+                        labelTinhCong_DonTu_HR.Text = "Có tính công";
+                    }
+                    else
+                    {
+                        labelTinhCong_DonTu_HR.Text = "Không tính công";
+                    }
+                    comboBoxTrangThai_DonTu_HR.Text = DT.Btrangthai;
+                    //MOTA
+                    labelMoTa_DuyetDon_HR.Text = DT.Bmota;
+                }
+                catch
+                {
+                    MessageBox.Show("Lỗi truy xuất!");
+                }
+
+            }
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            if (labelMaDon_DonTu_HR.Text.Equals("") == false)
+            {
+                string madon = labelMaDon_DonTu_HR.Text;
+                string trangthai = "Đã Duyệt";
+                int kt2 = DT.DuyetDonTuBLL(madon, trangthai);
+                if (kt2 == 1)
+                {
+                    MessageBox.Show("Đã Duyệt Đơn");
+                    TaoThongBaoDuyetDon(madon, manvdn, labelMaNV_DonTu_HR.Text, labelLoaiDon_DonTu_HR.Text, trangthai);
+                }
+                else
+                {
+                    MessageBox.Show("Duyệt Đơn thất bại!");
+                }
+                loadDuyetDonTuView();
+                ClearThongTinDuyetDon();
+            }
+            else
+            {
+                MessageBox.Show("chọn đơn cần duyệt !");
+            }
+        }
+
+        public void ClearThongTinDuyetDon()
+        {
+            //TieuDe
+            labelTieuDe_DonTu_HR.Text = "";
+            //MaDon
+            labelMaDon_DonTu_HR.Text = "";
+            //MaLoai
+            labelLoaiDon_DonTu_HR.Text = "";
+            //ngaytao
+            labelNgayTao_DonTu_HR.Text = "";
+
+            //taoho
+                labelTaoHo_DonTu_HR.Text = "";
+
+            //mã nhân viên
+            labelMaNV_DonTu_HR.Text = "";
+            //tên nhân viên
+            labelTenNV_DonTu_HR.Text = "";
+            ///Tên Người Tạo
+            labelNguoiTao_DonTu_HR.Text = "";
+            //lydo
+            labelLyDo_DonTu_HR.Text ="";
+
+            //NguoiDuyet
+            labelNguoiDuyet_DonTu_HR.Text = "";
+            //tý làm nhaaaa
+            //comboBoxNguoiDuyet_Sua_DonTu_View.SelectedIndex = comboBoxNguoiDuyet_Sua_DonTu_View.FindStringExact(DT.tennguoiduyet);
+            //Ngaybd
+            //dateTimePickerNgayBD_Sua_DonTu_View.Value = DT.Bngaybd;
+            label1NgayBD_DonTu_HR.Text = "";
+            //NgayKT
+            //dateTimePickerNgayKT_Sua_DonTu_View.Value = DT.Bngaykt;
+            labelNgayKT_DonTu_HR.Text = "";
+            //
+
+                label1GioBD_DonTu_HR.Text = "";
+                labelGioKT_DonTu_HR.Text = "";
+
+
+                labelTinhCong_DonTu_HR.Text = "";
+
+            comboBoxTrangThai_DonTu_HR.Text = "";
+            //MOTA
+            labelMoTa_DuyetDon_HR.Text = "";
+        
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            ClearThongTinDuyetDon();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (labelMaDon_DonTu_HR.Text.Equals("") == false)
+            {
+                string madon = labelMaDon_DonTu_HR.Text;
+                string trangthai = comboBoxTrangThai_DonTu_HR.Text;
+                int kt2 = DT.DuyetDonTuBLL(madon, trangthai);
+                if (kt2 == 1)
+                {
+                    MessageBox.Show("Đã Duyệt Đơn");
+                    TaoThongBaoDuyetDon(madon, manvdn, labelMaNV_DonTu_HR.Text, labelLoaiDon_DonTu_HR.Text, trangthai);
+                }
+                else
+                {
+                    MessageBox.Show("Duyệt Đơn thất bại!");
+                }
+                loadDuyetDonTuView();
+                ClearThongTinDuyetDon();
+            }
+            else
+            {
+                MessageBox.Show("chọn đơn cần duyệt !");
+            }
+        }
+
+        public void TaoThongBaoDuyetDon(string madon, string nguoiduyet, string manv, string loaidon, string trangthai)
+        { 
+            DateTime ngaytaotb = new DateTime();
+            string matb;
+            int ma = BP.MaxMaBLL("MATB  ");
+            matb = "TB00" + ma.ToString();
+            string nguoitao = nguoiduyet;
+            int doituong = 1;
+            string mapb = null;
+            string manvtb = manv;
+            string tieudetb = trangthai + " " + loaidon +" - mã đơn: " + madon;
+            string tennvd = NV.BLLTenNhanVien(nguoiduyet);
+            string noidung = tennvd + " đã " + trangthai + " " + loaidon +" của bạn!, vui lòng kiểm tra lại đơn từ nhé! cám ơn.";
+            ngaytaotb = DateTime.Now;
+
+            int kt = TB.ThemThongBaoBLL( matb, nguoitao,  ngaytaotb, doituong, mapb , manv,  tieudetb, noidung);
+            //int kt = TB.ThemThongBaoBLL("DEMO3", "DEMO", ngaytaotb, 1, null , "NV0050", "DEMO03", "DEMOO3");
+            if (kt == 1)
+            {
+                int kt2 = TB.ThemChiTietThongBaoBLL(matb, manv);
+                if (kt2 == 1)
+                {
+                    MessageBox.Show("đã thông báo đến nhân viên!");
+                    BP.TangMaBangPhuBLL("MATB  ");
+                }
+                else
+                {
+                    MessageBox.Show("2.chưa tạo thông báo!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("1.chưa tạo thông báo!");
+            }
+
+        }
+
+        private void buttonViewAll_DonTu_HR_Click(object sender, EventArgs e)
+        {
+            loadDuyetDonTuView();
+        }
+
+        private void dateTimePickerDuyetDon_DonTu_HR_ValueChanged(object sender, EventArgs e)
+        {
+            listViewDuyetDon_DonTu_HR.Items.Clear();
+            DateTime date = new DateTime(dateTimePickerDuyetDon_DonTu_HR.Value.Year, dateTimePickerDuyetDon_DonTu_HR.Value.Month, dateTimePickerDuyetDon_DonTu_HR.Value.Day);
+            DT.ListDonTuOfDayAllBLL(date);
+
+            foreach (var demo in DT.dsdontu)
+            {
+                listViewDuyetDon_DonTu_HR.Items.Add(new ListViewItem(new string[] { demo.Madon1, demo.Tennv1.ToString(), demo.Loaidon1, demo.Ngaytao1.ToString(), demo.Nguoiduyet1, demo.Trangthai1.ToString() }));
+            }
+        }
+
+        private void buttonHomNay_DonTu_HR_Click(object sender, EventArgs e)
+        {
+            listViewDuyetDon_DonTu_HR.Items.Clear();
+            DateTime date = new DateTime();
+            date = DateTime.Now;
+
+            DT.ListDonTuOfDayAllBLL(date);
+
+            foreach (var demo in DT.dsdontu)
+            {
+                listViewDuyetDon_DonTu_HR.Items.Add(new ListViewItem(new string[] { demo.Madon1, demo.Tennv1.ToString(), demo.Loaidon1, demo.Ngaytao1.ToString(), demo.Nguoiduyet1, demo.Trangthai1.ToString() }));
+            }
+        }
+
+        ///================================================================================================================================
+        ///                       Duyệt Đơn                     
+        ///================================================================================================================================
+
+
+        private void barButtonItemTaiKhoan_HRM_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            navigationFrameMain.SelectedPage = navigationPageTaiKhoan_HRM;
+            loadTaiKhoanHRM();
+            panelSuaTrangThai_TaiKhoan_HR.Hide();
+        }
+
+        public void loadTaiKhoanHRM()
+        {
+            listViewTaiKhoan_HRM.Items.Clear();
+            DN.ListTaiKhoanBLL();
+            foreach (var TK in DN.Dstaikhoan)
+            {
+                string tenNV = NV.BLLTenNhanVien(TK.Madn);
+                string trangthai;
+                if (TK.Hoatdong == 1)
+                {
+                    trangthai = "Hoạt động";
+                }
+                else
+                {
+                    trangthai = "Đã khóa";
+                }
+
+                listViewTaiKhoan_HRM.Items.Add(new ListViewItem(new string[] { TK.Madn, tenNV, trangthai }));
+            }
+            ////////////
+
+            /////////////
+
+        }
+
+        private void textBoxSearch_TaiKhoan_HR_TextChanged(object sender, EventArgs e)
+        {
+            listViewTaiKhoan_HRM.Items.Clear();
+            DN.ListTaiKhoanByMaDNBLL(textBoxSearch_TaiKhoan_HR.Text);
+            foreach (var TK in DN.Dstaikhoan)
+            {
+                string tenNV = NV.BLLTenNhanVien(TK.Madn);
+                string trangthai;
+                if (TK.Hoatdong == 1)
+                {
+                    trangthai = "Hoạt động";
+                }
+                else
+                {
+                    trangthai = "Đã khóa";
+                }
+
+                listViewTaiKhoan_HRM.Items.Add(new ListViewItem(new string[] { TK.Madn, tenNV, trangthai }));
+            }
+        }
+
+        private void buttonSearch_TaiKhoan_HR_Click(object sender, EventArgs e)
+        {
+            listViewTaiKhoan_HRM.Items.Clear();
+            DN.ListTaiKhoanByMaDNBLL(textBoxSearch_TaiKhoan_HR.Text);
+            foreach (var TK in DN.Dstaikhoan)
+            {
+                string tenNV = NV.BLLTenNhanVien(TK.Madn);
+                string trangthai;
+                if (TK.Hoatdong == 1)
+                {
+                    trangthai = "Hoạt động";
+                }
+                else
+                {
+                    trangthai = "Đã khóa";
+                }
+
+                listViewTaiKhoan_HRM.Items.Add(new ListViewItem(new string[] { TK.Madn, tenNV, trangthai }));
+            }
+        }
+
+        private void label106_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listViewTaiKhoan_HRM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //madon = listViewDuyetDon_DonTu_HR.SelectedItems[0].SubItems[0].Text;
+
+            string madn = null;
+
+            if (listViewTaiKhoan_HRM.SelectedItems.Count > 0)
+            {
+                madn = listViewTaiKhoan_HRM.SelectedItems[0].SubItems[0].Text;
+                try
+                {
+
+                    DN.LoadThongTinTaiKhoanBLL(madn);
+
+                    labelMaDN_TaiKhoan_HR.Text = madn;
+                    labelTenNV_TaiKhoan_HR.Text = NV.BLLTenNhanVien(madn);
+                    string trangthai;
+                    if (DN.hoatdongB == 1)
+                    {
+                        trangthai = "Hoạt Động";
+                    }
+                    else
+                    {
+                        trangthai = "Đã Khóa";
+                    }
+                    labelTrangThai_TaiKhoan_HR.Text = trangthai;
+                    comboBoxTrangThai_TaiKhoan_HR.Text = trangthai;
+                }
+                catch { }
+            } 
+        }
+
+        private void buttonCapNhat_TaiKhoan_HR_Click(object sender, EventArgs e)
+        {
+            panelSuaTrangThai_TaiKhoan_HR.Show();
+        }
+
+        private void buttonHuy_TaiKhoan_HR_Click(object sender, EventArgs e)
+        {
+            panelSuaTrangThai_TaiKhoan_HR.Hide();
+            labelMaDN_TaiKhoan_HR.Text = "";
+            labelTenNV_TaiKhoan_HR.Text = "";
+            labelTrangThai_TaiKhoan_HR.Text = "";
+        }
+
+        private void buttonLuu_TaiKhoan_HR_Click(object sender, EventArgs e)
+        {
+            if (labelMaDN_TaiKhoan_HR.Text != "")
+            {
+                int trangthai;
+                if (comboBoxTrangThai_TaiKhoan_HR.Text.Equals("Hoạt Động"))
+                {
+                    trangthai = 1;
+                }
+
+                else
+                {
+                    trangthai = 0;
+                }
+
+                int kt = DN.SuaTaiKhoanBLL(labelMaDN_TaiKhoan_HR.Text, trangthai);
+                //////////////////////////////
+                if (kt == 1)
+                {
+                    MessageBox.Show("Sửa thành công");
+                    panelSuaTrangThai_TaiKhoan_HR.Hide();
+                    labelMaDN_TaiKhoan_HR.Text = "";
+                    labelTenNV_TaiKhoan_HR.Text = "";
+                    labelTrangThai_TaiKhoan_HR.Text = "";
+                    loadTaiKhoanHRM();
+                }
+                else
+                    MessageBox.Show("2.Lỗi Sửa!!!!!!");
+            }
+            else
+            {
+                MessageBox.Show("1.Lỗi Sửa!!!!!!");
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

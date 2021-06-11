@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietThongBaoItem.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DALBangPhu.cs" />
     <Compile Include="DALChamCong.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="DALNhanVien.cs" />
     <Compile Include="DALQLNhanVien.cs" />
     <Compile Include="DALQLPhongBan.cs" />
+    <Compile Include="DALThongBao.cs" />
     <Compile Include="DataQuanLyNhanSu.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -68,6 +70,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="TaiKhanItem.cs" />
+    <Compile Include="ThongBaoItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
