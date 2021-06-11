@@ -242,47 +242,6 @@
             this.txtTK = new System.Windows.Forms.TextBox();
             this.navigationPageDonTu = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.buttonXoa_DonTu_View = new System.Windows.Forms.Button();
-            this.buttonSua_DonTu_View = new System.Windows.Forms.Button();
-            this.panelChiTietDonTu_DonTu_View = new System.Windows.Forms.Panel();
-            this.labelLyDo_DonTu_View = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.labelMoTa_DonTu_View = new System.Windows.Forms.Label();
-            this.labelGhiChu_TieuDe_DonTu_View = new System.Windows.Forms.Label();
-            this.labelTrangThai_DonTu_View = new System.Windows.Forms.Label();
-            this.labelTaoHo_DonTu_View = new System.Windows.Forms.Label();
-            this.labelTinhCong_DonTu_View = new System.Windows.Forms.Label();
-            this.labelGioKT_DonTu_View = new System.Windows.Forms.Label();
-            this.labelNgayKT_DonTu_View = new System.Windows.Forms.Label();
-            this.labelNgayTao_DonTu_View = new System.Windows.Forms.Label();
-            this.labelGioBD_DonTu_View = new System.Windows.Forms.Label();
-            this.labelNgayBD_DonTu_View = new System.Windows.Forms.Label();
-            this.labelNguoiDuyet_DonTu_View = new System.Windows.Forms.Label();
-            this.labelTenNguoiTao_DonTu_View = new System.Windows.Forms.Label();
-            this.labelTenNV_DonTu_View = new System.Windows.Forms.Label();
-            this.labelMaNV_DonTu_View = new System.Windows.Forms.Label();
-            this.labelLoaiDon_DonTu_View = new System.Windows.Forms.Label();
-            this.labelMaDon_DonTu_View = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.label44 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
             this.panelSuaThongTinDonTu_DonTu_View = new System.Windows.Forms.Panel();
             this.comboBoxLyDo_Sua_DonTu_View = new System.Windows.Forms.ComboBox();
             this.label63 = new System.Windows.Forms.Label();
@@ -324,6 +283,47 @@
             this.label89 = new System.Windows.Forms.Label();
             this.label90 = new System.Windows.Forms.Label();
             this.label91 = new System.Windows.Forms.Label();
+            this.buttonXoa_DonTu_View = new System.Windows.Forms.Button();
+            this.buttonSua_DonTu_View = new System.Windows.Forms.Button();
+            this.panelChiTietDonTu_DonTu_View = new System.Windows.Forms.Panel();
+            this.labelLyDo_DonTu_View = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelMoTa_DonTu_View = new System.Windows.Forms.Label();
+            this.labelGhiChu_TieuDe_DonTu_View = new System.Windows.Forms.Label();
+            this.labelTrangThai_DonTu_View = new System.Windows.Forms.Label();
+            this.labelTaoHo_DonTu_View = new System.Windows.Forms.Label();
+            this.labelTinhCong_DonTu_View = new System.Windows.Forms.Label();
+            this.labelGioKT_DonTu_View = new System.Windows.Forms.Label();
+            this.labelNgayKT_DonTu_View = new System.Windows.Forms.Label();
+            this.labelNgayTao_DonTu_View = new System.Windows.Forms.Label();
+            this.labelGioBD_DonTu_View = new System.Windows.Forms.Label();
+            this.labelNgayBD_DonTu_View = new System.Windows.Forms.Label();
+            this.labelNguoiDuyet_DonTu_View = new System.Windows.Forms.Label();
+            this.labelTenNguoiTao_DonTu_View = new System.Windows.Forms.Label();
+            this.labelTenNV_DonTu_View = new System.Windows.Forms.Label();
+            this.labelMaNV_DonTu_View = new System.Windows.Forms.Label();
+            this.labelLoaiDon_DonTu_View = new System.Windows.Forms.Label();
+            this.labelMaDon_DonTu_View = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.label44 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.listViewDEMO = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -337,11 +337,50 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.navigationPageDonXinNghi = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.label6 = new System.Windows.Forms.Label();
-            this.navigationPageDonVangMat = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.label7 = new System.Windows.Forms.Label();
-            this.navigationPageDonCheckInOut = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.textBoxMaNV_TaoDon_DonTu_View = new System.Windows.Forms.TextBox();
+            this.checkBoxTaoHo_TaoDon_DonTu_View = new System.Windows.Forms.CheckBox();
+            this.panelEditGio_TaoDon_DonTu_View = new System.Windows.Forms.Panel();
+            this.label98 = new System.Windows.Forms.Label();
+            this.label95 = new System.Windows.Forms.Label();
+            this.comboBoxGioBD_TaoDon_DonTu_View = new System.Windows.Forms.ComboBox();
+            this.comboBoxPhutBD_TaoDon_DonTu_View = new System.Windows.Forms.ComboBox();
+            this.comboBoxGioKT_TaoDon_DonTu_View = new System.Windows.Forms.ComboBox();
+            this.comboBoxPhutKT_TaoDon_DonTu_View = new System.Windows.Forms.ComboBox();
+            this.label64 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.comboBoxTenNV_TaoDon_DonTu_View = new System.Windows.Forms.ComboBox();
+            this.comboBoxLyDo_TaoDon_DonTu_View = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.buttonCapNhat_TaoDon_DonTu_View = new System.Windows.Forms.Button();
+            this.buttonHuyBo_TaoDon_DonTu_View = new System.Windows.Forms.Button();
+            this.dateTimePickerNgayKT_TaoDon_DonTu_View = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerNgayBD_TaoDon_DonTu_View = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxNguoiDuyet_TaoDon_DonTu_View = new System.Windows.Forms.ComboBox();
+            this.textBoxTieuDe_TaoDon_DonTu_View = new System.Windows.Forms.TextBox();
+            this.textBoxMoTa_TaoDon_DonTu_View = new System.Windows.Forms.TextBox();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.labelNgayTao_TaoDon_DonTu_View = new System.Windows.Forms.Label();
+            this.labelTenNguoiTao_TaoDon_DonTu_View = new System.Windows.Forms.Label();
+            this.labelTenLoaiDon_TaoDon_DonTu_View = new System.Windows.Forms.Label();
+            this.labelMaDon_TaoDon_DonTu_View = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label92 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label94 = new System.Windows.Forms.Label();
+            this.label96 = new System.Windows.Forms.Label();
+            this.label97 = new System.Windows.Forms.Label();
+            this.label99 = new System.Windows.Forms.Label();
+            this.label100 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.label102 = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
+            this.label104 = new System.Windows.Forms.Label();
+            this.label105 = new System.Windows.Forms.Label();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.navigationPageThongBao = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.label9 = new System.Windows.Forms.Label();
             this.navigationPageTaoThongBao = new DevExpress.XtraBars.Navigation.NavigationPage();
@@ -426,16 +465,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChuVu)).BeginInit();
             this.navigationPageDonTu.SuspendLayout();
             this.panel14.SuspendLayout();
+            this.panelSuaThongTinDonTu_DonTu_View.SuspendLayout();
             this.panelChiTietDonTu_DonTu_View.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel13.SuspendLayout();
-            this.panelSuaThongTinDonTu_DonTu_View.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDonTu_DonTuView)).BeginInit();
             this.panel2.SuspendLayout();
             this.navigationPageDonXinNghi.SuspendLayout();
-            this.navigationPageDonVangMat.SuspendLayout();
-            this.navigationPageDonCheckInOut.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.panelEditGio_TaoDon_DonTu_View.SuspendLayout();
+            this.panel20.SuspendLayout();
             this.navigationPageThongBao.SuspendLayout();
             this.navigationPageTaoThongBao.SuspendLayout();
             this.navigationPageHopDong_HR.SuspendLayout();
@@ -1655,8 +1695,6 @@
             this.navigationFrameMain.Controls.Add(this.navigationPageChucVu);
             this.navigationFrameMain.Controls.Add(this.navigationPageDonTu);
             this.navigationFrameMain.Controls.Add(this.navigationPageDonXinNghi);
-            this.navigationFrameMain.Controls.Add(this.navigationPageDonVangMat);
-            this.navigationFrameMain.Controls.Add(this.navigationPageDonCheckInOut);
             this.navigationFrameMain.Controls.Add(this.navigationPageThongBao);
             this.navigationFrameMain.Controls.Add(this.navigationPageTaoThongBao);
             this.navigationFrameMain.Controls.Add(this.navigationPageHopDong_HR);
@@ -1672,8 +1710,6 @@
             this.navigationPageChucVu,
             this.navigationPageDonTu,
             this.navigationPageDonXinNghi,
-            this.navigationPageDonVangMat,
-            this.navigationPageDonCheckInOut,
             this.navigationPageThongBao,
             this.navigationPageTaoThongBao,
             this.navigationPageHopDong_HR});
@@ -2523,459 +2559,6 @@
             this.panel14.Size = new System.Drawing.Size(589, 675);
             this.panel14.TabIndex = 38;
             // 
-            // buttonXoa_DonTu_View
-            // 
-            this.buttonXoa_DonTu_View.BackColor = System.Drawing.Color.Firebrick;
-            this.buttonXoa_DonTu_View.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonXoa_DonTu_View.ForeColor = System.Drawing.Color.White;
-            this.buttonXoa_DonTu_View.Location = new System.Drawing.Point(138, 615);
-            this.buttonXoa_DonTu_View.Name = "buttonXoa_DonTu_View";
-            this.buttonXoa_DonTu_View.Size = new System.Drawing.Size(97, 41);
-            this.buttonXoa_DonTu_View.TabIndex = 4;
-            this.buttonXoa_DonTu_View.Text = "Xóa";
-            this.buttonXoa_DonTu_View.UseVisualStyleBackColor = false;
-            this.buttonXoa_DonTu_View.Click += new System.EventHandler(this.buttonXoa_DonTu_View_Click);
-            // 
-            // buttonSua_DonTu_View
-            // 
-            this.buttonSua_DonTu_View.BackColor = System.Drawing.Color.ForestGreen;
-            this.buttonSua_DonTu_View.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonSua_DonTu_View.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonSua_DonTu_View.ForeColor = System.Drawing.Color.White;
-            this.buttonSua_DonTu_View.Location = new System.Drawing.Point(23, 615);
-            this.buttonSua_DonTu_View.Name = "buttonSua_DonTu_View";
-            this.buttonSua_DonTu_View.Size = new System.Drawing.Size(97, 41);
-            this.buttonSua_DonTu_View.TabIndex = 3;
-            this.buttonSua_DonTu_View.Text = "Sửa";
-            this.buttonSua_DonTu_View.UseVisualStyleBackColor = false;
-            this.buttonSua_DonTu_View.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // panelChiTietDonTu_DonTu_View
-            // 
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelLyDo_DonTu_View);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label62);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.flowLayoutPanel1);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelGhiChu_TieuDe_DonTu_View);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelTrangThai_DonTu_View);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelTaoHo_DonTu_View);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelTinhCong_DonTu_View);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelGioKT_DonTu_View);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelNgayKT_DonTu_View);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelNgayTao_DonTu_View);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelGioBD_DonTu_View);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelNgayBD_DonTu_View);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelNguoiDuyet_DonTu_View);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelTenNguoiTao_DonTu_View);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelTenNV_DonTu_View);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelMaNV_DonTu_View);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelLoaiDon_DonTu_View);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelMaDon_DonTu_View);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label59);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label58);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label57);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label56);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label55);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label54);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label53);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label52);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label51);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label50);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label49);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label48);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label47);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label46);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label45);
-            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label43);
-            this.panelChiTietDonTu_DonTu_View.Location = new System.Drawing.Point(21, 64);
-            this.panelChiTietDonTu_DonTu_View.Name = "panelChiTietDonTu_DonTu_View";
-            this.panelChiTietDonTu_DonTu_View.Size = new System.Drawing.Size(551, 533);
-            this.panelChiTietDonTu_DonTu_View.TabIndex = 2;
-            // 
-            // labelLyDo_DonTu_View
-            // 
-            this.labelLyDo_DonTu_View.AutoSize = true;
-            this.labelLyDo_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelLyDo_DonTu_View.Location = new System.Drawing.Point(123, 264);
-            this.labelLyDo_DonTu_View.Name = "labelLyDo_DonTu_View";
-            this.labelLyDo_DonTu_View.Size = new System.Drawing.Size(43, 17);
-            this.labelLyDo_DonTu_View.TabIndex = 34;
-            this.labelLyDo_DonTu_View.Text = "Lý do";
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.label62.Location = new System.Drawing.Point(20, 264);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(46, 17);
-            this.label62.TabIndex = 33;
-            this.label62.Text = "Lý do";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Controls.Add(this.labelMoTa_DonTu_View);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(74, 471);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(434, 57);
-            this.flowLayoutPanel1.TabIndex = 32;
-            // 
-            // labelMoTa_DonTu_View
-            // 
-            this.labelMoTa_DonTu_View.AutoSize = true;
-            this.labelMoTa_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelMoTa_DonTu_View.Location = new System.Drawing.Point(3, 0);
-            this.labelMoTa_DonTu_View.Name = "labelMoTa_DonTu_View";
-            this.labelMoTa_DonTu_View.Size = new System.Drawing.Size(42, 17);
-            this.labelMoTa_DonTu_View.TabIndex = 30;
-            this.labelMoTa_DonTu_View.Text = "Mô tả";
-            // 
-            // labelGhiChu_TieuDe_DonTu_View
-            // 
-            this.labelGhiChu_TieuDe_DonTu_View.AutoSize = true;
-            this.labelGhiChu_TieuDe_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelGhiChu_TieuDe_DonTu_View.Location = new System.Drawing.Point(123, 28);
-            this.labelGhiChu_TieuDe_DonTu_View.Name = "labelGhiChu_TieuDe_DonTu_View";
-            this.labelGhiChu_TieuDe_DonTu_View.Size = new System.Drawing.Size(52, 17);
-            this.labelGhiChu_TieuDe_DonTu_View.TabIndex = 31;
-            this.labelGhiChu_TieuDe_DonTu_View.Text = "Tiêu đề";
-            // 
-            // labelTrangThai_DonTu_View
-            // 
-            this.labelTrangThai_DonTu_View.AutoSize = true;
-            this.labelTrangThai_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelTrangThai_DonTu_View.Location = new System.Drawing.Point(377, 421);
-            this.labelTrangThai_DonTu_View.Name = "labelTrangThai_DonTu_View";
-            this.labelTrangThai_DonTu_View.Size = new System.Drawing.Size(73, 17);
-            this.labelTrangThai_DonTu_View.TabIndex = 29;
-            this.labelTrangThai_DonTu_View.Text = "Trạng Thái";
-            // 
-            // labelTaoHo_DonTu_View
-            // 
-            this.labelTaoHo_DonTu_View.AutoSize = true;
-            this.labelTaoHo_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelTaoHo_DonTu_View.Location = new System.Drawing.Point(370, 123);
-            this.labelTaoHo_DonTu_View.Name = "labelTaoHo_DonTu_View";
-            this.labelTaoHo_DonTu_View.Size = new System.Drawing.Size(52, 17);
-            this.labelTaoHo_DonTu_View.TabIndex = 28;
-            this.labelTaoHo_DonTu_View.Text = "Tạo Hộ";
-            // 
-            // labelTinhCong_DonTu_View
-            // 
-            this.labelTinhCong_DonTu_View.AutoSize = true;
-            this.labelTinhCong_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelTinhCong_DonTu_View.Location = new System.Drawing.Point(124, 421);
-            this.labelTinhCong_DonTu_View.Name = "labelTinhCong_DonTu_View";
-            this.labelTinhCong_DonTu_View.Size = new System.Drawing.Size(71, 17);
-            this.labelTinhCong_DonTu_View.TabIndex = 27;
-            this.labelTinhCong_DonTu_View.Text = "Tính Công";
-            // 
-            // labelGioKT_DonTu_View
-            // 
-            this.labelGioKT_DonTu_View.AutoSize = true;
-            this.labelGioKT_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelGioKT_DonTu_View.Location = new System.Drawing.Point(377, 367);
-            this.labelGioKT_DonTu_View.Name = "labelGioKT_DonTu_View";
-            this.labelGioKT_DonTu_View.Size = new System.Drawing.Size(82, 17);
-            this.labelGioKT_DonTu_View.TabIndex = 26;
-            this.labelGioKT_DonTu_View.Text = "Giờ kết thúc";
-            // 
-            // labelNgayKT_DonTu_View
-            // 
-            this.labelNgayKT_DonTu_View.AutoSize = true;
-            this.labelNgayKT_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelNgayKT_DonTu_View.Location = new System.Drawing.Point(376, 313);
-            this.labelNgayKT_DonTu_View.Name = "labelNgayKT_DonTu_View";
-            this.labelNgayKT_DonTu_View.Size = new System.Drawing.Size(95, 17);
-            this.labelNgayKT_DonTu_View.TabIndex = 25;
-            this.labelNgayKT_DonTu_View.Text = "Ngày kết thúc";
-            // 
-            // labelNgayTao_DonTu_View
-            // 
-            this.labelNgayTao_DonTu_View.AutoSize = true;
-            this.labelNgayTao_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelNgayTao_DonTu_View.Location = new System.Drawing.Point(123, 123);
-            this.labelNgayTao_DonTu_View.Name = "labelNgayTao_DonTu_View";
-            this.labelNgayTao_DonTu_View.Size = new System.Drawing.Size(64, 17);
-            this.labelNgayTao_DonTu_View.TabIndex = 24;
-            this.labelNgayTao_DonTu_View.Text = "Ngày tạo";
-            // 
-            // labelGioBD_DonTu_View
-            // 
-            this.labelGioBD_DonTu_View.AutoSize = true;
-            this.labelGioBD_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelGioBD_DonTu_View.Location = new System.Drawing.Point(124, 367);
-            this.labelGioBD_DonTu_View.Name = "labelGioBD_DonTu_View";
-            this.labelGioBD_DonTu_View.Size = new System.Drawing.Size(78, 17);
-            this.labelGioBD_DonTu_View.TabIndex = 23;
-            this.labelGioBD_DonTu_View.Text = "Giờ bắt đầu";
-            // 
-            // labelNgayBD_DonTu_View
-            // 
-            this.labelNgayBD_DonTu_View.AutoSize = true;
-            this.labelNgayBD_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelNgayBD_DonTu_View.Location = new System.Drawing.Point(124, 313);
-            this.labelNgayBD_DonTu_View.Name = "labelNgayBD_DonTu_View";
-            this.labelNgayBD_DonTu_View.Size = new System.Drawing.Size(91, 17);
-            this.labelNgayBD_DonTu_View.TabIndex = 22;
-            this.labelNgayBD_DonTu_View.Text = "Ngày bắt đàu";
-            // 
-            // labelNguoiDuyet_DonTu_View
-            // 
-            this.labelNguoiDuyet_DonTu_View.AutoSize = true;
-            this.labelNguoiDuyet_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelNguoiDuyet_DonTu_View.Location = new System.Drawing.Point(370, 221);
-            this.labelNguoiDuyet_DonTu_View.Name = "labelNguoiDuyet_DonTu_View";
-            this.labelNguoiDuyet_DonTu_View.Size = new System.Drawing.Size(84, 17);
-            this.labelNguoiDuyet_DonTu_View.TabIndex = 21;
-            this.labelNguoiDuyet_DonTu_View.Text = "Người duyệt";
-            // 
-            // labelTenNguoiTao_DonTu_View
-            // 
-            this.labelTenNguoiTao_DonTu_View.AutoSize = true;
-            this.labelTenNguoiTao_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelTenNguoiTao_DonTu_View.Location = new System.Drawing.Point(123, 221);
-            this.labelTenNguoiTao_DonTu_View.Name = "labelTenNguoiTao_DonTu_View";
-            this.labelTenNguoiTao_DonTu_View.Size = new System.Drawing.Size(94, 17);
-            this.labelTenNguoiTao_DonTu_View.TabIndex = 20;
-            this.labelTenNguoiTao_DonTu_View.Text = "Tên người tạo";
-            // 
-            // labelTenNV_DonTu_View
-            // 
-            this.labelTenNV_DonTu_View.AutoSize = true;
-            this.labelTenNV_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelTenNV_DonTu_View.Location = new System.Drawing.Point(370, 173);
-            this.labelTenNV_DonTu_View.Name = "labelTenNV_DonTu_View";
-            this.labelTenNV_DonTu_View.Size = new System.Drawing.Size(52, 17);
-            this.labelTenNV_DonTu_View.TabIndex = 19;
-            this.labelTenNV_DonTu_View.Text = "Tên NV";
-            // 
-            // labelMaNV_DonTu_View
-            // 
-            this.labelMaNV_DonTu_View.AutoSize = true;
-            this.labelMaNV_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelMaNV_DonTu_View.Location = new System.Drawing.Point(123, 173);
-            this.labelMaNV_DonTu_View.Name = "labelMaNV_DonTu_View";
-            this.labelMaNV_DonTu_View.Size = new System.Drawing.Size(46, 17);
-            this.labelMaNV_DonTu_View.TabIndex = 18;
-            this.labelMaNV_DonTu_View.Text = "Mã NV";
-            // 
-            // labelLoaiDon_DonTu_View
-            // 
-            this.labelLoaiDon_DonTu_View.AutoSize = true;
-            this.labelLoaiDon_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelLoaiDon_DonTu_View.Location = new System.Drawing.Point(370, 73);
-            this.labelLoaiDon_DonTu_View.Name = "labelLoaiDon_DonTu_View";
-            this.labelLoaiDon_DonTu_View.Size = new System.Drawing.Size(60, 17);
-            this.labelLoaiDon_DonTu_View.TabIndex = 17;
-            this.labelLoaiDon_DonTu_View.Text = "Loại đơn";
-            // 
-            // labelMaDon_DonTu_View
-            // 
-            this.labelMaDon_DonTu_View.AutoSize = true;
-            this.labelMaDon_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelMaDon_DonTu_View.Location = new System.Drawing.Point(123, 73);
-            this.labelMaDon_DonTu_View.Name = "labelMaDon_DonTu_View";
-            this.labelMaDon_DonTu_View.Size = new System.Drawing.Size(53, 17);
-            this.labelMaDon_DonTu_View.TabIndex = 16;
-            this.labelMaDon_DonTu_View.Text = "Mã đơn";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.label59.Location = new System.Drawing.Point(20, 28);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(58, 17);
-            this.label59.TabIndex = 15;
-            this.label59.Text = "Tiêu đề";
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.label58.Location = new System.Drawing.Point(21, 471);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(47, 17);
-            this.label58.TabIndex = 14;
-            this.label58.Text = "Mô tả";
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.label57.Location = new System.Drawing.Point(274, 421);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(82, 17);
-            this.label57.TabIndex = 13;
-            this.label57.Text = "Trạng Thái";
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.label56.Location = new System.Drawing.Point(267, 123);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(58, 17);
-            this.label56.TabIndex = 12;
-            this.label56.Text = "Tạo Hộ";
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.label55.Location = new System.Drawing.Point(21, 421);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(79, 17);
-            this.label55.TabIndex = 11;
-            this.label55.Text = "Tính Công";
-            this.label55.Click += new System.EventHandler(this.label55_Click);
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.label54.Location = new System.Drawing.Point(274, 367);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(91, 17);
-            this.label54.TabIndex = 10;
-            this.label54.Text = "Giờ kết thúc";
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.label53.Location = new System.Drawing.Point(273, 313);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(105, 17);
-            this.label53.TabIndex = 9;
-            this.label53.Text = "Ngày kết thúc";
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.label52.Location = new System.Drawing.Point(20, 123);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(71, 17);
-            this.label52.TabIndex = 8;
-            this.label52.Text = "Ngày tạo";
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.label51.Location = new System.Drawing.Point(21, 367);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(87, 17);
-            this.label51.TabIndex = 7;
-            this.label51.Text = "Giờ bắt đầu";
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.label50.Location = new System.Drawing.Point(21, 313);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(101, 17);
-            this.label50.TabIndex = 6;
-            this.label50.Text = "Ngày bắt đàu";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.label49.Location = new System.Drawing.Point(267, 221);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(94, 17);
-            this.label49.TabIndex = 5;
-            this.label49.Text = "Người duyệt";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.label48.Location = new System.Drawing.Point(20, 221);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(105, 17);
-            this.label48.TabIndex = 4;
-            this.label48.Text = "Tên người tạo";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.label47.Location = new System.Drawing.Point(267, 173);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(59, 17);
-            this.label47.TabIndex = 3;
-            this.label47.Text = "Tên NV";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.label46.Location = new System.Drawing.Point(20, 173);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(53, 17);
-            this.label46.TabIndex = 2;
-            this.label46.Text = "Mã NV";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.label45.Location = new System.Drawing.Point(267, 73);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(67, 17);
-            this.label45.TabIndex = 1;
-            this.label45.Text = "Loại đơn";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.label43.Location = new System.Drawing.Point(20, 73);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(59, 17);
-            this.label43.TabIndex = 0;
-            this.label43.Text = "Mã đơn";
-            // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.Color.Chocolate;
-            this.panel19.Controls.Add(this.label44);
-            this.panel19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel19.Location = new System.Drawing.Point(0, 0);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(589, 38);
-            this.panel19.TabIndex = 1;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
-            this.label44.ForeColor = System.Drawing.Color.White;
-            this.label44.Location = new System.Drawing.Point(16, 5);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(200, 27);
-            this.label44.TabIndex = 2;
-            this.label44.Text = "Thông tin chi tiết";
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.listViewDEMO);
-            this.panel13.Controls.Add(this.buttonViewAll_DonTu_View);
-            this.panel13.Controls.Add(this.dateTimePicker_DonTu_View);
-            this.panel13.Controls.Add(this.dataGridViewDonTu_DonTuView);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel13.Location = new System.Drawing.Point(0, 57);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(666, 711);
-            this.panel13.TabIndex = 37;
-            this.panel13.Paint += new System.Windows.Forms.PaintEventHandler(this.panel13_Paint);
-            // 
             // panelSuaThongTinDonTu_DonTu_View
             // 
             this.panelSuaThongTinDonTu_DonTu_View.Controls.Add(this.comboBoxLyDo_Sua_DonTu_View);
@@ -3472,6 +3055,459 @@
             this.label91.TabIndex = 33;
             this.label91.Text = "Mã đơn";
             // 
+            // buttonXoa_DonTu_View
+            // 
+            this.buttonXoa_DonTu_View.BackColor = System.Drawing.Color.Firebrick;
+            this.buttonXoa_DonTu_View.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonXoa_DonTu_View.ForeColor = System.Drawing.Color.White;
+            this.buttonXoa_DonTu_View.Location = new System.Drawing.Point(138, 615);
+            this.buttonXoa_DonTu_View.Name = "buttonXoa_DonTu_View";
+            this.buttonXoa_DonTu_View.Size = new System.Drawing.Size(97, 41);
+            this.buttonXoa_DonTu_View.TabIndex = 4;
+            this.buttonXoa_DonTu_View.Text = "Xóa";
+            this.buttonXoa_DonTu_View.UseVisualStyleBackColor = false;
+            this.buttonXoa_DonTu_View.Click += new System.EventHandler(this.buttonXoa_DonTu_View_Click);
+            // 
+            // buttonSua_DonTu_View
+            // 
+            this.buttonSua_DonTu_View.BackColor = System.Drawing.Color.ForestGreen;
+            this.buttonSua_DonTu_View.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonSua_DonTu_View.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonSua_DonTu_View.ForeColor = System.Drawing.Color.White;
+            this.buttonSua_DonTu_View.Location = new System.Drawing.Point(23, 615);
+            this.buttonSua_DonTu_View.Name = "buttonSua_DonTu_View";
+            this.buttonSua_DonTu_View.Size = new System.Drawing.Size(97, 41);
+            this.buttonSua_DonTu_View.TabIndex = 3;
+            this.buttonSua_DonTu_View.Text = "Sửa";
+            this.buttonSua_DonTu_View.UseVisualStyleBackColor = false;
+            this.buttonSua_DonTu_View.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // panelChiTietDonTu_DonTu_View
+            // 
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelLyDo_DonTu_View);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label62);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.flowLayoutPanel1);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelGhiChu_TieuDe_DonTu_View);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelTrangThai_DonTu_View);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelTaoHo_DonTu_View);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelTinhCong_DonTu_View);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelGioKT_DonTu_View);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelNgayKT_DonTu_View);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelNgayTao_DonTu_View);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelGioBD_DonTu_View);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelNgayBD_DonTu_View);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelNguoiDuyet_DonTu_View);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelTenNguoiTao_DonTu_View);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelTenNV_DonTu_View);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelMaNV_DonTu_View);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelLoaiDon_DonTu_View);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.labelMaDon_DonTu_View);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label59);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label58);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label57);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label56);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label55);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label54);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label53);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label52);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label51);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label50);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label49);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label48);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label47);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label46);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label45);
+            this.panelChiTietDonTu_DonTu_View.Controls.Add(this.label43);
+            this.panelChiTietDonTu_DonTu_View.Location = new System.Drawing.Point(21, 64);
+            this.panelChiTietDonTu_DonTu_View.Name = "panelChiTietDonTu_DonTu_View";
+            this.panelChiTietDonTu_DonTu_View.Size = new System.Drawing.Size(551, 533);
+            this.panelChiTietDonTu_DonTu_View.TabIndex = 2;
+            // 
+            // labelLyDo_DonTu_View
+            // 
+            this.labelLyDo_DonTu_View.AutoSize = true;
+            this.labelLyDo_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelLyDo_DonTu_View.Location = new System.Drawing.Point(123, 264);
+            this.labelLyDo_DonTu_View.Name = "labelLyDo_DonTu_View";
+            this.labelLyDo_DonTu_View.Size = new System.Drawing.Size(43, 17);
+            this.labelLyDo_DonTu_View.TabIndex = 34;
+            this.labelLyDo_DonTu_View.Text = "Lý do";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label62.Location = new System.Drawing.Point(20, 264);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(46, 17);
+            this.label62.TabIndex = 33;
+            this.label62.Text = "Lý do";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel1.Controls.Add(this.labelMoTa_DonTu_View);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(74, 471);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(434, 57);
+            this.flowLayoutPanel1.TabIndex = 32;
+            // 
+            // labelMoTa_DonTu_View
+            // 
+            this.labelMoTa_DonTu_View.AutoSize = true;
+            this.labelMoTa_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelMoTa_DonTu_View.Location = new System.Drawing.Point(3, 0);
+            this.labelMoTa_DonTu_View.Name = "labelMoTa_DonTu_View";
+            this.labelMoTa_DonTu_View.Size = new System.Drawing.Size(42, 17);
+            this.labelMoTa_DonTu_View.TabIndex = 30;
+            this.labelMoTa_DonTu_View.Text = "Mô tả";
+            // 
+            // labelGhiChu_TieuDe_DonTu_View
+            // 
+            this.labelGhiChu_TieuDe_DonTu_View.AutoSize = true;
+            this.labelGhiChu_TieuDe_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelGhiChu_TieuDe_DonTu_View.Location = new System.Drawing.Point(123, 28);
+            this.labelGhiChu_TieuDe_DonTu_View.Name = "labelGhiChu_TieuDe_DonTu_View";
+            this.labelGhiChu_TieuDe_DonTu_View.Size = new System.Drawing.Size(52, 17);
+            this.labelGhiChu_TieuDe_DonTu_View.TabIndex = 31;
+            this.labelGhiChu_TieuDe_DonTu_View.Text = "Tiêu đề";
+            // 
+            // labelTrangThai_DonTu_View
+            // 
+            this.labelTrangThai_DonTu_View.AutoSize = true;
+            this.labelTrangThai_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelTrangThai_DonTu_View.Location = new System.Drawing.Point(377, 421);
+            this.labelTrangThai_DonTu_View.Name = "labelTrangThai_DonTu_View";
+            this.labelTrangThai_DonTu_View.Size = new System.Drawing.Size(73, 17);
+            this.labelTrangThai_DonTu_View.TabIndex = 29;
+            this.labelTrangThai_DonTu_View.Text = "Trạng Thái";
+            // 
+            // labelTaoHo_DonTu_View
+            // 
+            this.labelTaoHo_DonTu_View.AutoSize = true;
+            this.labelTaoHo_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelTaoHo_DonTu_View.Location = new System.Drawing.Point(370, 123);
+            this.labelTaoHo_DonTu_View.Name = "labelTaoHo_DonTu_View";
+            this.labelTaoHo_DonTu_View.Size = new System.Drawing.Size(52, 17);
+            this.labelTaoHo_DonTu_View.TabIndex = 28;
+            this.labelTaoHo_DonTu_View.Text = "Tạo Hộ";
+            // 
+            // labelTinhCong_DonTu_View
+            // 
+            this.labelTinhCong_DonTu_View.AutoSize = true;
+            this.labelTinhCong_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelTinhCong_DonTu_View.Location = new System.Drawing.Point(124, 421);
+            this.labelTinhCong_DonTu_View.Name = "labelTinhCong_DonTu_View";
+            this.labelTinhCong_DonTu_View.Size = new System.Drawing.Size(71, 17);
+            this.labelTinhCong_DonTu_View.TabIndex = 27;
+            this.labelTinhCong_DonTu_View.Text = "Tính Công";
+            // 
+            // labelGioKT_DonTu_View
+            // 
+            this.labelGioKT_DonTu_View.AutoSize = true;
+            this.labelGioKT_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelGioKT_DonTu_View.Location = new System.Drawing.Point(377, 367);
+            this.labelGioKT_DonTu_View.Name = "labelGioKT_DonTu_View";
+            this.labelGioKT_DonTu_View.Size = new System.Drawing.Size(82, 17);
+            this.labelGioKT_DonTu_View.TabIndex = 26;
+            this.labelGioKT_DonTu_View.Text = "Giờ kết thúc";
+            // 
+            // labelNgayKT_DonTu_View
+            // 
+            this.labelNgayKT_DonTu_View.AutoSize = true;
+            this.labelNgayKT_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelNgayKT_DonTu_View.Location = new System.Drawing.Point(376, 313);
+            this.labelNgayKT_DonTu_View.Name = "labelNgayKT_DonTu_View";
+            this.labelNgayKT_DonTu_View.Size = new System.Drawing.Size(95, 17);
+            this.labelNgayKT_DonTu_View.TabIndex = 25;
+            this.labelNgayKT_DonTu_View.Text = "Ngày kết thúc";
+            // 
+            // labelNgayTao_DonTu_View
+            // 
+            this.labelNgayTao_DonTu_View.AutoSize = true;
+            this.labelNgayTao_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelNgayTao_DonTu_View.Location = new System.Drawing.Point(123, 123);
+            this.labelNgayTao_DonTu_View.Name = "labelNgayTao_DonTu_View";
+            this.labelNgayTao_DonTu_View.Size = new System.Drawing.Size(64, 17);
+            this.labelNgayTao_DonTu_View.TabIndex = 24;
+            this.labelNgayTao_DonTu_View.Text = "Ngày tạo";
+            // 
+            // labelGioBD_DonTu_View
+            // 
+            this.labelGioBD_DonTu_View.AutoSize = true;
+            this.labelGioBD_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelGioBD_DonTu_View.Location = new System.Drawing.Point(124, 367);
+            this.labelGioBD_DonTu_View.Name = "labelGioBD_DonTu_View";
+            this.labelGioBD_DonTu_View.Size = new System.Drawing.Size(78, 17);
+            this.labelGioBD_DonTu_View.TabIndex = 23;
+            this.labelGioBD_DonTu_View.Text = "Giờ bắt đầu";
+            // 
+            // labelNgayBD_DonTu_View
+            // 
+            this.labelNgayBD_DonTu_View.AutoSize = true;
+            this.labelNgayBD_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelNgayBD_DonTu_View.Location = new System.Drawing.Point(124, 313);
+            this.labelNgayBD_DonTu_View.Name = "labelNgayBD_DonTu_View";
+            this.labelNgayBD_DonTu_View.Size = new System.Drawing.Size(91, 17);
+            this.labelNgayBD_DonTu_View.TabIndex = 22;
+            this.labelNgayBD_DonTu_View.Text = "Ngày bắt đàu";
+            // 
+            // labelNguoiDuyet_DonTu_View
+            // 
+            this.labelNguoiDuyet_DonTu_View.AutoSize = true;
+            this.labelNguoiDuyet_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelNguoiDuyet_DonTu_View.Location = new System.Drawing.Point(370, 221);
+            this.labelNguoiDuyet_DonTu_View.Name = "labelNguoiDuyet_DonTu_View";
+            this.labelNguoiDuyet_DonTu_View.Size = new System.Drawing.Size(84, 17);
+            this.labelNguoiDuyet_DonTu_View.TabIndex = 21;
+            this.labelNguoiDuyet_DonTu_View.Text = "Người duyệt";
+            // 
+            // labelTenNguoiTao_DonTu_View
+            // 
+            this.labelTenNguoiTao_DonTu_View.AutoSize = true;
+            this.labelTenNguoiTao_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelTenNguoiTao_DonTu_View.Location = new System.Drawing.Point(123, 221);
+            this.labelTenNguoiTao_DonTu_View.Name = "labelTenNguoiTao_DonTu_View";
+            this.labelTenNguoiTao_DonTu_View.Size = new System.Drawing.Size(94, 17);
+            this.labelTenNguoiTao_DonTu_View.TabIndex = 20;
+            this.labelTenNguoiTao_DonTu_View.Text = "Tên người tạo";
+            // 
+            // labelTenNV_DonTu_View
+            // 
+            this.labelTenNV_DonTu_View.AutoSize = true;
+            this.labelTenNV_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelTenNV_DonTu_View.Location = new System.Drawing.Point(370, 173);
+            this.labelTenNV_DonTu_View.Name = "labelTenNV_DonTu_View";
+            this.labelTenNV_DonTu_View.Size = new System.Drawing.Size(52, 17);
+            this.labelTenNV_DonTu_View.TabIndex = 19;
+            this.labelTenNV_DonTu_View.Text = "Tên NV";
+            // 
+            // labelMaNV_DonTu_View
+            // 
+            this.labelMaNV_DonTu_View.AutoSize = true;
+            this.labelMaNV_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelMaNV_DonTu_View.Location = new System.Drawing.Point(123, 173);
+            this.labelMaNV_DonTu_View.Name = "labelMaNV_DonTu_View";
+            this.labelMaNV_DonTu_View.Size = new System.Drawing.Size(46, 17);
+            this.labelMaNV_DonTu_View.TabIndex = 18;
+            this.labelMaNV_DonTu_View.Text = "Mã NV";
+            // 
+            // labelLoaiDon_DonTu_View
+            // 
+            this.labelLoaiDon_DonTu_View.AutoSize = true;
+            this.labelLoaiDon_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelLoaiDon_DonTu_View.Location = new System.Drawing.Point(370, 73);
+            this.labelLoaiDon_DonTu_View.Name = "labelLoaiDon_DonTu_View";
+            this.labelLoaiDon_DonTu_View.Size = new System.Drawing.Size(60, 17);
+            this.labelLoaiDon_DonTu_View.TabIndex = 17;
+            this.labelLoaiDon_DonTu_View.Text = "Loại đơn";
+            // 
+            // labelMaDon_DonTu_View
+            // 
+            this.labelMaDon_DonTu_View.AutoSize = true;
+            this.labelMaDon_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelMaDon_DonTu_View.Location = new System.Drawing.Point(123, 73);
+            this.labelMaDon_DonTu_View.Name = "labelMaDon_DonTu_View";
+            this.labelMaDon_DonTu_View.Size = new System.Drawing.Size(53, 17);
+            this.labelMaDon_DonTu_View.TabIndex = 16;
+            this.labelMaDon_DonTu_View.Text = "Mã đơn";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label59.Location = new System.Drawing.Point(20, 28);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(58, 17);
+            this.label59.TabIndex = 15;
+            this.label59.Text = "Tiêu đề";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label58.Location = new System.Drawing.Point(21, 471);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(47, 17);
+            this.label58.TabIndex = 14;
+            this.label58.Text = "Mô tả";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label57.Location = new System.Drawing.Point(274, 421);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(82, 17);
+            this.label57.TabIndex = 13;
+            this.label57.Text = "Trạng Thái";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label56.Location = new System.Drawing.Point(267, 123);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(58, 17);
+            this.label56.TabIndex = 12;
+            this.label56.Text = "Tạo Hộ";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label55.Location = new System.Drawing.Point(21, 421);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(79, 17);
+            this.label55.TabIndex = 11;
+            this.label55.Text = "Tính Công";
+            this.label55.Click += new System.EventHandler(this.label55_Click);
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label54.Location = new System.Drawing.Point(274, 367);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(91, 17);
+            this.label54.TabIndex = 10;
+            this.label54.Text = "Giờ kết thúc";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label53.Location = new System.Drawing.Point(273, 313);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(105, 17);
+            this.label53.TabIndex = 9;
+            this.label53.Text = "Ngày kết thúc";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label52.Location = new System.Drawing.Point(20, 123);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(71, 17);
+            this.label52.TabIndex = 8;
+            this.label52.Text = "Ngày tạo";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label51.Location = new System.Drawing.Point(21, 367);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(87, 17);
+            this.label51.TabIndex = 7;
+            this.label51.Text = "Giờ bắt đầu";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label50.Location = new System.Drawing.Point(21, 313);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(101, 17);
+            this.label50.TabIndex = 6;
+            this.label50.Text = "Ngày bắt đàu";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label49.Location = new System.Drawing.Point(267, 221);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(94, 17);
+            this.label49.TabIndex = 5;
+            this.label49.Text = "Người duyệt";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label48.Location = new System.Drawing.Point(20, 221);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(105, 17);
+            this.label48.TabIndex = 4;
+            this.label48.Text = "Tên người tạo";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label47.Location = new System.Drawing.Point(267, 173);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(59, 17);
+            this.label47.TabIndex = 3;
+            this.label47.Text = "Tên NV";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label46.Location = new System.Drawing.Point(20, 173);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(53, 17);
+            this.label46.TabIndex = 2;
+            this.label46.Text = "Mã NV";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label45.Location = new System.Drawing.Point(267, 73);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(67, 17);
+            this.label45.TabIndex = 1;
+            this.label45.Text = "Loại đơn";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label43.Location = new System.Drawing.Point(20, 73);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(59, 17);
+            this.label43.TabIndex = 0;
+            this.label43.Text = "Mã đơn";
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.Chocolate;
+            this.panel19.Controls.Add(this.label44);
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel19.Location = new System.Drawing.Point(0, 0);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(589, 38);
+            this.panel19.TabIndex = 1;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold);
+            this.label44.ForeColor = System.Drawing.Color.White;
+            this.label44.Location = new System.Drawing.Point(16, 5);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(200, 27);
+            this.label44.TabIndex = 2;
+            this.label44.Text = "Thông tin chi tiết";
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.listViewDEMO);
+            this.panel13.Controls.Add(this.buttonViewAll_DonTu_View);
+            this.panel13.Controls.Add(this.dateTimePicker_DonTu_View);
+            this.panel13.Controls.Add(this.dataGridViewDonTu_DonTuView);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel13.Location = new System.Drawing.Point(0, 57);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(666, 711);
+            this.panel13.TabIndex = 37;
+            this.panel13.Paint += new System.Windows.Forms.PaintEventHandler(this.panel13_Paint);
+            // 
             // listViewDEMO
             // 
             this.listViewDEMO.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -3574,48 +3610,536 @@
             // 
             // navigationPageDonXinNghi
             // 
-            this.navigationPageDonXinNghi.Controls.Add(this.label6);
+            this.navigationPageDonXinNghi.Controls.Add(this.panel21);
+            this.navigationPageDonXinNghi.Controls.Add(this.panel20);
             this.navigationPageDonXinNghi.Name = "navigationPageDonXinNghi";
             this.navigationPageDonXinNghi.Size = new System.Drawing.Size(1293, 768);
             // 
-            // label6
+            // panel21
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 3);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Đơn Xin Nghỉ";
+            this.panel21.Controls.Add(this.textBoxMaNV_TaoDon_DonTu_View);
+            this.panel21.Controls.Add(this.checkBoxTaoHo_TaoDon_DonTu_View);
+            this.panel21.Controls.Add(this.panelEditGio_TaoDon_DonTu_View);
+            this.panel21.Controls.Add(this.comboBoxTenNV_TaoDon_DonTu_View);
+            this.panel21.Controls.Add(this.comboBoxLyDo_TaoDon_DonTu_View);
+            this.panel21.Controls.Add(this.label7);
+            this.panel21.Controls.Add(this.buttonCapNhat_TaoDon_DonTu_View);
+            this.panel21.Controls.Add(this.buttonHuyBo_TaoDon_DonTu_View);
+            this.panel21.Controls.Add(this.dateTimePickerNgayKT_TaoDon_DonTu_View);
+            this.panel21.Controls.Add(this.dateTimePickerNgayBD_TaoDon_DonTu_View);
+            this.panel21.Controls.Add(this.comboBoxNguoiDuyet_TaoDon_DonTu_View);
+            this.panel21.Controls.Add(this.textBoxTieuDe_TaoDon_DonTu_View);
+            this.panel21.Controls.Add(this.textBoxMoTa_TaoDon_DonTu_View);
+            this.panel21.Controls.Add(this.label65);
+            this.panel21.Controls.Add(this.label67);
+            this.panel21.Controls.Add(this.labelNgayTao_TaoDon_DonTu_View);
+            this.panel21.Controls.Add(this.labelTenNguoiTao_TaoDon_DonTu_View);
+            this.panel21.Controls.Add(this.labelTenLoaiDon_TaoDon_DonTu_View);
+            this.panel21.Controls.Add(this.labelMaDon_TaoDon_DonTu_View);
+            this.panel21.Controls.Add(this.label74);
+            this.panel21.Controls.Add(this.label75);
+            this.panel21.Controls.Add(this.label92);
+            this.panel21.Controls.Add(this.label93);
+            this.panel21.Controls.Add(this.label94);
+            this.panel21.Controls.Add(this.label96);
+            this.panel21.Controls.Add(this.label97);
+            this.panel21.Controls.Add(this.label99);
+            this.panel21.Controls.Add(this.label100);
+            this.panel21.Controls.Add(this.label101);
+            this.panel21.Controls.Add(this.label102);
+            this.panel21.Controls.Add(this.label103);
+            this.panel21.Controls.Add(this.label104);
+            this.panel21.Controls.Add(this.label105);
+            this.panel21.Location = new System.Drawing.Point(56, 76);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(611, 648);
+            this.panel21.TabIndex = 36;
             // 
-            // navigationPageDonVangMat
+            // textBoxMaNV_TaoDon_DonTu_View
             // 
-            this.navigationPageDonVangMat.Controls.Add(this.label7);
-            this.navigationPageDonVangMat.Name = "navigationPageDonVangMat";
-            this.navigationPageDonVangMat.Size = new System.Drawing.Size(1293, 768);
+            this.textBoxMaNV_TaoDon_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.textBoxMaNV_TaoDon_DonTu_View.Location = new System.Drawing.Point(109, 165);
+            this.textBoxMaNV_TaoDon_DonTu_View.Name = "textBoxMaNV_TaoDon_DonTu_View";
+            this.textBoxMaNV_TaoDon_DonTu_View.Size = new System.Drawing.Size(131, 24);
+            this.textBoxMaNV_TaoDon_DonTu_View.TabIndex = 81;
+            this.textBoxMaNV_TaoDon_DonTu_View.TextChanged += new System.EventHandler(this.textBoxMaNV_TaoDon_DonTu_View_TextChanged);
             // 
-            // label7
+            // checkBoxTaoHo_TaoDon_DonTu_View
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 3);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Đơn vắng mặt";
+            this.checkBoxTaoHo_TaoDon_DonTu_View.AutoSize = true;
+            this.checkBoxTaoHo_TaoDon_DonTu_View.Location = new System.Drawing.Point(365, 118);
+            this.checkBoxTaoHo_TaoDon_DonTu_View.Name = "checkBoxTaoHo_TaoDon_DonTu_View";
+            this.checkBoxTaoHo_TaoDon_DonTu_View.Size = new System.Drawing.Size(123, 17);
+            this.checkBoxTaoHo_TaoDon_DonTu_View.TabIndex = 80;
+            this.checkBoxTaoHo_TaoDon_DonTu_View.Text = "Tạo Cho Người Khác";
+            this.checkBoxTaoHo_TaoDon_DonTu_View.UseVisualStyleBackColor = true;
+            this.checkBoxTaoHo_TaoDon_DonTu_View.CheckedChanged += new System.EventHandler(this.checkBoxTaoHo_TaoDon_DonTu_View_CheckedChanged);
             // 
-            // navigationPageDonCheckInOut
+            // panelEditGio_TaoDon_DonTu_View
             // 
-            this.navigationPageDonCheckInOut.Controls.Add(this.label8);
-            this.navigationPageDonCheckInOut.Name = "navigationPageDonCheckInOut";
-            this.navigationPageDonCheckInOut.Size = new System.Drawing.Size(1293, 768);
+            this.panelEditGio_TaoDon_DonTu_View.Controls.Add(this.label98);
+            this.panelEditGio_TaoDon_DonTu_View.Controls.Add(this.label95);
+            this.panelEditGio_TaoDon_DonTu_View.Controls.Add(this.comboBoxGioBD_TaoDon_DonTu_View);
+            this.panelEditGio_TaoDon_DonTu_View.Controls.Add(this.comboBoxPhutBD_TaoDon_DonTu_View);
+            this.panelEditGio_TaoDon_DonTu_View.Controls.Add(this.comboBoxGioKT_TaoDon_DonTu_View);
+            this.panelEditGio_TaoDon_DonTu_View.Controls.Add(this.comboBoxPhutKT_TaoDon_DonTu_View);
+            this.panelEditGio_TaoDon_DonTu_View.Controls.Add(this.label64);
+            this.panelEditGio_TaoDon_DonTu_View.Controls.Add(this.label8);
+            this.panelEditGio_TaoDon_DonTu_View.Location = new System.Drawing.Point(12, 355);
+            this.panelEditGio_TaoDon_DonTu_View.Name = "panelEditGio_TaoDon_DonTu_View";
+            this.panelEditGio_TaoDon_DonTu_View.Size = new System.Drawing.Size(563, 51);
+            this.panelEditGio_TaoDon_DonTu_View.TabIndex = 82;
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label98.Location = new System.Drawing.Point(5, 19);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(87, 17);
+            this.label98.TabIndex = 40;
+            this.label98.Text = "Giờ bắt đầu";
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label95.Location = new System.Drawing.Point(258, 19);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(91, 17);
+            this.label95.TabIndex = 43;
+            this.label95.Text = "Giờ kết thúc";
+            // 
+            // comboBoxGioBD_TaoDon_DonTu_View
+            // 
+            this.comboBoxGioBD_TaoDon_DonTu_View.FormattingEnabled = true;
+            this.comboBoxGioBD_TaoDon_DonTu_View.Items.AddRange(new object[] {
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23"});
+            this.comboBoxGioBD_TaoDon_DonTu_View.Location = new System.Drawing.Point(96, 18);
+            this.comboBoxGioBD_TaoDon_DonTu_View.Name = "comboBoxGioBD_TaoDon_DonTu_View";
+            this.comboBoxGioBD_TaoDon_DonTu_View.Size = new System.Drawing.Size(46, 21);
+            this.comboBoxGioBD_TaoDon_DonTu_View.TabIndex = 66;
+            // 
+            // comboBoxPhutBD_TaoDon_DonTu_View
+            // 
+            this.comboBoxPhutBD_TaoDon_DonTu_View.FormattingEnabled = true;
+            this.comboBoxPhutBD_TaoDon_DonTu_View.Items.AddRange(new object[] {
+            "00",
+            "30"});
+            this.comboBoxPhutBD_TaoDon_DonTu_View.Location = new System.Drawing.Point(170, 18);
+            this.comboBoxPhutBD_TaoDon_DonTu_View.Name = "comboBoxPhutBD_TaoDon_DonTu_View";
+            this.comboBoxPhutBD_TaoDon_DonTu_View.Size = new System.Drawing.Size(46, 21);
+            this.comboBoxPhutBD_TaoDon_DonTu_View.TabIndex = 67;
+            // 
+            // comboBoxGioKT_TaoDon_DonTu_View
+            // 
+            this.comboBoxGioKT_TaoDon_DonTu_View.FormattingEnabled = true;
+            this.comboBoxGioKT_TaoDon_DonTu_View.Items.AddRange(new object[] {
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23"});
+            this.comboBoxGioKT_TaoDon_DonTu_View.Location = new System.Drawing.Point(355, 18);
+            this.comboBoxGioKT_TaoDon_DonTu_View.Name = "comboBoxGioKT_TaoDon_DonTu_View";
+            this.comboBoxGioKT_TaoDon_DonTu_View.Size = new System.Drawing.Size(46, 21);
+            this.comboBoxGioKT_TaoDon_DonTu_View.TabIndex = 73;
+            // 
+            // comboBoxPhutKT_TaoDon_DonTu_View
+            // 
+            this.comboBoxPhutKT_TaoDon_DonTu_View.FormattingEnabled = true;
+            this.comboBoxPhutKT_TaoDon_DonTu_View.Items.AddRange(new object[] {
+            "00",
+            "30"});
+            this.comboBoxPhutKT_TaoDon_DonTu_View.Location = new System.Drawing.Point(429, 18);
+            this.comboBoxPhutKT_TaoDon_DonTu_View.Name = "comboBoxPhutKT_TaoDon_DonTu_View";
+            this.comboBoxPhutKT_TaoDon_DonTu_View.Size = new System.Drawing.Size(46, 21);
+            this.comboBoxPhutKT_TaoDon_DonTu_View.TabIndex = 74;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label64.Location = new System.Drawing.Point(148, 19);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(13, 17);
+            this.label64.TabIndex = 75;
+            this.label64.Text = ":";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 7);
+            this.label8.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(407, 18);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(125, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Đơn Check In Check Out";
+            this.label8.Size = new System.Drawing.Size(13, 17);
+            this.label8.TabIndex = 76;
+            this.label8.Text = ":";
+            // 
+            // comboBoxTenNV_TaoDon_DonTu_View
+            // 
+            this.comboBoxTenNV_TaoDon_DonTu_View.FormattingEnabled = true;
+            this.comboBoxTenNV_TaoDon_DonTu_View.Location = new System.Drawing.Point(365, 167);
+            this.comboBoxTenNV_TaoDon_DonTu_View.Name = "comboBoxTenNV_TaoDon_DonTu_View";
+            this.comboBoxTenNV_TaoDon_DonTu_View.Size = new System.Drawing.Size(193, 21);
+            this.comboBoxTenNV_TaoDon_DonTu_View.TabIndex = 78;
+            this.comboBoxTenNV_TaoDon_DonTu_View.SelectedIndexChanged += new System.EventHandler(this.comboBoxTenNV_TaoDon_DonTu_View_SelectedIndexChanged);
+            // 
+            // comboBoxLyDo_TaoDon_DonTu_View
+            // 
+            this.comboBoxLyDo_TaoDon_DonTu_View.FormattingEnabled = true;
+            this.comboBoxLyDo_TaoDon_DonTu_View.Items.AddRange(new object[] {
+            "Nghỉ ốm",
+            "Nghỉ không lương",
+            "Nghỉ phép năm",
+            "Nghỉ khác",
+            "Nghỉ tai nạn",
+            "Nghỉ công tác",
+            "Nghỉ thai sản",
+            "Quên check in",
+            "Quên check out"});
+            this.comboBoxLyDo_TaoDon_DonTu_View.Location = new System.Drawing.Point(91, 271);
+            this.comboBoxLyDo_TaoDon_DonTu_View.Name = "comboBoxLyDo_TaoDon_DonTu_View";
+            this.comboBoxLyDo_TaoDon_DonTu_View.Size = new System.Drawing.Size(255, 21);
+            this.comboBoxLyDo_TaoDon_DonTu_View.TabIndex = 77;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(20, 272);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(46, 17);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Lý do";
+            // 
+            // buttonCapNhat_TaoDon_DonTu_View
+            // 
+            this.buttonCapNhat_TaoDon_DonTu_View.BackColor = System.Drawing.Color.OrangeRed;
+            this.buttonCapNhat_TaoDon_DonTu_View.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonCapNhat_TaoDon_DonTu_View.ForeColor = System.Drawing.Color.White;
+            this.buttonCapNhat_TaoDon_DonTu_View.Location = new System.Drawing.Point(274, 594);
+            this.buttonCapNhat_TaoDon_DonTu_View.Name = "buttonCapNhat_TaoDon_DonTu_View";
+            this.buttonCapNhat_TaoDon_DonTu_View.Size = new System.Drawing.Size(143, 41);
+            this.buttonCapNhat_TaoDon_DonTu_View.TabIndex = 6;
+            this.buttonCapNhat_TaoDon_DonTu_View.Text = "Cập nhật";
+            this.buttonCapNhat_TaoDon_DonTu_View.UseVisualStyleBackColor = false;
+            this.buttonCapNhat_TaoDon_DonTu_View.Click += new System.EventHandler(this.buttonCapNhat_TaoDon_DonTu_View_Click);
+            // 
+            // buttonHuyBo_TaoDon_DonTu_View
+            // 
+            this.buttonHuyBo_TaoDon_DonTu_View.BackColor = System.Drawing.Color.White;
+            this.buttonHuyBo_TaoDon_DonTu_View.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonHuyBo_TaoDon_DonTu_View.ForeColor = System.Drawing.Color.OrangeRed;
+            this.buttonHuyBo_TaoDon_DonTu_View.Location = new System.Drawing.Point(423, 594);
+            this.buttonHuyBo_TaoDon_DonTu_View.Name = "buttonHuyBo_TaoDon_DonTu_View";
+            this.buttonHuyBo_TaoDon_DonTu_View.Size = new System.Drawing.Size(135, 41);
+            this.buttonHuyBo_TaoDon_DonTu_View.TabIndex = 5;
+            this.buttonHuyBo_TaoDon_DonTu_View.Text = "Hủy bỏ";
+            this.buttonHuyBo_TaoDon_DonTu_View.UseVisualStyleBackColor = false;
+            this.buttonHuyBo_TaoDon_DonTu_View.Click += new System.EventHandler(this.buttonHuyBo_TaoDon_DonTu_View_Click);
+            // 
+            // dateTimePickerNgayKT_TaoDon_DonTu_View
+            // 
+            this.dateTimePickerNgayKT_TaoDon_DonTu_View.Location = new System.Drawing.Point(350, 318);
+            this.dateTimePickerNgayKT_TaoDon_DonTu_View.Name = "dateTimePickerNgayKT_TaoDon_DonTu_View";
+            this.dateTimePickerNgayKT_TaoDon_DonTu_View.Size = new System.Drawing.Size(208, 21);
+            this.dateTimePickerNgayKT_TaoDon_DonTu_View.TabIndex = 72;
+            // 
+            // dateTimePickerNgayBD_TaoDon_DonTu_View
+            // 
+            this.dateTimePickerNgayBD_TaoDon_DonTu_View.Location = new System.Drawing.Point(89, 318);
+            this.dateTimePickerNgayBD_TaoDon_DonTu_View.Name = "dateTimePickerNgayBD_TaoDon_DonTu_View";
+            this.dateTimePickerNgayBD_TaoDon_DonTu_View.Size = new System.Drawing.Size(175, 21);
+            this.dateTimePickerNgayBD_TaoDon_DonTu_View.TabIndex = 71;
+            // 
+            // comboBoxNguoiDuyet_TaoDon_DonTu_View
+            // 
+            this.comboBoxNguoiDuyet_TaoDon_DonTu_View.FormattingEnabled = true;
+            this.comboBoxNguoiDuyet_TaoDon_DonTu_View.Location = new System.Drawing.Point(365, 221);
+            this.comboBoxNguoiDuyet_TaoDon_DonTu_View.Name = "comboBoxNguoiDuyet_TaoDon_DonTu_View";
+            this.comboBoxNguoiDuyet_TaoDon_DonTu_View.Size = new System.Drawing.Size(193, 21);
+            this.comboBoxNguoiDuyet_TaoDon_DonTu_View.TabIndex = 65;
+            // 
+            // textBoxTieuDe_TaoDon_DonTu_View
+            // 
+            this.textBoxTieuDe_TaoDon_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.textBoxTieuDe_TaoDon_DonTu_View.Location = new System.Drawing.Point(109, 20);
+            this.textBoxTieuDe_TaoDon_DonTu_View.Name = "textBoxTieuDe_TaoDon_DonTu_View";
+            this.textBoxTieuDe_TaoDon_DonTu_View.Size = new System.Drawing.Size(362, 24);
+            this.textBoxTieuDe_TaoDon_DonTu_View.TabIndex = 63;
+            // 
+            // textBoxMoTa_TaoDon_DonTu_View
+            // 
+            this.textBoxMoTa_TaoDon_DonTu_View.Location = new System.Drawing.Point(83, 477);
+            this.textBoxMoTa_TaoDon_DonTu_View.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxMoTa_TaoDon_DonTu_View.Multiline = true;
+            this.textBoxMoTa_TaoDon_DonTu_View.Name = "textBoxMoTa_TaoDon_DonTu_View";
+            this.textBoxMoTa_TaoDon_DonTu_View.Size = new System.Drawing.Size(430, 99);
+            this.textBoxMoTa_TaoDon_DonTu_View.TabIndex = 6;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label65.Location = new System.Drawing.Point(374, 428);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(73, 17);
+            this.label65.TabIndex = 62;
+            this.label65.Text = "Trạng Thái";
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label67.Location = new System.Drawing.Point(121, 428);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(71, 17);
+            this.label67.TabIndex = 60;
+            this.label67.Text = "Tính Công";
+            // 
+            // labelNgayTao_TaoDon_DonTu_View
+            // 
+            this.labelNgayTao_TaoDon_DonTu_View.AutoSize = true;
+            this.labelNgayTao_TaoDon_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelNgayTao_TaoDon_DonTu_View.Location = new System.Drawing.Point(121, 118);
+            this.labelNgayTao_TaoDon_DonTu_View.Name = "labelNgayTao_TaoDon_DonTu_View";
+            this.labelNgayTao_TaoDon_DonTu_View.Size = new System.Drawing.Size(64, 17);
+            this.labelNgayTao_TaoDon_DonTu_View.TabIndex = 57;
+            this.labelNgayTao_TaoDon_DonTu_View.Text = "Ngày tạo";
+            // 
+            // labelTenNguoiTao_TaoDon_DonTu_View
+            // 
+            this.labelTenNguoiTao_TaoDon_DonTu_View.AutoSize = true;
+            this.labelTenNguoiTao_TaoDon_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelTenNguoiTao_TaoDon_DonTu_View.Location = new System.Drawing.Point(121, 222);
+            this.labelTenNguoiTao_TaoDon_DonTu_View.Name = "labelTenNguoiTao_TaoDon_DonTu_View";
+            this.labelTenNguoiTao_TaoDon_DonTu_View.Size = new System.Drawing.Size(94, 17);
+            this.labelTenNguoiTao_TaoDon_DonTu_View.TabIndex = 53;
+            this.labelTenNguoiTao_TaoDon_DonTu_View.Text = "Tên người tạo";
+            // 
+            // labelTenLoaiDon_TaoDon_DonTu_View
+            // 
+            this.labelTenLoaiDon_TaoDon_DonTu_View.AutoSize = true;
+            this.labelTenLoaiDon_TaoDon_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelTenLoaiDon_TaoDon_DonTu_View.Location = new System.Drawing.Point(368, 68);
+            this.labelTenLoaiDon_TaoDon_DonTu_View.Name = "labelTenLoaiDon_TaoDon_DonTu_View";
+            this.labelTenLoaiDon_TaoDon_DonTu_View.Size = new System.Drawing.Size(60, 17);
+            this.labelTenLoaiDon_TaoDon_DonTu_View.TabIndex = 50;
+            this.labelTenLoaiDon_TaoDon_DonTu_View.Text = "Loại đơn";
+            // 
+            // labelMaDon_TaoDon_DonTu_View
+            // 
+            this.labelMaDon_TaoDon_DonTu_View.AutoSize = true;
+            this.labelMaDon_TaoDon_DonTu_View.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelMaDon_TaoDon_DonTu_View.Location = new System.Drawing.Point(121, 68);
+            this.labelMaDon_TaoDon_DonTu_View.Name = "labelMaDon_TaoDon_DonTu_View";
+            this.labelMaDon_TaoDon_DonTu_View.Size = new System.Drawing.Size(53, 17);
+            this.labelMaDon_TaoDon_DonTu_View.TabIndex = 49;
+            this.labelMaDon_TaoDon_DonTu_View.Text = "Mã đơn";
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label74.Location = new System.Drawing.Point(18, 23);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(58, 17);
+            this.label74.TabIndex = 48;
+            this.label74.Text = "Tiêu đề";
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label75.Location = new System.Drawing.Point(18, 478);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(47, 17);
+            this.label75.TabIndex = 47;
+            this.label75.Text = "Mô tả";
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label92.Location = new System.Drawing.Point(271, 428);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(82, 17);
+            this.label92.TabIndex = 46;
+            this.label92.Text = "Trạng Thái";
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label93.Location = new System.Drawing.Point(265, 118);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(58, 17);
+            this.label93.TabIndex = 45;
+            this.label93.Text = "Tạo Hộ";
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label94.Location = new System.Drawing.Point(18, 428);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(79, 17);
+            this.label94.TabIndex = 44;
+            this.label94.Text = "Tính Công";
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label96.Location = new System.Drawing.Point(270, 320);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(74, 17);
+            this.label96.TabIndex = 42;
+            this.label96.Text = "Đến ngày";
+            // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label97.Location = new System.Drawing.Point(18, 118);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(71, 17);
+            this.label97.TabIndex = 41;
+            this.label97.Text = "Ngày tạo";
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label99.Location = new System.Drawing.Point(18, 320);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(65, 17);
+            this.label99.TabIndex = 39;
+            this.label99.Text = "Từ ngày";
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label100.Location = new System.Drawing.Point(265, 222);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(94, 17);
+            this.label100.TabIndex = 38;
+            this.label100.Text = "Người duyệt";
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label101.Location = new System.Drawing.Point(18, 222);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(105, 17);
+            this.label101.TabIndex = 37;
+            this.label101.Text = "Tên người tạo";
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label102.Location = new System.Drawing.Point(265, 168);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(59, 17);
+            this.label102.TabIndex = 36;
+            this.label102.Text = "Tên NV";
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label103.Location = new System.Drawing.Point(18, 168);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(53, 17);
+            this.label103.TabIndex = 35;
+            this.label103.Text = "Mã NV";
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label104.Location = new System.Drawing.Point(265, 68);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(67, 17);
+            this.label104.TabIndex = 34;
+            this.label104.Text = "Loại đơn";
+            // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label105.Location = new System.Drawing.Point(18, 68);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(59, 17);
+            this.label105.TabIndex = 33;
+            this.label105.Text = "Mã đơn";
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.Tomato;
+            this.panel20.Controls.Add(this.label6);
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel20.Location = new System.Drawing.Point(0, 0);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(1293, 56);
+            this.panel20.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(16, 7);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(212, 41);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Lập Đơn Từ";
             // 
             // navigationPageThongBao
             // 
@@ -4071,6 +4595,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChuVu)).EndInit();
             this.navigationPageDonTu.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
+            this.panelSuaThongTinDonTu_DonTu_View.ResumeLayout(false);
+            this.panelSuaThongTinDonTu_DonTu_View.PerformLayout();
             this.panelChiTietDonTu_DonTu_View.ResumeLayout(false);
             this.panelChiTietDonTu_DonTu_View.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -4078,17 +4604,16 @@
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
             this.panel13.ResumeLayout(false);
-            this.panelSuaThongTinDonTu_DonTu_View.ResumeLayout(false);
-            this.panelSuaThongTinDonTu_DonTu_View.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDonTu_DonTuView)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.navigationPageDonXinNghi.ResumeLayout(false);
-            this.navigationPageDonXinNghi.PerformLayout();
-            this.navigationPageDonVangMat.ResumeLayout(false);
-            this.navigationPageDonVangMat.PerformLayout();
-            this.navigationPageDonCheckInOut.ResumeLayout(false);
-            this.navigationPageDonCheckInOut.PerformLayout();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
+            this.panelEditGio_TaoDon_DonTu_View.ResumeLayout(false);
+            this.panelEditGio_TaoDon_DonTu_View.PerformLayout();
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
             this.navigationPageThongBao.ResumeLayout(false);
             this.navigationPageThongBao.PerformLayout();
             this.navigationPageTaoThongBao.ResumeLayout(false);
@@ -4171,10 +4696,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
-        private DevExpress.XtraBars.Navigation.NavigationPage navigationPageDonVangMat;
-        private System.Windows.Forms.Label label7;
-        private DevExpress.XtraBars.Navigation.NavigationPage navigationPageDonCheckInOut;
-        private System.Windows.Forms.Label label8;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
@@ -4456,5 +4977,48 @@
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.ComboBox comboBoxLyDo_Sua_DonTu_View;
         private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.TextBox textBoxMaNV_TaoDon_DonTu_View;
+        private System.Windows.Forms.CheckBox checkBoxTaoHo_TaoDon_DonTu_View;
+        private System.Windows.Forms.ComboBox comboBoxTenNV_TaoDon_DonTu_View;
+        private System.Windows.Forms.ComboBox comboBoxLyDo_TaoDon_DonTu_View;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button buttonCapNhat_TaoDon_DonTu_View;
+        private System.Windows.Forms.Button buttonHuyBo_TaoDon_DonTu_View;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.ComboBox comboBoxPhutKT_TaoDon_DonTu_View;
+        private System.Windows.Forms.ComboBox comboBoxGioKT_TaoDon_DonTu_View;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNgayKT_TaoDon_DonTu_View;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNgayBD_TaoDon_DonTu_View;
+        private System.Windows.Forms.ComboBox comboBoxPhutBD_TaoDon_DonTu_View;
+        private System.Windows.Forms.ComboBox comboBoxGioBD_TaoDon_DonTu_View;
+        private System.Windows.Forms.ComboBox comboBoxNguoiDuyet_TaoDon_DonTu_View;
+        private System.Windows.Forms.TextBox textBoxTieuDe_TaoDon_DonTu_View;
+        private System.Windows.Forms.TextBox textBoxMoTa_TaoDon_DonTu_View;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label labelNgayTao_TaoDon_DonTu_View;
+        private System.Windows.Forms.Label labelTenNguoiTao_TaoDon_DonTu_View;
+        private System.Windows.Forms.Label labelTenLoaiDon_TaoDon_DonTu_View;
+        private System.Windows.Forms.Label labelMaDon_TaoDon_DonTu_View;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Label label92;
+        private System.Windows.Forms.Label label93;
+        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.Label label95;
+        private System.Windows.Forms.Label label96;
+        private System.Windows.Forms.Label label97;
+        private System.Windows.Forms.Label label98;
+        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.Label label102;
+        private System.Windows.Forms.Label label103;
+        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.Label label105;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Panel panelEditGio_TaoDon_DonTu_View;
     }
 }

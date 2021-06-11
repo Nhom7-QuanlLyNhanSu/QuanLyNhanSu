@@ -57,5 +57,11 @@ namespace BLL
         }
 
 
+        public string BLLTenNhanVien(string ma)
+        {
+            return NV.DALTenNhanVien(ma);
+        }
+
+
     }////
 }

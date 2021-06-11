@@ -177,11 +177,8 @@ namespace DAL
                 Dlydo = thongtin.LYDO;                  //public string Dlydo;    //LYDO NVARCHAR(60),
                 Dngaybd = (DateTime)thongtin.NGAYBD;    //public DateTime Dngaybd;        //NGAYBD DATETIME,
                 Dngaykt = (DateTime)thongtin.NGAYKT;    //public DateTime Dngaykt;        //NGAYKT DATETIME,
-                if (thongtin.GIOBD != null)
-                {
                     Dgiobd = (DateTime)thongtin.GIOBD;      //public DateTime Dgiobd;        //GIOBD DATETIME,
-                    Dgiobd = (DateTime)thongtin.GIOKT;      //public DateTime Dgiokt;        //GIOKT DATETIME,
-                }
+                    Dgiokt = (DateTime)thongtin.GIOKT;      //public DateTime Dgiokt;        //GIOKT DATETIME,
                 Dtinhcong =Convert.ToInt32( thongtin.TINHCONG);          //public int Dtinhcong;        //TINHCONG INT,
                 Dmota = thongtin.MOTA;                   //public string Dmota;        //MOTA NVARCHAR(200),
                 Dphat = Convert.ToInt32(thongtin.PHAT);  //public int Dphat;        //PHAT INT,
@@ -277,7 +274,73 @@ namespace DAL
             
         }
 
+        //tao don
 
+        public int ThemDonTuDAL(string manv, string madon, string maloai, string nguoilap, int taoho, string nguoiduyet, DateTime ngaytao, string trangthai, string tieude)
+        {
+            using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
+            {
+                try
+                {
+                    DONTU dt = new DONTU
+                    {
+                        MANV = manv,
+                        MADON = madon,
+                        MALOAIDON = maloai,
+                        NGUOILAP = nguoilap,
+                        TAOHO = taoho,
+                        NGUOIDUYET = nguoiduyet,
+                        NGAYTAO = (DateTime)ngaytao,
+                        TRANGTHAI = trangthai,
+                        GHICHU = tieude,
+                        
+                    };
+
+                    db.DONTUs.InsertOnSubmit(dt);
+                    db.SubmitChanges();
+                    return 1;
+                }
+                catch
+                {
+                    return 0;
+
+                }
+
+            }
+        
+        }
+
+
+        public int ThemChiTietDonTuDAL(string madon, string lydo, DateTime ngaybd, DateTime ngaykt, DateTime giobd, DateTime giokt, int tinhcong, string mota)
+        {
+            using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
+            {
+                try
+                {
+                    CHITIETDONTU dt = new CHITIETDONTU
+                    {
+                        MADON = madon,
+                        LYDO = lydo,
+                        NGAYBD = ngaybd,
+                        NGAYKT = ngaykt,
+                        GIOBD = giobd,
+                        GIOKT = giokt,
+                        TINHCONG = tinhcong,
+                        MOTA = mota,
+                    };
+
+                    db.CHITIETDONTUs.InsertOnSubmit(dt);
+                    db.SubmitChanges();
+                    return 1;
+                }
+                catch
+                {
+                    return 0;
+
+                }
+
+            }
+        }
 
 
     }////////////////////////////////////////

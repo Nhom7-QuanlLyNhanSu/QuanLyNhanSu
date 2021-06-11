@@ -21,7 +21,10 @@ namespace GUI
         BLLHopDong hd = new BLLHopDong();
         BLLQLNhanVien nv = new BLLQLNhanVien();
         BLLPhongBan pb = new BLLPhongBan();
+        BLLBangPhu BP = new BLLBangPhu();
+
         string manvdn;
+        string chondon;
         protected string fileName = "null";
         public MainForm1(string ma)
         {
@@ -116,32 +119,81 @@ namespace GUI
 
         private void barButtonItem14_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            /////// đơn xin nghỉ
+
+            chondon = "DTXN  ";
+            loadThongTinTaoDon();
+            checkBoxTaoHo_TaoDon_DonTu_View.Checked = false;
+            textBoxMaNV_TaoDon_DonTu_View.Enabled = false;
+            comboBoxTenNV_TaoDon_DonTu_View.Enabled = false;
+            panelEditGio_TaoDon_DonTu_View.Enabled = false;
+            ///////
             navigationFrameMain.SelectedPage = navigationPageDonXinNghi;
         }
 
         private void barButtonItem15_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            navigationFrameMain.SelectedPage = navigationPageDonVangMat;
+            /////// đơn vắng mặt
+            chondon = "DTVM  ";
+            loadThongTinTaoDon();
+            checkBoxTaoHo_TaoDon_DonTu_View.Checked = false;
+            textBoxMaNV_TaoDon_DonTu_View.Enabled = false;
+            comboBoxTenNV_TaoDon_DonTu_View.Enabled = false;
+            panelEditGio_TaoDon_DonTu_View.Enabled = true;
+            ///////
+            navigationFrameMain.SelectedPage = navigationPageDonXinNghi;
         }
 
         private void barButtonItem16_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            navigationFrameMain.SelectedPage = navigationPageDonCheckInOut;
+            /////// đơn check in out
+            chondon = "DTCIO ";
+            loadThongTinTaoDon();
+            checkBoxTaoHo_TaoDon_DonTu_View.Checked = false;
+            textBoxMaNV_TaoDon_DonTu_View.Enabled = false;
+            comboBoxTenNV_TaoDon_DonTu_View.Enabled = false;
+            panelEditGio_TaoDon_DonTu_View.Enabled = true;
+            ///////
+            //navigationFrameMain.SelectedPage = navigationPageDonCheckInOut;
         }
 
         private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            /////// tao ho đơn xin nghỉ
+            chondon = "DTXN  ";
+            loadThongTinTaoDon();
+            checkBoxTaoHo_TaoDon_DonTu_View.Checked = true;
+            textBoxMaNV_TaoDon_DonTu_View.Enabled = true;
+            comboBoxTenNV_TaoDon_DonTu_View.Enabled = true;
+            panelEditGio_TaoDon_DonTu_View.Enabled = false;
+            ///////
             navigationFrameMain.SelectedPage = navigationPageDonXinNghi;
         }
 
         private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            navigationFrameMain.SelectedPage = navigationPageDonVangMat;
+            /////// tạo ho don vang mat
+            chondon = "DTVM  ";
+            loadThongTinTaoDon();
+            checkBoxTaoHo_TaoDon_DonTu_View.Checked = true;
+            textBoxMaNV_TaoDon_DonTu_View.Enabled = true;
+            comboBoxTenNV_TaoDon_DonTu_View.Enabled = true;
+            panelEditGio_TaoDon_DonTu_View.Enabled = true;
+            ///////
+            navigationFrameMain.SelectedPage = navigationPageDonXinNghi;
         }
 
         private void barButtonItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            navigationFrameMain.SelectedPage = navigationPageDonCheckInOut;
+            ///////tao ho chekc in out
+            chondon = "DTCIO ";
+            loadThongTinTaoDon();
+            checkBoxTaoHo_TaoDon_DonTu_View.Checked = true;
+            textBoxMaNV_TaoDon_DonTu_View.Enabled = true;
+            comboBoxTenNV_TaoDon_DonTu_View.Enabled = true;
+            panelEditGio_TaoDon_DonTu_View.Enabled = true;
+            ///////
+            navigationFrameMain.SelectedPage = navigationPageDonXinNghi;
         }
 
         private void barButtonItem18_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -551,6 +603,11 @@ namespace GUI
 
         }
 
+        ///================================================================================================================================
+        ///                       ĐỔI MẬT KHẨU                      
+        ///================================================================================================================================
+
+
         private void labelXacNhan_MK_TaiKhoan_Click(object sender, EventArgs e)
         {
             if (TB_NEWMK_TaiKhoan.Text == null || TB_OLDMK_TaiKhoan.Text == null || TB_REMK_TaiKhoan.Text == null)
@@ -601,6 +658,12 @@ namespace GUI
         {
             panelEditMK_TaiKhoan.Show();
         }
+
+
+        ///================================================================================================================================
+        ///                       CHỨC VỤ                     
+        ///================================================================================================================================
+
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
@@ -695,6 +758,11 @@ namespace GUI
         {
 
         }
+
+        ///================================================================================================================================
+        ///                       HỢP ĐỒNG                    
+        ///================================================================================================================================
+
 
         private void simpleButtonXEMTATCA_HD_Click(object sender, EventArgs e)
         {
@@ -804,6 +872,11 @@ namespace GUI
 
             }
         }
+
+        ///================================================================================================================================
+        ///                       NHÂN VIÊN - NHÂN SỰ                     
+        ///================================================================================================================================
+
 
         private void navigationPageNhanSu_Paint(object sender, PaintEventArgs e)
         {
@@ -959,6 +1032,11 @@ namespace GUI
             dtpNgayVL_QLNV.Value = DateTime.Now;
         }
 
+        ///================================================================================================================================
+        ///                       PHÒNG BAN                      
+        ///================================================================================================================================
+
+
         private void simpleButtonTim__PB_Click(object sender, EventArgs e)
         {
             dataGridViewPHONGBAN.DataSource = pb.loadDGVTheoMa(txtTK_PB.Text);
@@ -1088,6 +1166,11 @@ namespace GUI
         {
 
         }
+
+        ///================================================================================================================================
+        ///                       DON TỪ                      
+        ///================================================================================================================================
+
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
@@ -1260,6 +1343,11 @@ namespace GUI
             panelSuaThongTinDonTu_DonTu_View.Hide();
         }
 
+        ///================================================================================================================================
+        ///                       TẠO ĐƠN TỪ                      
+        ///================================================================================================================================
+
+
         private void buttonLuu_Sua_DonTu_View_Click(object sender, EventArgs e)
         {
             DateTime giobd = new DateTime();
@@ -1329,6 +1417,138 @@ namespace GUI
                 }
                 loadDonTuView();
             }
+        }
+
+        public void loadThongTinTaoDon()
+        {
+            //comboBoxNguoiDuyet_Sua_DonTu_View
+            comboBoxTenNV_TaoDon_DonTu_View.DisplayMember = "TENNV";
+            comboBoxTenNV_TaoDon_DonTu_View.ValueMember = "MANV";
+            comboBoxTenNV_TaoDon_DonTu_View.DataSource = NV.LoadMaTenNVBLL();
+
+            //comboBoxNguoiDuyet_Sua_DonTu_View
+            comboBoxNguoiDuyet_TaoDon_DonTu_View.DisplayMember = "TENNV";
+            comboBoxNguoiDuyet_TaoDon_DonTu_View.ValueMember = "MANV";
+            comboBoxNguoiDuyet_TaoDon_DonTu_View.DataSource = NV.LoadMaTenNVBLL();
+
+            string matamdt = "DT0" + BP.MaxMaBLL("MADON").ToString();
+            labelMaDon_TaoDon_DonTu_View.Text = matamdt;
+
+            labelTenLoaiDon_TaoDon_DonTu_View.Text = DT.BLLTenLoaiDon(chondon);
+
+            DateTime date = new DateTime();
+            date = DateTime.Now;
+            labelNgayTao_TaoDon_DonTu_View.Text = date.Day.ToString() + "/" + date.Month.ToString() + "/" + date.Year.ToString();
+
+            textBoxMaNV_TaoDon_DonTu_View.Text = manvdn;
+            labelTenNguoiTao_TaoDon_DonTu_View.Text = NV.BLLTenNhanVien(manvdn);
+
+        }
+
+        private void checkBoxTaoHo_TaoDon_DonTu_View_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxTaoHo_TaoDon_DonTu_View.Checked == true)
+            {
+                textBoxMaNV_TaoDon_DonTu_View.Enabled = true;
+                comboBoxTenNV_TaoDon_DonTu_View.Enabled = true;
+            }
+            else
+            {
+                textBoxMaNV_TaoDon_DonTu_View.Enabled = false;
+                comboBoxTenNV_TaoDon_DonTu_View.Enabled = false;
+            }
+        }
+
+        private void textBoxMaNV_TaoDon_DonTu_View_TextChanged(object sender, EventArgs e)
+        {
+            
+            comboBoxTenNV_TaoDon_DonTu_View.Text = NV.BLLTenNhanVien(textBoxMaNV_TaoDon_DonTu_View.Text);
+        }
+
+        private void comboBoxTenNV_TaoDon_DonTu_View_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxMaNV_TaoDon_DonTu_View.Text = comboBoxTenNV_TaoDon_DonTu_View.SelectedValue.ToString();
+        }
+
+        ///HỦY BỎ LẬP ĐƠN
+        private void buttonHuyBo_TaoDon_DonTu_View_Click(object sender, EventArgs e)
+        {
+            navigationFrameMain.SelectedPage = navigationPageDonTu;
+            // DataTable datadon
+            dataGridViewDonTu_DonTuView.DataSource = DT.loadDonTuByMANVofBLL(manvdn);
+            loadDonTuView();
+        }
+
+
+        ///CẬP NHẬT ĐƠN TỪ
+        private void buttonCapNhat_TaoDon_DonTu_View_Click(object sender, EventArgs e)
+        {
+            //tao đơn
+            DateTime giobdtd = new DateTime();
+            DateTime giokttd = new DateTime();
+            DateTime ngaytaotd = new DateTime();
+
+            string manvtd = textBoxMaNV_TaoDon_DonTu_View.Text;
+            string madontd = labelMaDon_TaoDon_DonTu_View.Text;
+            string maloaitd = chondon;
+            string nguoilaptd = manvdn;
+            int taohotd;
+            if (checkBoxTaoHo_TaoDon_DonTu_View.Checked == true)
+            {
+                taohotd = 1;
+            }
+            else
+            {
+                taohotd = 0;
+            }
+            string nguoiduyettd = comboBoxNguoiDuyet_TaoDon_DonTu_View.SelectedValue.ToString();
+            ngaytaotd = DateTime.Now;
+            string trangthaitd = "Chờ Duyệt";
+            string tieudetd = textBoxTieuDe_TaoDon_DonTu_View.Text;
+            
+            //tao chi tiết đơn
+            if (chondon == "DTXN  ")
+            {
+
+                giobdtd = new DateTime(2000, 1, 1, 0, 0, 0);
+                giokttd = new DateTime(2000, 1, 1, 0, 0, 0);
+
+            }
+            else
+            {
+                giobdtd = new DateTime(2000, 1, 1, Convert.ToInt32(comboBoxGioBD_TaoDon_DonTu_View.Text), Convert.ToInt32(comboBoxPhutBD_TaoDon_DonTu_View.Text), 0);
+                giokttd = new DateTime(2000, 1, 1, Convert.ToInt32(comboBoxGioKT_TaoDon_DonTu_View.Text), Convert.ToInt32(comboBoxPhutKT_TaoDon_DonTu_View.Text), 0);
+            }
+            string lydotd = comboBoxLyDo_TaoDon_DonTu_View.Text;
+            DateTime ngaybdtd = dateTimePickerNgayBD_TaoDon_DonTu_View.Value;
+            DateTime ngaykttd = dateTimePickerNgayKT_TaoDon_DonTu_View.Value;
+            int tinhcongtd = 0;
+            string motatd = textBoxMoTa_TaoDon_DonTu_View.Text;
+
+            ///////gọi bll
+            //gọi bll
+            int kt1 = DT.ThemDonTuBLL(manvtd, madontd, maloaitd, nguoilaptd, taohotd, nguoiduyettd, ngaytaotd, trangthaitd, tieudetd);
+            if (kt1 == 1)
+            {
+                int kt2 = DT.ThemChiTietDonTuBLL(madontd, lydotd, ngaybdtd, ngaykttd, giobdtd, giokttd, tinhcongtd, motatd);
+                if (kt2 == 1)
+                {
+                    MessageBox.Show("Thêm Thành Công");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm chi tiết đơn Thất Bại!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Thêm Thất Bại!");
+            }
+            ////////////////////////////////////
+            ////////////////////////////////////
+            //tăng mã đơn
+            BP.TangMaBangPhuBLL("MADON ");
+
         }
 
 

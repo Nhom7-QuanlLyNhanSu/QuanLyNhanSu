@@ -73,10 +73,15 @@ namespace DAL
         {
             using (LINQquanLyNhanSuDataContext db = new LINQquanLyNhanSuDataContext())
             {
-
-                NHANVIEN thongtin = db.NHANVIENs.SingleOrDefault(NV => NV.MANV.Equals(ma));
-                return thongtin.TENNV;
-                
+                try
+                {
+                    NHANVIEN thongtin = db.NHANVIENs.SingleOrDefault(NV => NV.MANV.Equals(ma));
+                    return thongtin.TENNV;
+                }
+                catch
+                {
+                    return "";
+                }
             }
         }
 

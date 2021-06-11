@@ -109,7 +109,7 @@ namespace BLL
                 Bngaybd = (DateTime)dt.Dngaybd;        //NGAYBD DATETIME,
                 Bngaykt = (DateTime)dt.Dngaykt;        //NGAYKT DATETIME,
                 Bgiobd = (DateTime)dt.Dgiobd;        //GIOBD DATETIME,
-                Bgiobd = (DateTime)dt.Dgiokt;        //GIOKT DATETIME,
+                Bgiokt = (DateTime)dt.Dgiokt;        //GIOKT DATETIME,
                 Btinhcong = Convert.ToInt32(dt.Dtinhcong);        //TINHCONG INT,
                 Bmota = dt.Dmota;        //MOTA NVARCHAR(200),
                 Bphat = Convert.ToInt32(dt.Dphat);        //PHAT INT,
@@ -157,6 +157,32 @@ namespace BLL
                 return 1;
             else
                 return 0;
+        }
+
+        //Themdontu
+        public int ThemDonTuBLL(string manv, string madon, string maloai, string nguoilap, int taoho, string nguoiduyet, DateTime ngaytao, string trangthai, string tieude)
+        {
+            int kt = dt.ThemDonTuDAL( manv, madon,  maloai,  nguoilap, taoho, nguoiduyet,  ngaytao,  trangthai, tieude);
+            if (kt == 1)
+                return 1;
+            else
+                return 0;
+
+        }
+        //THEM CHI TIET DON TU
+        public int ThemChiTietDonTuBLL(string madon, string lydo, DateTime ngaybd, DateTime ngaykt, DateTime giobd, DateTime giokt, int tinhcong, string mota)
+        {
+            int kt = dt.ThemChiTietDonTuDAL(madon,  lydo,  ngaybd,  ngaykt, giobd,  giokt,  tinhcong, mota);
+            if (kt == 1)
+                return 1;
+            else
+                return 0;
+        
+        }
+
+        public string BLLTenLoaiDon(string maloai)
+        {
+            return loaidon.DALTenLoaiDon(maloai);
         }
 
     }///////////////////////

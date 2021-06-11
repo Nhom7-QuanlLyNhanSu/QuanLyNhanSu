@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DALBangPhu.cs" />
     <Compile Include="DALChamCong.cs" />
     <Compile Include="DALChucVu.cs" />
     <Compile Include="DALDangNhap.cs" />
