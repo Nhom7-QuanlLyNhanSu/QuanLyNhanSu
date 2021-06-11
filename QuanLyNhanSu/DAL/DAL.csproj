@@ -43,6 +43,7 @@
     <Compile Include="ChiTietThongBaoItem.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DALBangPhu.cs" />
+    <Compile Include="DALCaLamViec.cs" />
     <Compile Include="DALChamCong.cs" />
     <Compile Include="DALChucVu.cs" />
     <Compile Include="DALDangNhap.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="DALHongDong.cs" />
     <Compile Include="DALLoaiDonTu.cs" />
     <Compile Include="DALNhanVien.cs" />
+    <Compile Include="DALPhanCong.cs" />
     <Compile Include="DALQLNhanVien.cs" />
     <Compile Include="DALQLPhongBan.cs" />
     <Compile Include="DALThongBao.cs" />

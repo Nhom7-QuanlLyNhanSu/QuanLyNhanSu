@@ -77,5 +77,7 @@ namespace DAL
             Itieude1 = tieude;       ////public string Itieude;//TIEUDE NVARCHAR(100),
             Inoidung1 = noidung;        ////public string Inoidung;//NOIDUNG NVARCHAR(300),
         }
-    }
+
+
+    }////////////////////////////////////////////
 }

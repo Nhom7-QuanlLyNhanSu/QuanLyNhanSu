@@ -23,6 +23,8 @@ namespace GUI
         BLLPhongBan pb = new BLLPhongBan();
         BLLBangPhu BP = new BLLBangPhu();
         BLLThongBao TB = new BLLThongBao();
+        BLLCaLamViec CLV = new BLLCaLamViec();
+        BLLPhanCong PC = new BLLPhanCong();
 
         string manvdn;
         string chondon;
@@ -2034,8 +2036,302 @@ namespace GUI
             }
         }
 
+        ///================================================================================================================================
+        ///                       Phan Cong                     
+        ///================================================================================================================================
 
 
+        private void barButtonItem18_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+             navigationFrameMain.SelectedPage = navigationPagePhanCong_HRM;
+             LoadThongTinPhanCongHR();
+
+        }
+
+
+        public void LoadThongTinPhanCongHR()
+        {
+            string mapc = "PC00" + BP.MaxMaBLL("MAPC  ").ToString();
+            labelMaPhanCong_PhanCong_HR.Text = mapc;
+            //THONG TIN CHUNG
+            //NGAYTAO
+            DateTime date = new DateTime();
+            date = DateTime.Now;
+            labelNgayTao_PhanCong_HR.Text = date.Day.ToString() + "/" + date.Month.ToString() + "/" + date.Year.ToString();
+            labelNguoiLap_PhanCong_HR.Text = NV.BLLTenNhanVien(manvdn);
+            //comboBoxNguoiDuyet_PhanCong_HR
+            comboBoxNguoiDuyet_PhanCong_HR.DisplayMember = "TENNV";
+            comboBoxNguoiDuyet_PhanCong_HR.ValueMember = "MANV";
+            comboBoxNguoiDuyet_PhanCong_HR.DataSource = NV.LoadMaTenNVBLL();
+            //comboBoxTenNV_PhanCong_HR
+            comboBoxTenNV_PhanCong_HR.DisplayMember = "TENNV";
+            comboBoxTenNV_PhanCong_HR.ValueMember = "MANV";
+            comboBoxTenNV_PhanCong_HR.DataSource = NV.LoadMaTenNVBLL();
+            //comboBoxPhongBan_PhanCong_HR
+            comboBoxPhongBan_PhanCong_HR.DataSource = nv.loadCBBPhongban();
+            comboBoxPhongBan_PhanCong_HR.DisplayMember = "TENPH";
+            comboBoxPhongBan_PhanCong_HR.ValueMember = "MAPH";
+            comboBoxPhongBan_PhanCong_HR.Enabled = false;
+
+            //CHI TIET CA
+
+            //comboBoxCaThu2_PhanCong_HR
+            comboBoxCaThu2_PhanCong_HR.Enabled = false;
+            comboBoxCaThu2_PhanCong_HR.DataSource = CLV.LoadMaTenCaBLL();
+            comboBoxCaThu2_PhanCong_HR.DisplayMember = "TENCA";
+            comboBoxCaThu2_PhanCong_HR.ValueMember = "MACA";
+            //comboBoxCaThu3_PhanCong_HR
+            comboBoxCaThu3_PhanCong_HR.Enabled = false;
+            comboBoxCaThu3_PhanCong_HR.DataSource = CLV.LoadMaTenCaBLL();
+            comboBoxCaThu3_PhanCong_HR.DisplayMember = "TENCA";
+            comboBoxCaThu3_PhanCong_HR.ValueMember = "MACA";
+            //comboBoxCaThu4_PhanCong_HR
+            comboBoxCaThu4_PhanCong_HR.Enabled = false;
+            comboBoxCaThu4_PhanCong_HR.DataSource = CLV.LoadMaTenCaBLL();
+            comboBoxCaThu4_PhanCong_HR.DisplayMember = "TENCA";
+            comboBoxCaThu4_PhanCong_HR.ValueMember = "MACA";
+            //comboBoxCaThu5_PhanCong_HR
+            comboBoxCaThu5_PhanCong_HR.Enabled = false;
+            comboBoxCaThu5_PhanCong_HR.DataSource = CLV.LoadMaTenCaBLL();
+            comboBoxCaThu5_PhanCong_HR.DisplayMember = "TENCA";
+            comboBoxCaThu5_PhanCong_HR.ValueMember = "MACA";
+            //comboBoxCaThu6_PhanCong_HR
+            comboBoxCaThu6_PhanCong_HR.Enabled = false;
+            comboBoxCaThu6_PhanCong_HR.DataSource = CLV.LoadMaTenCaBLL();
+            comboBoxCaThu6_PhanCong_HR.DisplayMember = "TENCA";
+            comboBoxCaThu6_PhanCong_HR.ValueMember = "MACA";
+            //comboBoxCaThu7_PhanCong_HR
+            comboBoxCaThu7_PhanCong_HR.Enabled = false;
+            comboBoxCaThu7_PhanCong_HR.DataSource = CLV.LoadMaTenCaBLL();
+            comboBoxCaThu7_PhanCong_HR.DisplayMember = "TENCA";
+            comboBoxCaThu7_PhanCong_HR.ValueMember = "MACA";
+            //comboBoxCaChuNhat_PhanCong_HR
+            comboBoxCaChuNhat_PhanCong_HR.Enabled = false;
+            comboBoxCaChuNhat_PhanCong_HR.DataSource = CLV.LoadMaTenCaBLL();
+            comboBoxCaChuNhat_PhanCong_HR.DisplayMember = "TENCA";
+            comboBoxCaChuNhat_PhanCong_HR.ValueMember = "MACA";
+
+
+            //comboBoxTenNV_TaoDon_DonTu_View.DisplayMember = "TENNV";
+            //comboBoxTenNV_TaoDon_DonTu_View.ValueMember = "MANV";
+            //comboBoxTenNV_TaoDon_DonTu_View.DataSource = NV.LoadMaTenNVBLL();
+        }
+
+        private void checkBoxThu2_PhanCong_HR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxThu2_PhanCong_HR.Checked == true)
+            {
+                comboBoxCaThu2_PhanCong_HR.Enabled = true;
+            }
+            else
+            {
+                comboBoxCaThu2_PhanCong_HR.Enabled = false;
+            }
+        }
+
+        private void checkBoxThu3_PhanCong_HR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxThu3_PhanCong_HR.Checked == true)
+            {
+                comboBoxCaThu3_PhanCong_HR.Enabled = true;
+            }
+            else
+            {
+                comboBoxCaThu3_PhanCong_HR.Enabled = false;
+            }
+        }
+
+        private void checkBoxThu4_PhanCong_HR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxThu4_PhanCong_HR.Checked == true)
+            {
+                comboBoxCaThu4_PhanCong_HR.Enabled = true;
+            }
+            else
+            {
+                comboBoxCaThu4_PhanCong_HR.Enabled = false;
+            }
+        }
+
+        private void checkBoxThu5_PhanCong_HR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxThu5_PhanCong_HR.Checked == true)
+            {
+                comboBoxCaThu5_PhanCong_HR.Enabled = true;
+            }
+            else
+            {
+                comboBoxCaThu5_PhanCong_HR.Enabled = false;
+            }
+        }
+
+        private void checkBoxThu6_PhanCong_HR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxThu6_PhanCong_HR.Checked == true)
+            {
+                comboBoxCaThu6_PhanCong_HR.Enabled = true;
+            }
+            else
+            {
+                comboBoxCaThu6_PhanCong_HR.Enabled = false;
+            }
+        }
+
+        private void checkBoxThu7_PhanCong_HR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxThu7_PhanCong_HR.Checked == true)
+            {
+                comboBoxCaThu7_PhanCong_HR.Enabled = true;
+            }
+            else
+            {
+                comboBoxCaThu7_PhanCong_HR.Enabled = false;
+            }
+        }
+
+        private void checkBoxChuNhat_PhanCong_HR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxChuNhat_PhanCong_HR.Checked == true)
+            {
+                comboBoxCaChuNhat_PhanCong_HR.Enabled = true;
+            }
+            else
+            {
+                comboBoxCaChuNhat_PhanCong_HR.Enabled = false;
+            }
+        }
+
+        private void comboBoxTenNV_PhanCong_HR_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxMaNV_PhanCong_HR.Text = comboBoxTenNV_PhanCong_HR.SelectedValue.ToString();
+        }
+
+        private void textBoxMaNV_PhanCong_HR_TextChanged(object sender, EventArgs e)
+        {
+            comboBoxTenNV_PhanCong_HR.Text = NV.BLLTenNhanVien(textBoxMaNV_PhanCong_HR.Text);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            ///CAP NHAT PHAN CONG -----------------------------------------
+            //ThemPhanCongBLL(string mapc, string nguoitao, string mapb, string nguoiduyet, DateTime ngaytao, DateTime tungay, DateTime denngay, string tieude, string GhiChu)
+            string mapc = "PC00" + BP.MaxMaBLL("MAPC  ").ToString();
+            
+            string nguoitao = manvdn;
+            string mapb = comboBoxPhongBan_PhanCong_HR.SelectedValue.ToString();
+            string nguoiduyet = comboBoxNguoiDuyet_PhanCong_HR.SelectedValue.ToString();
+            DateTime ngaytao = new DateTime();
+            ngaytao = DateTime.Now;
+            DateTime tungay = dateTimePickerTuNgay_PhanCong_HR.Value;
+            DateTime denngay = dateTimePickerDenNgay_PhanCong_HR.Value;
+            string tieude = textBoxTieuDe_PhanCong_HR.Text;
+            string GhiChu = textBoxGhiChu_PhanCong_HR.Text;
+
+            int kt1 = PC.ThemPhanCongBLL(mapc, nguoitao, mapb, nguoiduyet, ngaytao, tungay, denngay, tieude, GhiChu);
+            if (kt1 == 1)
+            {
+                //thu 2
+                if (checkBoxThu2_PhanCong_HR.Checked == true)
+                { 
+                    //ThemCTPhanCongBLL(string mapc, string manv, int day, string maca)
+                    int day = 1;
+                    string maca = comboBoxCaThu2_PhanCong_HR.SelectedValue.ToString();
+                    string manv = textBoxMaNV_PhanCong_HR.Text;
+                    int kt2 = PC.ThemCTPhanCongBLL(mapc, manv, day, maca);
+                    if (kt2 != 1)
+                    {
+                        MessageBox.Show("2.Lỗi Thêm!!!!!!");
+                    }
+                }
+                //thu 3
+                if (checkBoxThu3_PhanCong_HR.Checked == true)
+                {
+                    //ThemCTPhanCongBLL(string mapc, string manv, int day, string maca)
+                    int day = 2;
+                    string maca = comboBoxCaThu3_PhanCong_HR.SelectedValue.ToString();
+                    string manv = textBoxMaNV_PhanCong_HR.Text;
+                    int kt2 = PC.ThemCTPhanCongBLL(mapc, manv, day, maca);
+                    if (kt2 != 1)
+                    {
+                        MessageBox.Show("2.Lỗi Thêm!!!!!!");
+                    }
+                }
+                //thu 4
+                if (checkBoxThu4_PhanCong_HR.Checked == true)
+                {
+                    //ThemCTPhanCongBLL(string mapc, string manv, int day, string maca)
+                    int day = 3;
+                    string maca = comboBoxCaThu4_PhanCong_HR.SelectedValue.ToString();
+                    string manv = textBoxMaNV_PhanCong_HR.Text;
+                    int kt2 = PC.ThemCTPhanCongBLL(mapc, manv, day, maca);
+                    if (kt2 != 1)
+                    {
+                        MessageBox.Show("2.Lỗi Thêm!!!!!!");
+                    }
+                }
+                //thu 5
+                if (checkBoxThu5_PhanCong_HR.Checked == true)
+                {
+                    //ThemCTPhanCongBLL(string mapc, string manv, int day, string maca)
+                    int day = 4;
+                    string maca = comboBoxCaThu5_PhanCong_HR.SelectedValue.ToString();
+                    string manv = textBoxMaNV_PhanCong_HR.Text;
+                    int kt2 = PC.ThemCTPhanCongBLL(mapc, manv, day, maca);
+                    if (kt2 != 1)
+                    {
+                        MessageBox.Show("2.Lỗi Thêm!!!!!!");
+                    }
+                }
+                //thu 6
+                if (checkBoxThu6_PhanCong_HR.Checked == true)
+                {
+                    //ThemCTPhanCongBLL(string mapc, string manv, int day, string maca)
+                    int day = 5;
+                    string maca = comboBoxCaThu6_PhanCong_HR.SelectedValue.ToString();
+                    string manv = textBoxMaNV_PhanCong_HR.Text;
+                    int kt2 = PC.ThemCTPhanCongBLL(mapc, manv, day, maca);
+                    if (kt2 != 1)
+                    {
+                        MessageBox.Show("2.Lỗi Thêm!!!!!!");
+                    }
+                }
+                //thu 7
+                if (checkBoxThu7_PhanCong_HR.Checked == true)
+                {
+                    //ThemCTPhanCongBLL(string mapc, string manv, int day, string maca)
+                    int day = 6;
+                    string maca = comboBoxCaThu7_PhanCong_HR.SelectedValue.ToString();
+                    string manv = textBoxMaNV_PhanCong_HR.Text;
+                    int kt2 = PC.ThemCTPhanCongBLL(mapc, manv, day, maca);
+                    if (kt2 != 1)
+                    {
+                        MessageBox.Show("2.Lỗi Thêm!!!!!!");
+                    }
+                }
+                //thu chu nhat
+                if (checkBoxChuNhat_PhanCong_HR.Checked == true)
+                {
+                    //ThemCTPhanCongBLL(string mapc, string manv, int day, string maca)
+                    int day = 7;
+                    string maca = comboBoxCaChuNhat_PhanCong_HR.SelectedValue.ToString();
+                    string manv = textBoxMaNV_PhanCong_HR.Text;
+                    int kt2 = PC.ThemCTPhanCongBLL(mapc, manv, day, maca);
+                    if (kt2 != 1)
+                    {
+                        MessageBox.Show("2.Lỗi Thêm!!!!!!");
+                    }
+                }
+
+                MessageBox.Show("Đã Tạo Phiếu Phân Công");
+                BP.TangMaBangPhuBLL("MAPC  ");
+            }
+            else
+            {
+                MessageBox.Show("1.Lỗi Thêm!!!!!!");
+            }
+
+
+        }
 
 
 

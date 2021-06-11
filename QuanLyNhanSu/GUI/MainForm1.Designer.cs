@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm1));
-            DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem17 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem18 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem19 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem20 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.officeNavigationBar = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
             this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
@@ -495,6 +495,65 @@
             this.label69 = new System.Windows.Forms.Label();
             this.panel26 = new System.Windows.Forms.Panel();
             this.label68 = new System.Windows.Forms.Label();
+            this.navigationPagePhanCong_HRM = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.panel35 = new System.Windows.Forms.Panel();
+            this.panel50 = new System.Windows.Forms.Panel();
+            this.label107 = new System.Windows.Forms.Label();
+            this.panel48 = new System.Windows.Forms.Panel();
+            this.comboBoxCaThu7_PhanCong_HR = new System.Windows.Forms.ComboBox();
+            this.panel49 = new System.Windows.Forms.Panel();
+            this.checkBoxThu7_PhanCong_HR = new System.Windows.Forms.CheckBox();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.comboBoxCaChuNhat_PhanCong_HR = new System.Windows.Forms.ComboBox();
+            this.panel39 = new System.Windows.Forms.Panel();
+            this.checkBoxChuNhat_PhanCong_HR = new System.Windows.Forms.CheckBox();
+            this.panel46 = new System.Windows.Forms.Panel();
+            this.comboBoxCaThu6_PhanCong_HR = new System.Windows.Forms.ComboBox();
+            this.panel47 = new System.Windows.Forms.Panel();
+            this.checkBoxThu6_PhanCong_HR = new System.Windows.Forms.CheckBox();
+            this.panel44 = new System.Windows.Forms.Panel();
+            this.comboBoxCaThu5_PhanCong_HR = new System.Windows.Forms.ComboBox();
+            this.panel45 = new System.Windows.Forms.Panel();
+            this.checkBoxThu5_PhanCong_HR = new System.Windows.Forms.CheckBox();
+            this.panel42 = new System.Windows.Forms.Panel();
+            this.comboBoxCaThu3_PhanCong_HR = new System.Windows.Forms.ComboBox();
+            this.panel43 = new System.Windows.Forms.Panel();
+            this.checkBoxThu3_PhanCong_HR = new System.Windows.Forms.CheckBox();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.comboBoxCaThu4_PhanCong_HR = new System.Windows.Forms.ComboBox();
+            this.panel41 = new System.Windows.Forms.Panel();
+            this.checkBoxThu4_PhanCong_HR = new System.Windows.Forms.CheckBox();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.comboBoxCaThu2_PhanCong_HR = new System.Windows.Forms.ComboBox();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.checkBoxThu2_PhanCong_HR = new System.Windows.Forms.CheckBox();
+            this.textBoxMaNV_PhanCong_HR = new System.Windows.Forms.TextBox();
+            this.comboBoxTenNV_PhanCong_HR = new System.Windows.Forms.ComboBox();
+            this.comboBoxPhongBan_PhanCong_HR = new System.Windows.Forms.ComboBox();
+            this.label111 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.dateTimePickerDenNgay_PhanCong_HR = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerTuNgay_PhanCong_HR = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxNguoiDuyet_PhanCong_HR = new System.Windows.Forms.ComboBox();
+            this.textBoxTieuDe_PhanCong_HR = new System.Windows.Forms.TextBox();
+            this.textBoxGhiChu_PhanCong_HR = new System.Windows.Forms.TextBox();
+            this.labelNgayTao_PhanCong_HR = new System.Windows.Forms.Label();
+            this.labelNguoiLap_PhanCong_HR = new System.Windows.Forms.Label();
+            this.labelMaPhanCong_PhanCong_HR = new System.Windows.Forms.Label();
+            this.label118 = new System.Windows.Forms.Label();
+            this.label119 = new System.Windows.Forms.Label();
+            this.label123 = new System.Windows.Forms.Label();
+            this.label124 = new System.Windows.Forms.Label();
+            this.label125 = new System.Windows.Forms.Label();
+            this.label126 = new System.Windows.Forms.Label();
+            this.label127 = new System.Windows.Forms.Label();
+            this.label128 = new System.Windows.Forms.Label();
+            this.label130 = new System.Windows.Forms.Label();
+            this.label132 = new System.Windows.Forms.Label();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.label106 = new System.Windows.Forms.Label();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -582,6 +641,25 @@
             this.panel29.SuspendLayout();
             this.panel31.SuspendLayout();
             this.panel26.SuspendLayout();
+            this.navigationPagePhanCong_HRM.SuspendLayout();
+            this.panel34.SuspendLayout();
+            this.panel35.SuspendLayout();
+            this.panel50.SuspendLayout();
+            this.panel48.SuspendLayout();
+            this.panel49.SuspendLayout();
+            this.panel38.SuspendLayout();
+            this.panel39.SuspendLayout();
+            this.panel46.SuspendLayout();
+            this.panel47.SuspendLayout();
+            this.panel44.SuspendLayout();
+            this.panel45.SuspendLayout();
+            this.panel42.SuspendLayout();
+            this.panel43.SuspendLayout();
+            this.panel40.SuspendLayout();
+            this.panel41.SuspendLayout();
+            this.panel36.SuspendLayout();
+            this.panel37.SuspendLayout();
+            this.panel33.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabbedView
@@ -1029,17 +1107,17 @@
             this.barButtonItemTK.ImageOptions.Image = global::GUI.Properties.Resources.customer_16x16;
             this.barButtonItemTK.ImageOptions.LargeImage = global::GUI.Properties.Resources.customer_32x32;
             this.barButtonItemTK.Name = "barButtonItemTK";
-            toolTipTitleItem17.Text = "Tài Khoản cá nhân";
-            toolTipItem9.LeftIndent = 6;
-            toolTipItem9.Text = "Xem thông tin tài khoản đăng nhập, chỉnh sửa thông tin, thay đổi mật khẩu";
-            toolTipTitleItem18.Appearance.Image = global::GUI.Properties.Resources.contact_32x32;
-            toolTipTitleItem18.Appearance.Options.UseImage = true;
-            toolTipTitleItem18.Image = global::GUI.Properties.Resources.contact_32x32;
-            toolTipTitleItem18.LeftIndent = 6;
-            superToolTip9.Items.Add(toolTipTitleItem17);
-            superToolTip9.Items.Add(toolTipItem9);
-            superToolTip9.Items.Add(toolTipTitleItem18);
-            this.barButtonItemTK.SuperTip = superToolTip9;
+            toolTipTitleItem1.Text = "Tài Khoản cá nhân";
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "Xem thông tin tài khoản đăng nhập, chỉnh sửa thông tin, thay đổi mật khẩu";
+            toolTipTitleItem2.Appearance.Image = global::GUI.Properties.Resources.contact_32x32;
+            toolTipTitleItem2.Appearance.Options.UseImage = true;
+            toolTipTitleItem2.Image = global::GUI.Properties.Resources.contact_32x32;
+            toolTipTitleItem2.LeftIndent = 6;
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            superToolTip1.Items.Add(toolTipTitleItem2);
+            this.barButtonItemTK.SuperTip = superToolTip1;
             this.barButtonItemTK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemTK_ItemClick);
             // 
             // barButtonItem29
@@ -1048,17 +1126,17 @@
             this.barButtonItem29.Id = 101;
             this.barButtonItem29.ImageOptions.Image = global::GUI.Properties.Resources.assignto_32x32;
             this.barButtonItem29.Name = "barButtonItem29";
-            toolTipTitleItem19.Text = "Đăng Xuất";
-            toolTipItem10.LeftIndent = 6;
-            toolTipItem10.Text = "Thoát đăng nhập tài khoản này!\r\n";
-            toolTipTitleItem20.Appearance.Image = global::GUI.Properties.Resources.assignto_32x321;
-            toolTipTitleItem20.Appearance.Options.UseImage = true;
-            toolTipTitleItem20.Image = global::GUI.Properties.Resources.assignto_32x321;
-            toolTipTitleItem20.LeftIndent = 6;
-            superToolTip10.Items.Add(toolTipTitleItem19);
-            superToolTip10.Items.Add(toolTipItem10);
-            superToolTip10.Items.Add(toolTipTitleItem20);
-            this.barButtonItem29.SuperTip = superToolTip10;
+            toolTipTitleItem3.Text = "Đăng Xuất";
+            toolTipItem2.LeftIndent = 6;
+            toolTipItem2.Text = "Thoát đăng nhập tài khoản này!\r\n";
+            toolTipTitleItem4.Appearance.Image = global::GUI.Properties.Resources.assignto_32x321;
+            toolTipTitleItem4.Appearance.Options.UseImage = true;
+            toolTipTitleItem4.Image = global::GUI.Properties.Resources.assignto_32x321;
+            toolTipTitleItem4.LeftIndent = 6;
+            superToolTip2.Items.Add(toolTipTitleItem3);
+            superToolTip2.Items.Add(toolTipItem2);
+            superToolTip2.Items.Add(toolTipTitleItem4);
+            this.barButtonItem29.SuperTip = superToolTip2;
             // 
             // barButtonItem30
             // 
@@ -1085,6 +1163,7 @@
             this.barButtonItem18.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem18.ImageOptions.Image")));
             this.barButtonItem18.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem18.ImageOptions.LargeImage")));
             this.barButtonItem18.Name = "barButtonItem18";
+            this.barButtonItem18.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem18_ItemClick_1);
             // 
             // barButtonItemTaiKhoan_HRM
             // 
@@ -1802,6 +1881,7 @@
             this.navigationFrameMain.Controls.Add(this.navigationPageHopDong_HR);
             this.navigationFrameMain.Controls.Add(this.navigationPageDuyetDon_hr);
             this.navigationFrameMain.Controls.Add(this.navigationPageTaiKhoan_HRM);
+            this.navigationFrameMain.Controls.Add(this.navigationPagePhanCong_HRM);
             this.navigationFrameMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navigationFrameMain.Location = new System.Drawing.Point(165, 143);
             this.navigationFrameMain.Name = "navigationFrameMain";
@@ -1818,7 +1898,8 @@
             this.navigationPageTaoThongBao,
             this.navigationPageHopDong_HR,
             this.navigationPageDuyetDon_hr,
-            this.navigationPageTaiKhoan_HRM});
+            this.navigationPageTaiKhoan_HRM,
+            this.navigationPagePhanCong_HRM});
             this.navigationFrameMain.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
             this.navigationFrameMain.SelectedPage = this.NavigationPageTaiKhoan;
             this.navigationFrameMain.Size = new System.Drawing.Size(1293, 768);
@@ -5195,7 +5276,7 @@
             this.panelSuaTrangThai_TaiKhoan_HR.Controls.Add(this.buttonHuy_TaiKhoan_HR);
             this.panelSuaTrangThai_TaiKhoan_HR.Controls.Add(this.buttonLuu_TaiKhoan_HR);
             this.panelSuaTrangThai_TaiKhoan_HR.Controls.Add(this.comboBoxTrangThai_TaiKhoan_HR);
-            this.panelSuaTrangThai_TaiKhoan_HR.Location = new System.Drawing.Point(100, 445);
+            this.panelSuaTrangThai_TaiKhoan_HR.Location = new System.Drawing.Point(165, 189);
             this.panelSuaTrangThai_TaiKhoan_HR.Name = "panelSuaTrangThai_TaiKhoan_HR";
             this.panelSuaTrangThai_TaiKhoan_HR.Size = new System.Drawing.Size(365, 177);
             this.panelSuaTrangThai_TaiKhoan_HR.TabIndex = 9;
@@ -5431,6 +5512,638 @@
             this.label68.TabIndex = 1;
             this.label68.Text = "Tài Khoản";
             // 
+            // navigationPagePhanCong_HRM
+            // 
+            this.navigationPagePhanCong_HRM.Controls.Add(this.panel34);
+            this.navigationPagePhanCong_HRM.Controls.Add(this.panel33);
+            this.navigationPagePhanCong_HRM.Name = "navigationPagePhanCong_HRM";
+            this.navigationPagePhanCong_HRM.Size = new System.Drawing.Size(1293, 768);
+            // 
+            // panel34
+            // 
+            this.panel34.Controls.Add(this.panel35);
+            this.panel34.Controls.Add(this.textBoxMaNV_PhanCong_HR);
+            this.panel34.Controls.Add(this.comboBoxTenNV_PhanCong_HR);
+            this.panel34.Controls.Add(this.comboBoxPhongBan_PhanCong_HR);
+            this.panel34.Controls.Add(this.label111);
+            this.panel34.Controls.Add(this.button8);
+            this.panel34.Controls.Add(this.button9);
+            this.panel34.Controls.Add(this.dateTimePickerDenNgay_PhanCong_HR);
+            this.panel34.Controls.Add(this.dateTimePickerTuNgay_PhanCong_HR);
+            this.panel34.Controls.Add(this.comboBoxNguoiDuyet_PhanCong_HR);
+            this.panel34.Controls.Add(this.textBoxTieuDe_PhanCong_HR);
+            this.panel34.Controls.Add(this.textBoxGhiChu_PhanCong_HR);
+            this.panel34.Controls.Add(this.labelNgayTao_PhanCong_HR);
+            this.panel34.Controls.Add(this.labelNguoiLap_PhanCong_HR);
+            this.panel34.Controls.Add(this.labelMaPhanCong_PhanCong_HR);
+            this.panel34.Controls.Add(this.label118);
+            this.panel34.Controls.Add(this.label119);
+            this.panel34.Controls.Add(this.label123);
+            this.panel34.Controls.Add(this.label124);
+            this.panel34.Controls.Add(this.label125);
+            this.panel34.Controls.Add(this.label126);
+            this.panel34.Controls.Add(this.label127);
+            this.panel34.Controls.Add(this.label128);
+            this.panel34.Controls.Add(this.label130);
+            this.panel34.Controls.Add(this.label132);
+            this.panel34.Location = new System.Drawing.Point(26, 73);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(1267, 671);
+            this.panel34.TabIndex = 15;
+            // 
+            // panel35
+            // 
+            this.panel35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel35.Controls.Add(this.panel50);
+            this.panel35.Controls.Add(this.panel48);
+            this.panel35.Controls.Add(this.panel38);
+            this.panel35.Controls.Add(this.panel46);
+            this.panel35.Controls.Add(this.panel44);
+            this.panel35.Controls.Add(this.panel42);
+            this.panel35.Controls.Add(this.panel40);
+            this.panel35.Controls.Add(this.panel36);
+            this.panel35.Location = new System.Drawing.Point(41, 394);
+            this.panel35.Name = "panel35";
+            this.panel35.Size = new System.Drawing.Size(1192, 185);
+            this.panel35.TabIndex = 115;
+            // 
+            // panel50
+            // 
+            this.panel50.BackColor = System.Drawing.Color.Teal;
+            this.panel50.Controls.Add(this.label107);
+            this.panel50.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel50.ForeColor = System.Drawing.Color.Black;
+            this.panel50.Location = new System.Drawing.Point(0, 0);
+            this.panel50.Name = "panel50";
+            this.panel50.Size = new System.Drawing.Size(1190, 32);
+            this.panel50.TabIndex = 116;
+            // 
+            // label107
+            // 
+            this.label107.AutoSize = true;
+            this.label107.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label107.ForeColor = System.Drawing.Color.White;
+            this.label107.Location = new System.Drawing.Point(18, 6);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(134, 17);
+            this.label107.TabIndex = 116;
+            this.label107.Text = "Chi tiết phân công";
+            // 
+            // panel48
+            // 
+            this.panel48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel48.Controls.Add(this.comboBoxCaThu7_PhanCong_HR);
+            this.panel48.Controls.Add(this.panel49);
+            this.panel48.Location = new System.Drawing.Point(845, 70);
+            this.panel48.Name = "panel48";
+            this.panel48.Size = new System.Drawing.Size(160, 94);
+            this.panel48.TabIndex = 119;
+            // 
+            // comboBoxCaThu7_PhanCong_HR
+            // 
+            this.comboBoxCaThu7_PhanCong_HR.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.comboBoxCaThu7_PhanCong_HR.FormattingEnabled = true;
+            this.comboBoxCaThu7_PhanCong_HR.Location = new System.Drawing.Point(10, 45);
+            this.comboBoxCaThu7_PhanCong_HR.Name = "comboBoxCaThu7_PhanCong_HR";
+            this.comboBoxCaThu7_PhanCong_HR.Size = new System.Drawing.Size(139, 26);
+            this.comboBoxCaThu7_PhanCong_HR.TabIndex = 117;
+            // 
+            // panel49
+            // 
+            this.panel49.BackColor = System.Drawing.Color.Goldenrod;
+            this.panel49.Controls.Add(this.checkBoxThu7_PhanCong_HR);
+            this.panel49.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel49.Location = new System.Drawing.Point(0, 0);
+            this.panel49.Name = "panel49";
+            this.panel49.Size = new System.Drawing.Size(158, 34);
+            this.panel49.TabIndex = 117;
+            // 
+            // checkBoxThu7_PhanCong_HR
+            // 
+            this.checkBoxThu7_PhanCong_HR.AutoSize = true;
+            this.checkBoxThu7_PhanCong_HR.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.checkBoxThu7_PhanCong_HR.ForeColor = System.Drawing.Color.White;
+            this.checkBoxThu7_PhanCong_HR.Location = new System.Drawing.Point(14, 8);
+            this.checkBoxThu7_PhanCong_HR.Name = "checkBoxThu7_PhanCong_HR";
+            this.checkBoxThu7_PhanCong_HR.Size = new System.Drawing.Size(68, 21);
+            this.checkBoxThu7_PhanCong_HR.TabIndex = 0;
+            this.checkBoxThu7_PhanCong_HR.Text = "Thứ 7";
+            this.checkBoxThu7_PhanCong_HR.UseVisualStyleBackColor = true;
+            this.checkBoxThu7_PhanCong_HR.CheckedChanged += new System.EventHandler(this.checkBoxThu7_PhanCong_HR_CheckedChanged);
+            // 
+            // panel38
+            // 
+            this.panel38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel38.Controls.Add(this.comboBoxCaChuNhat_PhanCong_HR);
+            this.panel38.Controls.Add(this.panel39);
+            this.panel38.Location = new System.Drawing.Point(1012, 70);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(160, 94);
+            this.panel38.TabIndex = 118;
+            // 
+            // comboBoxCaChuNhat_PhanCong_HR
+            // 
+            this.comboBoxCaChuNhat_PhanCong_HR.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.comboBoxCaChuNhat_PhanCong_HR.FormattingEnabled = true;
+            this.comboBoxCaChuNhat_PhanCong_HR.Location = new System.Drawing.Point(10, 45);
+            this.comboBoxCaChuNhat_PhanCong_HR.Name = "comboBoxCaChuNhat_PhanCong_HR";
+            this.comboBoxCaChuNhat_PhanCong_HR.Size = new System.Drawing.Size(139, 26);
+            this.comboBoxCaChuNhat_PhanCong_HR.TabIndex = 117;
+            // 
+            // panel39
+            // 
+            this.panel39.BackColor = System.Drawing.Color.Firebrick;
+            this.panel39.Controls.Add(this.checkBoxChuNhat_PhanCong_HR);
+            this.panel39.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel39.Location = new System.Drawing.Point(0, 0);
+            this.panel39.Name = "panel39";
+            this.panel39.Size = new System.Drawing.Size(158, 34);
+            this.panel39.TabIndex = 117;
+            // 
+            // checkBoxChuNhat_PhanCong_HR
+            // 
+            this.checkBoxChuNhat_PhanCong_HR.AutoSize = true;
+            this.checkBoxChuNhat_PhanCong_HR.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.checkBoxChuNhat_PhanCong_HR.ForeColor = System.Drawing.Color.White;
+            this.checkBoxChuNhat_PhanCong_HR.Location = new System.Drawing.Point(14, 8);
+            this.checkBoxChuNhat_PhanCong_HR.Name = "checkBoxChuNhat_PhanCong_HR";
+            this.checkBoxChuNhat_PhanCong_HR.Size = new System.Drawing.Size(93, 21);
+            this.checkBoxChuNhat_PhanCong_HR.TabIndex = 0;
+            this.checkBoxChuNhat_PhanCong_HR.Text = "Chủ Nhật";
+            this.checkBoxChuNhat_PhanCong_HR.UseVisualStyleBackColor = true;
+            this.checkBoxChuNhat_PhanCong_HR.CheckedChanged += new System.EventHandler(this.checkBoxChuNhat_PhanCong_HR_CheckedChanged);
+            // 
+            // panel46
+            // 
+            this.panel46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel46.Controls.Add(this.comboBoxCaThu6_PhanCong_HR);
+            this.panel46.Controls.Add(this.panel47);
+            this.panel46.Location = new System.Drawing.Point(679, 70);
+            this.panel46.Name = "panel46";
+            this.panel46.Size = new System.Drawing.Size(160, 94);
+            this.panel46.TabIndex = 119;
+            // 
+            // comboBoxCaThu6_PhanCong_HR
+            // 
+            this.comboBoxCaThu6_PhanCong_HR.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.comboBoxCaThu6_PhanCong_HR.FormattingEnabled = true;
+            this.comboBoxCaThu6_PhanCong_HR.Location = new System.Drawing.Point(10, 45);
+            this.comboBoxCaThu6_PhanCong_HR.Name = "comboBoxCaThu6_PhanCong_HR";
+            this.comboBoxCaThu6_PhanCong_HR.Size = new System.Drawing.Size(139, 26);
+            this.comboBoxCaThu6_PhanCong_HR.TabIndex = 117;
+            // 
+            // panel47
+            // 
+            this.panel47.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel47.Controls.Add(this.checkBoxThu6_PhanCong_HR);
+            this.panel47.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel47.Location = new System.Drawing.Point(0, 0);
+            this.panel47.Name = "panel47";
+            this.panel47.Size = new System.Drawing.Size(158, 34);
+            this.panel47.TabIndex = 117;
+            // 
+            // checkBoxThu6_PhanCong_HR
+            // 
+            this.checkBoxThu6_PhanCong_HR.AutoSize = true;
+            this.checkBoxThu6_PhanCong_HR.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.checkBoxThu6_PhanCong_HR.ForeColor = System.Drawing.Color.White;
+            this.checkBoxThu6_PhanCong_HR.Location = new System.Drawing.Point(14, 8);
+            this.checkBoxThu6_PhanCong_HR.Name = "checkBoxThu6_PhanCong_HR";
+            this.checkBoxThu6_PhanCong_HR.Size = new System.Drawing.Size(68, 21);
+            this.checkBoxThu6_PhanCong_HR.TabIndex = 0;
+            this.checkBoxThu6_PhanCong_HR.Text = "Thứ 6";
+            this.checkBoxThu6_PhanCong_HR.UseVisualStyleBackColor = true;
+            this.checkBoxThu6_PhanCong_HR.CheckedChanged += new System.EventHandler(this.checkBoxThu6_PhanCong_HR_CheckedChanged);
+            // 
+            // panel44
+            // 
+            this.panel44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel44.Controls.Add(this.comboBoxCaThu5_PhanCong_HR);
+            this.panel44.Controls.Add(this.panel45);
+            this.panel44.Location = new System.Drawing.Point(513, 70);
+            this.panel44.Name = "panel44";
+            this.panel44.Size = new System.Drawing.Size(160, 94);
+            this.panel44.TabIndex = 119;
+            // 
+            // comboBoxCaThu5_PhanCong_HR
+            // 
+            this.comboBoxCaThu5_PhanCong_HR.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.comboBoxCaThu5_PhanCong_HR.FormattingEnabled = true;
+            this.comboBoxCaThu5_PhanCong_HR.Location = new System.Drawing.Point(10, 45);
+            this.comboBoxCaThu5_PhanCong_HR.Name = "comboBoxCaThu5_PhanCong_HR";
+            this.comboBoxCaThu5_PhanCong_HR.Size = new System.Drawing.Size(139, 26);
+            this.comboBoxCaThu5_PhanCong_HR.TabIndex = 117;
+            // 
+            // panel45
+            // 
+            this.panel45.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel45.Controls.Add(this.checkBoxThu5_PhanCong_HR);
+            this.panel45.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel45.Location = new System.Drawing.Point(0, 0);
+            this.panel45.Name = "panel45";
+            this.panel45.Size = new System.Drawing.Size(158, 34);
+            this.panel45.TabIndex = 117;
+            // 
+            // checkBoxThu5_PhanCong_HR
+            // 
+            this.checkBoxThu5_PhanCong_HR.AutoSize = true;
+            this.checkBoxThu5_PhanCong_HR.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.checkBoxThu5_PhanCong_HR.ForeColor = System.Drawing.Color.White;
+            this.checkBoxThu5_PhanCong_HR.Location = new System.Drawing.Point(14, 8);
+            this.checkBoxThu5_PhanCong_HR.Name = "checkBoxThu5_PhanCong_HR";
+            this.checkBoxThu5_PhanCong_HR.Size = new System.Drawing.Size(68, 21);
+            this.checkBoxThu5_PhanCong_HR.TabIndex = 0;
+            this.checkBoxThu5_PhanCong_HR.Text = "Thứ 5";
+            this.checkBoxThu5_PhanCong_HR.UseVisualStyleBackColor = true;
+            this.checkBoxThu5_PhanCong_HR.CheckedChanged += new System.EventHandler(this.checkBoxThu5_PhanCong_HR_CheckedChanged);
+            // 
+            // panel42
+            // 
+            this.panel42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel42.Controls.Add(this.comboBoxCaThu3_PhanCong_HR);
+            this.panel42.Controls.Add(this.panel43);
+            this.panel42.Location = new System.Drawing.Point(181, 70);
+            this.panel42.Name = "panel42";
+            this.panel42.Size = new System.Drawing.Size(160, 94);
+            this.panel42.TabIndex = 120;
+            // 
+            // comboBoxCaThu3_PhanCong_HR
+            // 
+            this.comboBoxCaThu3_PhanCong_HR.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.comboBoxCaThu3_PhanCong_HR.FormattingEnabled = true;
+            this.comboBoxCaThu3_PhanCong_HR.Location = new System.Drawing.Point(10, 45);
+            this.comboBoxCaThu3_PhanCong_HR.Name = "comboBoxCaThu3_PhanCong_HR";
+            this.comboBoxCaThu3_PhanCong_HR.Size = new System.Drawing.Size(139, 26);
+            this.comboBoxCaThu3_PhanCong_HR.TabIndex = 117;
+            // 
+            // panel43
+            // 
+            this.panel43.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel43.Controls.Add(this.checkBoxThu3_PhanCong_HR);
+            this.panel43.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel43.Location = new System.Drawing.Point(0, 0);
+            this.panel43.Name = "panel43";
+            this.panel43.Size = new System.Drawing.Size(158, 34);
+            this.panel43.TabIndex = 117;
+            // 
+            // checkBoxThu3_PhanCong_HR
+            // 
+            this.checkBoxThu3_PhanCong_HR.AutoSize = true;
+            this.checkBoxThu3_PhanCong_HR.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.checkBoxThu3_PhanCong_HR.ForeColor = System.Drawing.Color.White;
+            this.checkBoxThu3_PhanCong_HR.Location = new System.Drawing.Point(14, 8);
+            this.checkBoxThu3_PhanCong_HR.Name = "checkBoxThu3_PhanCong_HR";
+            this.checkBoxThu3_PhanCong_HR.Size = new System.Drawing.Size(68, 21);
+            this.checkBoxThu3_PhanCong_HR.TabIndex = 0;
+            this.checkBoxThu3_PhanCong_HR.Text = "Thứ 3";
+            this.checkBoxThu3_PhanCong_HR.UseVisualStyleBackColor = true;
+            this.checkBoxThu3_PhanCong_HR.CheckedChanged += new System.EventHandler(this.checkBoxThu3_PhanCong_HR_CheckedChanged);
+            // 
+            // panel40
+            // 
+            this.panel40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel40.Controls.Add(this.comboBoxCaThu4_PhanCong_HR);
+            this.panel40.Controls.Add(this.panel41);
+            this.panel40.Location = new System.Drawing.Point(347, 70);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(160, 94);
+            this.panel40.TabIndex = 119;
+            // 
+            // comboBoxCaThu4_PhanCong_HR
+            // 
+            this.comboBoxCaThu4_PhanCong_HR.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.comboBoxCaThu4_PhanCong_HR.FormattingEnabled = true;
+            this.comboBoxCaThu4_PhanCong_HR.Location = new System.Drawing.Point(10, 45);
+            this.comboBoxCaThu4_PhanCong_HR.Name = "comboBoxCaThu4_PhanCong_HR";
+            this.comboBoxCaThu4_PhanCong_HR.Size = new System.Drawing.Size(139, 26);
+            this.comboBoxCaThu4_PhanCong_HR.TabIndex = 117;
+            // 
+            // panel41
+            // 
+            this.panel41.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel41.Controls.Add(this.checkBoxThu4_PhanCong_HR);
+            this.panel41.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel41.Location = new System.Drawing.Point(0, 0);
+            this.panel41.Name = "panel41";
+            this.panel41.Size = new System.Drawing.Size(158, 34);
+            this.panel41.TabIndex = 117;
+            // 
+            // checkBoxThu4_PhanCong_HR
+            // 
+            this.checkBoxThu4_PhanCong_HR.AutoSize = true;
+            this.checkBoxThu4_PhanCong_HR.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.checkBoxThu4_PhanCong_HR.ForeColor = System.Drawing.Color.White;
+            this.checkBoxThu4_PhanCong_HR.Location = new System.Drawing.Point(14, 8);
+            this.checkBoxThu4_PhanCong_HR.Name = "checkBoxThu4_PhanCong_HR";
+            this.checkBoxThu4_PhanCong_HR.Size = new System.Drawing.Size(68, 21);
+            this.checkBoxThu4_PhanCong_HR.TabIndex = 0;
+            this.checkBoxThu4_PhanCong_HR.Text = "Thứ 4";
+            this.checkBoxThu4_PhanCong_HR.UseVisualStyleBackColor = true;
+            this.checkBoxThu4_PhanCong_HR.CheckedChanged += new System.EventHandler(this.checkBoxThu4_PhanCong_HR_CheckedChanged);
+            // 
+            // panel36
+            // 
+            this.panel36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel36.Controls.Add(this.comboBoxCaThu2_PhanCong_HR);
+            this.panel36.Controls.Add(this.panel37);
+            this.panel36.Location = new System.Drawing.Point(15, 70);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(160, 94);
+            this.panel36.TabIndex = 116;
+            // 
+            // comboBoxCaThu2_PhanCong_HR
+            // 
+            this.comboBoxCaThu2_PhanCong_HR.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.comboBoxCaThu2_PhanCong_HR.FormattingEnabled = true;
+            this.comboBoxCaThu2_PhanCong_HR.Location = new System.Drawing.Point(10, 45);
+            this.comboBoxCaThu2_PhanCong_HR.Name = "comboBoxCaThu2_PhanCong_HR";
+            this.comboBoxCaThu2_PhanCong_HR.Size = new System.Drawing.Size(139, 26);
+            this.comboBoxCaThu2_PhanCong_HR.TabIndex = 117;
+            // 
+            // panel37
+            // 
+            this.panel37.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel37.Controls.Add(this.checkBoxThu2_PhanCong_HR);
+            this.panel37.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel37.Location = new System.Drawing.Point(0, 0);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(158, 34);
+            this.panel37.TabIndex = 117;
+            // 
+            // checkBoxThu2_PhanCong_HR
+            // 
+            this.checkBoxThu2_PhanCong_HR.AutoSize = true;
+            this.checkBoxThu2_PhanCong_HR.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.checkBoxThu2_PhanCong_HR.ForeColor = System.Drawing.Color.White;
+            this.checkBoxThu2_PhanCong_HR.Location = new System.Drawing.Point(14, 8);
+            this.checkBoxThu2_PhanCong_HR.Name = "checkBoxThu2_PhanCong_HR";
+            this.checkBoxThu2_PhanCong_HR.Size = new System.Drawing.Size(68, 21);
+            this.checkBoxThu2_PhanCong_HR.TabIndex = 0;
+            this.checkBoxThu2_PhanCong_HR.Text = "Thứ 2";
+            this.checkBoxThu2_PhanCong_HR.UseVisualStyleBackColor = true;
+            this.checkBoxThu2_PhanCong_HR.CheckedChanged += new System.EventHandler(this.checkBoxThu2_PhanCong_HR_CheckedChanged);
+            // 
+            // textBoxMaNV_PhanCong_HR
+            // 
+            this.textBoxMaNV_PhanCong_HR.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.textBoxMaNV_PhanCong_HR.Location = new System.Drawing.Point(151, 141);
+            this.textBoxMaNV_PhanCong_HR.Name = "textBoxMaNV_PhanCong_HR";
+            this.textBoxMaNV_PhanCong_HR.Size = new System.Drawing.Size(131, 24);
+            this.textBoxMaNV_PhanCong_HR.TabIndex = 114;
+            this.textBoxMaNV_PhanCong_HR.TextChanged += new System.EventHandler(this.textBoxMaNV_PhanCong_HR_TextChanged);
+            // 
+            // comboBoxTenNV_PhanCong_HR
+            // 
+            this.comboBoxTenNV_PhanCong_HR.FormattingEnabled = true;
+            this.comboBoxTenNV_PhanCong_HR.Location = new System.Drawing.Point(419, 144);
+            this.comboBoxTenNV_PhanCong_HR.Name = "comboBoxTenNV_PhanCong_HR";
+            this.comboBoxTenNV_PhanCong_HR.Size = new System.Drawing.Size(193, 21);
+            this.comboBoxTenNV_PhanCong_HR.TabIndex = 112;
+            this.comboBoxTenNV_PhanCong_HR.SelectedIndexChanged += new System.EventHandler(this.comboBoxTenNV_PhanCong_HR_SelectedIndexChanged);
+            // 
+            // comboBoxPhongBan_PhanCong_HR
+            // 
+            this.comboBoxPhongBan_PhanCong_HR.FormattingEnabled = true;
+            this.comboBoxPhongBan_PhanCong_HR.Items.AddRange(new object[] {
+            "Nghỉ ốm",
+            "Nghỉ không lương",
+            "Nghỉ phép năm",
+            "Nghỉ khác",
+            "Nghỉ tai nạn",
+            "Nghỉ công tác",
+            "Nghỉ thai sản",
+            "Quên check in",
+            "Quên check out"});
+            this.comboBoxPhongBan_PhanCong_HR.Location = new System.Drawing.Point(776, 148);
+            this.comboBoxPhongBan_PhanCong_HR.Name = "comboBoxPhongBan_PhanCong_HR";
+            this.comboBoxPhongBan_PhanCong_HR.Size = new System.Drawing.Size(255, 21);
+            this.comboBoxPhongBan_PhanCong_HR.TabIndex = 111;
+            // 
+            // label111
+            // 
+            this.label111.AutoSize = true;
+            this.label111.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label111.Location = new System.Drawing.Point(687, 149);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(83, 17);
+            this.label111.TabIndex = 87;
+            this.label111.Text = "Phòng ban";
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Teal;
+            this.button8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(874, 610);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(143, 41);
+            this.button8.TabIndex = 84;
+            this.button8.Text = "Cập nhật";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.White;
+            this.button9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.button9.ForeColor = System.Drawing.Color.Teal;
+            this.button9.Location = new System.Drawing.Point(1023, 610);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(135, 41);
+            this.button9.TabIndex = 83;
+            this.button9.Text = "Hủy bỏ";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // dateTimePickerDenNgay_PhanCong_HR
+            // 
+            this.dateTimePickerDenNgay_PhanCong_HR.Location = new System.Drawing.Point(479, 209);
+            this.dateTimePickerDenNgay_PhanCong_HR.Name = "dateTimePickerDenNgay_PhanCong_HR";
+            this.dateTimePickerDenNgay_PhanCong_HR.Size = new System.Drawing.Size(208, 21);
+            this.dateTimePickerDenNgay_PhanCong_HR.TabIndex = 110;
+            // 
+            // dateTimePickerTuNgay_PhanCong_HR
+            // 
+            this.dateTimePickerTuNgay_PhanCong_HR.Location = new System.Drawing.Point(151, 209);
+            this.dateTimePickerTuNgay_PhanCong_HR.Name = "dateTimePickerTuNgay_PhanCong_HR";
+            this.dateTimePickerTuNgay_PhanCong_HR.Size = new System.Drawing.Size(202, 21);
+            this.dateTimePickerTuNgay_PhanCong_HR.TabIndex = 109;
+            // 
+            // comboBoxNguoiDuyet_PhanCong_HR
+            // 
+            this.comboBoxNguoiDuyet_PhanCong_HR.FormattingEnabled = true;
+            this.comboBoxNguoiDuyet_PhanCong_HR.Location = new System.Drawing.Point(787, 77);
+            this.comboBoxNguoiDuyet_PhanCong_HR.Name = "comboBoxNguoiDuyet_PhanCong_HR";
+            this.comboBoxNguoiDuyet_PhanCong_HR.Size = new System.Drawing.Size(193, 21);
+            this.comboBoxNguoiDuyet_PhanCong_HR.TabIndex = 108;
+            // 
+            // textBoxTieuDe_PhanCong_HR
+            // 
+            this.textBoxTieuDe_PhanCong_HR.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.textBoxTieuDe_PhanCong_HR.Location = new System.Drawing.Point(151, 17);
+            this.textBoxTieuDe_PhanCong_HR.Name = "textBoxTieuDe_PhanCong_HR";
+            this.textBoxTieuDe_PhanCong_HR.Size = new System.Drawing.Size(362, 24);
+            this.textBoxTieuDe_PhanCong_HR.TabIndex = 107;
+            // 
+            // textBoxGhiChu_PhanCong_HR
+            // 
+            this.textBoxGhiChu_PhanCong_HR.Location = new System.Drawing.Point(151, 282);
+            this.textBoxGhiChu_PhanCong_HR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxGhiChu_PhanCong_HR.Multiline = true;
+            this.textBoxGhiChu_PhanCong_HR.Name = "textBoxGhiChu_PhanCong_HR";
+            this.textBoxGhiChu_PhanCong_HR.Size = new System.Drawing.Size(430, 85);
+            this.textBoxGhiChu_PhanCong_HR.TabIndex = 85;
+            // 
+            // labelNgayTao_PhanCong_HR
+            // 
+            this.labelNgayTao_PhanCong_HR.AutoSize = true;
+            this.labelNgayTao_PhanCong_HR.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelNgayTao_PhanCong_HR.Location = new System.Drawing.Point(148, 78);
+            this.labelNgayTao_PhanCong_HR.Name = "labelNgayTao_PhanCong_HR";
+            this.labelNgayTao_PhanCong_HR.Size = new System.Drawing.Size(64, 17);
+            this.labelNgayTao_PhanCong_HR.TabIndex = 104;
+            this.labelNgayTao_PhanCong_HR.Text = "Ngày tạo";
+            // 
+            // labelNguoiLap_PhanCong_HR
+            // 
+            this.labelNguoiLap_PhanCong_HR.AutoSize = true;
+            this.labelNguoiLap_PhanCong_HR.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelNguoiLap_PhanCong_HR.Location = new System.Drawing.Point(447, 78);
+            this.labelNguoiLap_PhanCong_HR.Name = "labelNguoiLap_PhanCong_HR";
+            this.labelNguoiLap_PhanCong_HR.Size = new System.Drawing.Size(94, 17);
+            this.labelNguoiLap_PhanCong_HR.TabIndex = 103;
+            this.labelNguoiLap_PhanCong_HR.Text = "Tên người tạo";
+            // 
+            // labelMaPhanCong_PhanCong_HR
+            // 
+            this.labelMaPhanCong_PhanCong_HR.AutoSize = true;
+            this.labelMaPhanCong_PhanCong_HR.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelMaPhanCong_PhanCong_HR.Location = new System.Drawing.Point(705, 23);
+            this.labelMaPhanCong_PhanCong_HR.Name = "labelMaPhanCong_PhanCong_HR";
+            this.labelMaPhanCong_PhanCong_HR.Size = new System.Drawing.Size(53, 17);
+            this.labelMaPhanCong_PhanCong_HR.TabIndex = 101;
+            this.labelMaPhanCong_PhanCong_HR.Text = "Mã đơn";
+            // 
+            // label118
+            // 
+            this.label118.AutoSize = true;
+            this.label118.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label118.Location = new System.Drawing.Point(60, 20);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(58, 17);
+            this.label118.TabIndex = 100;
+            this.label118.Text = "Tiêu đề";
+            // 
+            // label119
+            // 
+            this.label119.AutoSize = true;
+            this.label119.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label119.Location = new System.Drawing.Point(50, 282);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(62, 17);
+            this.label119.TabIndex = 99;
+            this.label119.Text = "Ghi Chú";
+            // 
+            // label123
+            // 
+            this.label123.AutoSize = true;
+            this.label123.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label123.Location = new System.Drawing.Point(399, 211);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(74, 17);
+            this.label123.TabIndex = 95;
+            this.label123.Text = "Đến ngày";
+            // 
+            // label124
+            // 
+            this.label124.AutoSize = true;
+            this.label124.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label124.Location = new System.Drawing.Point(50, 78);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(71, 17);
+            this.label124.TabIndex = 94;
+            this.label124.Text = "Ngày tạo";
+            // 
+            // label125
+            // 
+            this.label125.AutoSize = true;
+            this.label125.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label125.Location = new System.Drawing.Point(53, 209);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(65, 17);
+            this.label125.TabIndex = 93;
+            this.label125.Text = "Từ ngày";
+            // 
+            // label126
+            // 
+            this.label126.AutoSize = true;
+            this.label126.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label126.Location = new System.Drawing.Point(687, 78);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(94, 17);
+            this.label126.TabIndex = 92;
+            this.label126.Text = "Người duyệt";
+            // 
+            // label127
+            // 
+            this.label127.AutoSize = true;
+            this.label127.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label127.Location = new System.Drawing.Point(314, 78);
+            this.label127.Name = "label127";
+            this.label127.Size = new System.Drawing.Size(105, 17);
+            this.label127.TabIndex = 91;
+            this.label127.Text = "Tên người tạo";
+            // 
+            // label128
+            // 
+            this.label128.AutoSize = true;
+            this.label128.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label128.Location = new System.Drawing.Point(319, 145);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(59, 17);
+            this.label128.TabIndex = 90;
+            this.label128.Text = "Tên NV";
+            // 
+            // label130
+            // 
+            this.label130.AutoSize = true;
+            this.label130.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label130.Location = new System.Drawing.Point(62, 144);
+            this.label130.Name = "label130";
+            this.label130.Size = new System.Drawing.Size(53, 17);
+            this.label130.TabIndex = 89;
+            this.label130.Text = "Mã NV";
+            // 
+            // label132
+            // 
+            this.label132.AutoSize = true;
+            this.label132.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.label132.Location = new System.Drawing.Point(602, 23);
+            this.label132.Name = "label132";
+            this.label132.Size = new System.Drawing.Size(59, 17);
+            this.label132.TabIndex = 86;
+            this.label132.Text = "Mã đơn";
+            // 
+            // panel33
+            // 
+            this.panel33.BackColor = System.Drawing.Color.Teal;
+            this.panel33.Controls.Add(this.label106);
+            this.panel33.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel33.Location = new System.Drawing.Point(0, 0);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(1293, 55);
+            this.panel33.TabIndex = 14;
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
+            this.label106.ForeColor = System.Drawing.Color.White;
+            this.label106.Location = new System.Drawing.Point(19, 6);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(196, 41);
+            this.label106.TabIndex = 0;
+            this.label106.Text = "Phân công";
+            // 
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
@@ -5639,6 +6352,35 @@
             this.panel31.PerformLayout();
             this.panel26.ResumeLayout(false);
             this.panel26.PerformLayout();
+            this.navigationPagePhanCong_HRM.ResumeLayout(false);
+            this.panel34.ResumeLayout(false);
+            this.panel34.PerformLayout();
+            this.panel35.ResumeLayout(false);
+            this.panel50.ResumeLayout(false);
+            this.panel50.PerformLayout();
+            this.panel48.ResumeLayout(false);
+            this.panel49.ResumeLayout(false);
+            this.panel49.PerformLayout();
+            this.panel38.ResumeLayout(false);
+            this.panel39.ResumeLayout(false);
+            this.panel39.PerformLayout();
+            this.panel46.ResumeLayout(false);
+            this.panel47.ResumeLayout(false);
+            this.panel47.PerformLayout();
+            this.panel44.ResumeLayout(false);
+            this.panel45.ResumeLayout(false);
+            this.panel45.PerformLayout();
+            this.panel42.ResumeLayout(false);
+            this.panel43.ResumeLayout(false);
+            this.panel43.PerformLayout();
+            this.panel40.ResumeLayout(false);
+            this.panel41.ResumeLayout(false);
+            this.panel41.PerformLayout();
+            this.panel36.ResumeLayout(false);
+            this.panel37.ResumeLayout(false);
+            this.panel37.PerformLayout();
+            this.panel33.ResumeLayout(false);
+            this.panel33.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6117,5 +6859,64 @@
         private System.Windows.Forms.Button buttonLuu_TaiKhoan_HR;
         private System.Windows.Forms.ComboBox comboBoxTrangThai_TaiKhoan_HR;
         private System.Windows.Forms.Label labelTrangThai_TaiKhoan_HR;
+        private DevExpress.XtraBars.Navigation.NavigationPage navigationPagePhanCong_HRM;
+        private System.Windows.Forms.Panel panel33;
+        private System.Windows.Forms.Label label106;
+        private System.Windows.Forms.Panel panel34;
+        private System.Windows.Forms.Panel panel35;
+        private System.Windows.Forms.Panel panel50;
+        private System.Windows.Forms.Label label107;
+        private System.Windows.Forms.Panel panel48;
+        private System.Windows.Forms.ComboBox comboBoxCaThu7_PhanCong_HR;
+        private System.Windows.Forms.Panel panel49;
+        private System.Windows.Forms.CheckBox checkBoxThu7_PhanCong_HR;
+        private System.Windows.Forms.Panel panel38;
+        private System.Windows.Forms.ComboBox comboBoxCaChuNhat_PhanCong_HR;
+        private System.Windows.Forms.Panel panel39;
+        private System.Windows.Forms.CheckBox checkBoxChuNhat_PhanCong_HR;
+        private System.Windows.Forms.Panel panel46;
+        private System.Windows.Forms.ComboBox comboBoxCaThu6_PhanCong_HR;
+        private System.Windows.Forms.Panel panel47;
+        private System.Windows.Forms.CheckBox checkBoxThu6_PhanCong_HR;
+        private System.Windows.Forms.Panel panel44;
+        private System.Windows.Forms.ComboBox comboBoxCaThu5_PhanCong_HR;
+        private System.Windows.Forms.Panel panel45;
+        private System.Windows.Forms.CheckBox checkBoxThu5_PhanCong_HR;
+        private System.Windows.Forms.Panel panel42;
+        private System.Windows.Forms.ComboBox comboBoxCaThu3_PhanCong_HR;
+        private System.Windows.Forms.Panel panel43;
+        private System.Windows.Forms.CheckBox checkBoxThu3_PhanCong_HR;
+        private System.Windows.Forms.Panel panel40;
+        private System.Windows.Forms.ComboBox comboBoxCaThu4_PhanCong_HR;
+        private System.Windows.Forms.Panel panel41;
+        private System.Windows.Forms.CheckBox checkBoxThu4_PhanCong_HR;
+        private System.Windows.Forms.Panel panel36;
+        private System.Windows.Forms.ComboBox comboBoxCaThu2_PhanCong_HR;
+        private System.Windows.Forms.Panel panel37;
+        private System.Windows.Forms.CheckBox checkBoxThu2_PhanCong_HR;
+        private System.Windows.Forms.TextBox textBoxMaNV_PhanCong_HR;
+        private System.Windows.Forms.ComboBox comboBoxTenNV_PhanCong_HR;
+        private System.Windows.Forms.ComboBox comboBoxPhongBan_PhanCong_HR;
+        private System.Windows.Forms.Label label111;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDenNgay_PhanCong_HR;
+        private System.Windows.Forms.DateTimePicker dateTimePickerTuNgay_PhanCong_HR;
+        private System.Windows.Forms.ComboBox comboBoxNguoiDuyet_PhanCong_HR;
+        private System.Windows.Forms.TextBox textBoxTieuDe_PhanCong_HR;
+        private System.Windows.Forms.TextBox textBoxGhiChu_PhanCong_HR;
+        private System.Windows.Forms.Label labelNgayTao_PhanCong_HR;
+        private System.Windows.Forms.Label labelNguoiLap_PhanCong_HR;
+        private System.Windows.Forms.Label labelMaPhanCong_PhanCong_HR;
+        private System.Windows.Forms.Label label118;
+        private System.Windows.Forms.Label label119;
+        private System.Windows.Forms.Label label123;
+        private System.Windows.Forms.Label label124;
+        private System.Windows.Forms.Label label125;
+        private System.Windows.Forms.Label label126;
+        private System.Windows.Forms.Label label127;
+        private System.Windows.Forms.Label label128;
+        private System.Windows.Forms.Label label130;
+        private System.Windows.Forms.Label label132;
     }
 }
