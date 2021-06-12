@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using DAL.DataQuanLyNhanSuTableAdapters;
+using System.Data.Linq.SqlClient;
 
 namespace DAL
 {
@@ -144,7 +145,7 @@ namespace DAL
                 {
               
                     //CaItem itemCa = new CaItem();
-                    ChamCongItem item = new ChamCongItem(chitiet.MA_NV, chitiet.NGAY_CC, (DateTime)chitiet.CHECK_IN, (DateTime) chitiet.CHECK_OUT, Convert.ToInt32(chitiet.SO_LAN));
+                    ChamCongItem item = new ChamCongItem(chitiet.MA_NV,(DateTime) chitiet.NGAY_CC, (DateTime)chitiet.CHECK_IN, (DateTime) chitiet.CHECK_OUT, Convert.ToInt32(chitiet.SO_LAN));
                     dschamcong.Add(item);
                 }
             }
@@ -159,7 +160,8 @@ namespace DAL
             {
 
                 var chamcong = from CHAMCONG in db.CHAMCONGs
-                               .Where(M => M.MANV.Equals(manv))
+                               //.Where(M => M.MANV.Equals(manv))
+                               where SqlMethods.Like(CHAMCONG.MANV, "%" + manv + "%")
                                select new
                                {
                                    MA_NV = CHAMCONG.MANV,

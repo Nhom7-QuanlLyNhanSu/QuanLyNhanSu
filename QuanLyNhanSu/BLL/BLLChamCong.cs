@@ -44,5 +44,54 @@ namespace BLL
                 return 1;
             return 0;
         }
-    }
+
+        private List<ChamCongItem> dschamcong = new List<ChamCongItem>();
+
+        public List<ChamCongItem> Dschamcong
+        {
+            get { return dschamcong; }
+            set { dschamcong = value; }
+        }
+
+        public void ListchamCongAllBLL()
+        {
+            dschamcong = new List<ChamCongItem>();
+            cc.ListchamCongAllDAL();
+            int i = 0;
+            foreach (var chitiet in cc.Dschamcong)
+            {
+                ChamCongItem item = new ChamCongItem(chitiet.Manvi, (DateTime) chitiet.Ngaycci, (DateTime)chitiet.Giockini, (DateTime)chitiet.Giochouti, Convert.ToInt32(chitiet.Solani));
+                dschamcong.Add(item);
+            }
+        }
+
+        /// list don tu theo manv
+        /// 
+        public void ListchamCongByMANVBLL(string manv)
+        {
+            dschamcong = new List<ChamCongItem>();
+            cc.ListchamCongByMANVDAL(manv);
+            int i = 0;
+            foreach (var chitiet in cc.Dschamcong)
+            {
+                ChamCongItem item = new ChamCongItem(chitiet.Manvi, (DateTime)chitiet.Ngaycci, (DateTime)chitiet.Giockini, (DateTime)chitiet.Giochouti, Convert.ToInt32(chitiet.Solani));
+                dschamcong.Add(item);
+            }
+        }
+              
+       /// list don tu theo NGAY
+        /// 
+        public void ListchamCongByDayDAL(DateTime day)
+        {
+            dschamcong = new List<ChamCongItem>();
+            cc.ListchamCongByDayDAL(day);
+            int i = 0;
+            foreach (var chitiet in cc.Dschamcong)
+            {
+                ChamCongItem item = new ChamCongItem(chitiet.Manvi, (DateTime)chitiet.Ngaycci, (DateTime)chitiet.Giockini, (DateTime)chitiet.Giochouti, Convert.ToInt32(chitiet.Solani));
+                dschamcong.Add(item);
+            }
+        }
+
+    }///////////////////
 }

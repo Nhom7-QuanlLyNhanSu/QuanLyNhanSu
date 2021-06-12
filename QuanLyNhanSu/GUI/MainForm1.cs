@@ -25,6 +25,7 @@ namespace GUI
         BLLThongBao TB = new BLLThongBao();
         BLLCaLamViec CLV = new BLLCaLamViec();
         BLLPhanCong PC = new BLLPhanCong();
+        BLLChamCong CC = new BLLChamCong();
 
         string manvdn;
         string chondon;
@@ -2359,7 +2360,99 @@ namespace GUI
 
         }
 
+        ///================================================================================================================================
+        ///                       DS CHAM CONG                    
+        ///================================================================================================================================
 
+
+        private void barButtonItemChamCong_HR_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            navigationFrameMain.SelectedPage = navigationPageDSChamCong;
+            loadDSChamCong();
+        }
+
+        public void loadDSChamCong()
+        {
+            listViewdsChamCong_hr.Items.Clear();
+            CC.ListchamCongAllBLL();
+            foreach (var c in CC.Dschamcong)
+            {
+                string tenNV = NV.BLLTenNhanVien(c.Manvi);
+                string ngaycc = c.Ngaycci.Day.ToString() + "/" + c.Ngaycci.Month.ToString() + "/" + c.Ngaycci.Year.ToString();
+                string checkin = c.Giockini.Hour.ToString() + ":" + c.Giockini.Minute.ToString();
+                string checkout = c.Giochouti.Hour.ToString() + ":" + c.Giochouti.Minute.ToString();
+
+                listViewdsChamCong_hr.Items.Add(new ListViewItem(new string[] { c.Manvi, tenNV, ngaycc, checkin, checkout }));
+            }
+            ////////////
+
+            /////////////
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                listViewdsChamCong_hr.Items.Clear();
+                CC.ListchamCongByMANVBLL(textBoxSearch_MANV_CHAMCONG.Text);
+                foreach (var c in CC.Dschamcong)
+                {
+                    string tenNV = NV.BLLTenNhanVien(c.Manvi);
+                    string ngaycc = c.Ngaycci.Day.ToString() + "/" + c.Ngaycci.Month.ToString() + "/" + c.Ngaycci.Year.ToString();
+                    string checkin = c.Giockini.Hour.ToString() + ":" + c.Giockini.Minute.ToString();
+                    string checkout = c.Giochouti.Hour.ToString() + ":" + c.Giochouti.Minute.ToString();
+
+                    listViewdsChamCong_hr.Items.Add(new ListViewItem(new string[] { c.Manvi, tenNV, ngaycc, checkin, checkout }));
+                }
+            }
+            catch { }
+        }
+
+        private void buttonViewALL_ChamCong_HR_Click(object sender, EventArgs e)
+        {
+            loadDSChamCong();
+        }
+
+        private void buttonToDay_ChamCong_HR_Click(object sender, EventArgs e)
+        {
+            DateTime date = new DateTime();
+            date = DateTime.Now;
+            try
+            {
+                listViewdsChamCong_hr.Items.Clear();
+                CC.ListchamCongByDayDAL(date);
+                foreach (var c in CC.Dschamcong)
+                {
+                    string tenNV = NV.BLLTenNhanVien(c.Manvi);
+                    string ngaycc = c.Ngaycci.Day.ToString() + "/" + c.Ngaycci.Month.ToString() + "/" + c.Ngaycci.Year.ToString();
+                    string checkin = c.Giockini.Hour.ToString() + ":" + c.Giockini.Minute.ToString();
+                    string checkout = c.Giochouti.Hour.ToString() + ":" + c.Giochouti.Minute.ToString();
+
+                    listViewdsChamCong_hr.Items.Add(new ListViewItem(new string[] { c.Manvi, tenNV, ngaycc, checkin, checkout }));
+                }
+            }
+            catch { }
+        }
+
+        private void dateTimePickerChamCong_hr_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                listViewdsChamCong_hr.Items.Clear();
+                CC.ListchamCongByDayDAL(dateTimePickerChamCong_hr.Value);
+                foreach (var c in CC.Dschamcong)
+                {
+                    string tenNV = NV.BLLTenNhanVien(c.Manvi);
+                    string ngaycc = c.Ngaycci.Day.ToString() + "/" + c.Ngaycci.Month.ToString() + "/" + c.Ngaycci.Year.ToString();
+                    string checkin = c.Giockini.Hour.ToString() + ":" + c.Giockini.Minute.ToString();
+                    string checkout = c.Giochouti.Hour.ToString() + ":" + c.Giochouti.Minute.ToString();
+
+                    listViewdsChamCong_hr.Items.Add(new ListViewItem(new string[] { c.Manvi, tenNV, ngaycc, checkin, checkout }));
+                }
+            }
+            catch { }
+        }
 
 
 

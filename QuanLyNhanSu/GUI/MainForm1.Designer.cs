@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm1));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem13 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem14 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem15 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem16 = new DevExpress.Utils.ToolTipTitleItem();
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.officeNavigationBar = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
             this.navBarControl = new DevExpress.XtraNavBar.NavBarControl();
@@ -89,7 +89,7 @@
             this.barButtonItemTK = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem29 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemChamCong_HR = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemTaiKhoan_HRM = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -554,6 +554,20 @@
             this.label132 = new System.Windows.Forms.Label();
             this.panel33 = new System.Windows.Forms.Panel();
             this.label106 = new System.Windows.Forms.Label();
+            this.navigationPageDSChamCong = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.panel52 = new System.Windows.Forms.Panel();
+            this.dateTimePickerChamCong_hr = new System.Windows.Forms.DateTimePicker();
+            this.buttonToDay_ChamCong_HR = new System.Windows.Forms.Button();
+            this.listViewdsChamCong_hr = new System.Windows.Forms.ListView();
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.buttonViewALL_ChamCong_HR = new System.Windows.Forms.Button();
+            this.textBoxSearch_MANV_CHAMCONG = new System.Windows.Forms.TextBox();
+            this.panel51 = new System.Windows.Forms.Panel();
+            this.label108 = new System.Windows.Forms.Label();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -660,6 +674,9 @@
             this.panel36.SuspendLayout();
             this.panel37.SuspendLayout();
             this.panel33.SuspendLayout();
+            this.navigationPageDSChamCong.SuspendLayout();
+            this.panel52.SuspendLayout();
+            this.panel51.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabbedView
@@ -768,7 +785,7 @@
             this.barButtonItemTK,
             this.barButtonItem29,
             this.barButtonItem30,
-            this.barButtonItem17,
+            this.barButtonItemChamCong_HR,
             this.barButtonItem18,
             this.barButtonItemTaiKhoan_HRM});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
@@ -1107,17 +1124,17 @@
             this.barButtonItemTK.ImageOptions.Image = global::GUI.Properties.Resources.customer_16x16;
             this.barButtonItemTK.ImageOptions.LargeImage = global::GUI.Properties.Resources.customer_32x32;
             this.barButtonItemTK.Name = "barButtonItemTK";
-            toolTipTitleItem1.Text = "Tài Khoản cá nhân";
-            toolTipItem1.LeftIndent = 6;
-            toolTipItem1.Text = "Xem thông tin tài khoản đăng nhập, chỉnh sửa thông tin, thay đổi mật khẩu";
-            toolTipTitleItem2.Appearance.Image = global::GUI.Properties.Resources.contact_32x32;
-            toolTipTitleItem2.Appearance.Options.UseImage = true;
-            toolTipTitleItem2.Image = global::GUI.Properties.Resources.contact_32x32;
-            toolTipTitleItem2.LeftIndent = 6;
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            superToolTip1.Items.Add(toolTipTitleItem2);
-            this.barButtonItemTK.SuperTip = superToolTip1;
+            toolTipTitleItem13.Text = "Tài Khoản cá nhân";
+            toolTipItem7.LeftIndent = 6;
+            toolTipItem7.Text = "Xem thông tin tài khoản đăng nhập, chỉnh sửa thông tin, thay đổi mật khẩu";
+            toolTipTitleItem14.Appearance.Image = global::GUI.Properties.Resources.contact_32x32;
+            toolTipTitleItem14.Appearance.Options.UseImage = true;
+            toolTipTitleItem14.Image = global::GUI.Properties.Resources.contact_32x32;
+            toolTipTitleItem14.LeftIndent = 6;
+            superToolTip7.Items.Add(toolTipTitleItem13);
+            superToolTip7.Items.Add(toolTipItem7);
+            superToolTip7.Items.Add(toolTipTitleItem14);
+            this.barButtonItemTK.SuperTip = superToolTip7;
             this.barButtonItemTK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemTK_ItemClick);
             // 
             // barButtonItem29
@@ -1126,17 +1143,17 @@
             this.barButtonItem29.Id = 101;
             this.barButtonItem29.ImageOptions.Image = global::GUI.Properties.Resources.assignto_32x32;
             this.barButtonItem29.Name = "barButtonItem29";
-            toolTipTitleItem3.Text = "Đăng Xuất";
-            toolTipItem2.LeftIndent = 6;
-            toolTipItem2.Text = "Thoát đăng nhập tài khoản này!\r\n";
-            toolTipTitleItem4.Appearance.Image = global::GUI.Properties.Resources.assignto_32x321;
-            toolTipTitleItem4.Appearance.Options.UseImage = true;
-            toolTipTitleItem4.Image = global::GUI.Properties.Resources.assignto_32x321;
-            toolTipTitleItem4.LeftIndent = 6;
-            superToolTip2.Items.Add(toolTipTitleItem3);
-            superToolTip2.Items.Add(toolTipItem2);
-            superToolTip2.Items.Add(toolTipTitleItem4);
-            this.barButtonItem29.SuperTip = superToolTip2;
+            toolTipTitleItem15.Text = "Đăng Xuất";
+            toolTipItem8.LeftIndent = 6;
+            toolTipItem8.Text = "Thoát đăng nhập tài khoản này!\r\n";
+            toolTipTitleItem16.Appearance.Image = global::GUI.Properties.Resources.assignto_32x321;
+            toolTipTitleItem16.Appearance.Options.UseImage = true;
+            toolTipTitleItem16.Image = global::GUI.Properties.Resources.assignto_32x321;
+            toolTipTitleItem16.LeftIndent = 6;
+            superToolTip8.Items.Add(toolTipTitleItem15);
+            superToolTip8.Items.Add(toolTipItem8);
+            superToolTip8.Items.Add(toolTipTitleItem16);
+            this.barButtonItem29.SuperTip = superToolTip8;
             // 
             // barButtonItem30
             // 
@@ -1148,13 +1165,14 @@
             this.barButtonItem30.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barButtonItem30.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem30_ItemClick);
             // 
-            // barButtonItem17
+            // barButtonItemChamCong_HR
             // 
-            this.barButtonItem17.Caption = "Chấm Công";
-            this.barButtonItem17.Id = 104;
-            this.barButtonItem17.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.ImageOptions.Image")));
-            this.barButtonItem17.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.ImageOptions.LargeImage")));
-            this.barButtonItem17.Name = "barButtonItem17";
+            this.barButtonItemChamCong_HR.Caption = "Chấm Công";
+            this.barButtonItemChamCong_HR.Id = 104;
+            this.barButtonItemChamCong_HR.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemChamCong_HR.ImageOptions.Image")));
+            this.barButtonItemChamCong_HR.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemChamCong_HR.ImageOptions.LargeImage")));
+            this.barButtonItemChamCong_HR.Name = "barButtonItemChamCong_HR";
+            this.barButtonItemChamCong_HR.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemChamCong_HR_ItemClick);
             // 
             // barButtonItem18
             // 
@@ -1288,7 +1306,7 @@
             // 
             // ribbonPageGroup20
             // 
-            this.ribbonPageGroup20.ItemLinks.Add(this.barButtonItem17);
+            this.ribbonPageGroup20.ItemLinks.Add(this.barButtonItemChamCong_HR);
             this.ribbonPageGroup20.ItemLinks.Add(this.barButtonItem18);
             this.ribbonPageGroup20.Name = "ribbonPageGroup20";
             this.ribbonPageGroup20.Text = "Công việc";
@@ -1882,6 +1900,7 @@
             this.navigationFrameMain.Controls.Add(this.navigationPageDuyetDon_hr);
             this.navigationFrameMain.Controls.Add(this.navigationPageTaiKhoan_HRM);
             this.navigationFrameMain.Controls.Add(this.navigationPagePhanCong_HRM);
+            this.navigationFrameMain.Controls.Add(this.navigationPageDSChamCong);
             this.navigationFrameMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navigationFrameMain.Location = new System.Drawing.Point(165, 143);
             this.navigationFrameMain.Name = "navigationFrameMain";
@@ -1899,7 +1918,8 @@
             this.navigationPageHopDong_HR,
             this.navigationPageDuyetDon_hr,
             this.navigationPageTaiKhoan_HRM,
-            this.navigationPagePhanCong_HRM});
+            this.navigationPagePhanCong_HRM,
+            this.navigationPageDSChamCong});
             this.navigationFrameMain.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
             this.navigationFrameMain.SelectedPage = this.NavigationPageTaiKhoan;
             this.navigationFrameMain.Size = new System.Drawing.Size(1293, 768);
@@ -6144,6 +6164,130 @@
             this.label106.TabIndex = 0;
             this.label106.Text = "Phân công";
             // 
+            // navigationPageDSChamCong
+            // 
+            this.navigationPageDSChamCong.Controls.Add(this.panel52);
+            this.navigationPageDSChamCong.Controls.Add(this.panel51);
+            this.navigationPageDSChamCong.Name = "navigationPageDSChamCong";
+            this.navigationPageDSChamCong.Size = new System.Drawing.Size(1293, 768);
+            // 
+            // panel52
+            // 
+            this.panel52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel52.Controls.Add(this.dateTimePickerChamCong_hr);
+            this.panel52.Controls.Add(this.buttonToDay_ChamCong_HR);
+            this.panel52.Controls.Add(this.listViewdsChamCong_hr);
+            this.panel52.Controls.Add(this.buttonViewALL_ChamCong_HR);
+            this.panel52.Controls.Add(this.textBoxSearch_MANV_CHAMCONG);
+            this.panel52.Location = new System.Drawing.Point(244, 100);
+            this.panel52.Name = "panel52";
+            this.panel52.Size = new System.Drawing.Size(802, 653);
+            this.panel52.TabIndex = 44;
+            // 
+            // dateTimePickerChamCong_hr
+            // 
+            this.dateTimePickerChamCong_hr.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.dateTimePickerChamCong_hr.Location = new System.Drawing.Point(551, 17);
+            this.dateTimePickerChamCong_hr.Name = "dateTimePickerChamCong_hr";
+            this.dateTimePickerChamCong_hr.Size = new System.Drawing.Size(233, 24);
+            this.dateTimePickerChamCong_hr.TabIndex = 45;
+            this.dateTimePickerChamCong_hr.ValueChanged += new System.EventHandler(this.dateTimePickerChamCong_hr_ValueChanged);
+            // 
+            // buttonToDay_ChamCong_HR
+            // 
+            this.buttonToDay_ChamCong_HR.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.buttonToDay_ChamCong_HR.Location = new System.Drawing.Point(357, 15);
+            this.buttonToDay_ChamCong_HR.Name = "buttonToDay_ChamCong_HR";
+            this.buttonToDay_ChamCong_HR.Size = new System.Drawing.Size(90, 26);
+            this.buttonToDay_ChamCong_HR.TabIndex = 44;
+            this.buttonToDay_ChamCong_HR.Text = "Hôm nay";
+            this.buttonToDay_ChamCong_HR.UseVisualStyleBackColor = true;
+            this.buttonToDay_ChamCong_HR.Click += new System.EventHandler(this.buttonToDay_ChamCong_HR_Click);
+            // 
+            // listViewdsChamCong_hr
+            // 
+            this.listViewdsChamCong_hr.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader16,
+            this.columnHeader20,
+            this.columnHeader17,
+            this.columnHeader18,
+            this.columnHeader19});
+            this.listViewdsChamCong_hr.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.listViewdsChamCong_hr.FullRowSelect = true;
+            this.listViewdsChamCong_hr.GridLines = true;
+            this.listViewdsChamCong_hr.HideSelection = false;
+            this.listViewdsChamCong_hr.Location = new System.Drawing.Point(20, 55);
+            this.listViewdsChamCong_hr.Name = "listViewdsChamCong_hr";
+            this.listViewdsChamCong_hr.Size = new System.Drawing.Size(764, 584);
+            this.listViewdsChamCong_hr.TabIndex = 41;
+            this.listViewdsChamCong_hr.UseCompatibleStateImageBehavior = false;
+            this.listViewdsChamCong_hr.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Mã NV";
+            this.columnHeader16.Width = 90;
+            // 
+            // columnHeader20
+            // 
+            this.columnHeader20.Text = "Tên Nhân Viên";
+            this.columnHeader20.Width = 160;
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Ngày CC";
+            this.columnHeader17.Width = 150;
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "Check-in";
+            this.columnHeader18.Width = 150;
+            // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "Check-out";
+            this.columnHeader19.Width = 150;
+            // 
+            // buttonViewALL_ChamCong_HR
+            // 
+            this.buttonViewALL_ChamCong_HR.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.buttonViewALL_ChamCong_HR.Location = new System.Drawing.Point(259, 15);
+            this.buttonViewALL_ChamCong_HR.Name = "buttonViewALL_ChamCong_HR";
+            this.buttonViewALL_ChamCong_HR.Size = new System.Drawing.Size(79, 26);
+            this.buttonViewALL_ChamCong_HR.TabIndex = 43;
+            this.buttonViewALL_ChamCong_HR.Text = "View all";
+            this.buttonViewALL_ChamCong_HR.UseVisualStyleBackColor = true;
+            this.buttonViewALL_ChamCong_HR.Click += new System.EventHandler(this.buttonViewALL_ChamCong_HR_Click);
+            // 
+            // textBoxSearch_MANV_CHAMCONG
+            // 
+            this.textBoxSearch_MANV_CHAMCONG.Location = new System.Drawing.Point(22, 17);
+            this.textBoxSearch_MANV_CHAMCONG.Name = "textBoxSearch_MANV_CHAMCONG";
+            this.textBoxSearch_MANV_CHAMCONG.Size = new System.Drawing.Size(215, 21);
+            this.textBoxSearch_MANV_CHAMCONG.TabIndex = 42;
+            this.textBoxSearch_MANV_CHAMCONG.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // panel51
+            // 
+            this.panel51.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.panel51.Controls.Add(this.label108);
+            this.panel51.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel51.Location = new System.Drawing.Point(0, 0);
+            this.panel51.Name = "panel51";
+            this.panel51.Size = new System.Drawing.Size(1293, 68);
+            this.panel51.TabIndex = 0;
+            // 
+            // label108
+            // 
+            this.label108.AutoSize = true;
+            this.label108.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold);
+            this.label108.ForeColor = System.Drawing.Color.White;
+            this.label108.Location = new System.Drawing.Point(25, 14);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(207, 41);
+            this.label108.TabIndex = 0;
+            this.label108.Text = "Chấm công";
+            // 
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
@@ -6381,6 +6525,11 @@
             this.panel37.PerformLayout();
             this.panel33.ResumeLayout(false);
             this.panel33.PerformLayout();
+            this.navigationPageDSChamCong.ResumeLayout(false);
+            this.panel52.ResumeLayout(false);
+            this.panel52.PerformLayout();
+            this.panel51.ResumeLayout(false);
+            this.panel51.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6637,7 +6786,7 @@
         private System.Windows.Forms.TextBox txtTK_PB;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Label label40;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem17;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemChamCong_HR;
         private DevExpress.XtraBars.BarButtonItem barButtonItem18;
         private DevExpress.XtraBars.BarButtonItem barButtonItemTaiKhoan_HRM;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup20;
@@ -6918,5 +7067,19 @@
         private System.Windows.Forms.Label label128;
         private System.Windows.Forms.Label label130;
         private System.Windows.Forms.Label label132;
+        private DevExpress.XtraBars.Navigation.NavigationPage navigationPageDSChamCong;
+        private System.Windows.Forms.Panel panel52;
+        private System.Windows.Forms.DateTimePicker dateTimePickerChamCong_hr;
+        private System.Windows.Forms.Button buttonToDay_ChamCong_HR;
+        private System.Windows.Forms.ListView listViewdsChamCong_hr;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.ColumnHeader columnHeader19;
+        private System.Windows.Forms.Button buttonViewALL_ChamCong_HR;
+        private System.Windows.Forms.TextBox textBoxSearch_MANV_CHAMCONG;
+        private System.Windows.Forms.Panel panel51;
+        private System.Windows.Forms.Label label108;
+        private System.Windows.Forms.ColumnHeader columnHeader20;
     }
 }
