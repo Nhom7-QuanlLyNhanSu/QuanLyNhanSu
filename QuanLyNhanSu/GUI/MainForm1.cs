@@ -924,13 +924,18 @@ namespace GUI
 
         private void btnThem_QLNV_Click(object sender, EventArgs e)
         {
+            if (txtTen.Text.Trim().Length == 0 || txtSDT_QLNV.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Vui lòng nhập dầy đủ thông tin");
+                return;
+            }
             DialogResult dialogResult = MessageBox.Show("Bạn muốn thêm nhân viên?", "Thông báo", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 DateTime dtpNS = dtpNgaySinh_QLNV.Value;
                 DateTime dtpNVL = dtpNgayVL_QLNV.Value;
-
-                if (nv.themNV(nv.taoMaTD(), txtTen_QLNV.Text, cbbGioiTinh_QLNV.Text, dtpNS, txtSDT_QLNV.Text, cbbPB_QLNV.SelectedValue.ToString(), cbbChucVu_QLNV.SelectedValue.ToString(), txtMaLuong_QLNV.Text, dtpNVL, txtTinhTrang_QLNV.Text, cbbChedolam_QLNV.Text, txtMaHD_QLNV.Text, fileName) == 1)
+                string manv = "VN00" + BP.MaxMaBLL("MANV  ");
+                if (NV.ThemNhanVienBLL(manv, txtTen_QLNV.Text, cbbGioiTinh_QLNV.Text, dtpNS, txtSDT_QLNV.Text, cbbPB_QLNV.SelectedValue.ToString(), cbbChucVu_QLNV.SelectedValue.ToString(), txtMaLuong_QLNV.Text, dtpNVL, txtTinhTrang_QLNV.Text, cbbChedolam_QLNV.Text, txtMaHD_QLNV.Text, fileName) == 1)
                 {
                     MessageBox.Show("Thêm thành công!");
                     dataGridViewNhanSu.DataSource = nv.loadDSNV();
@@ -943,6 +948,17 @@ namespace GUI
                     txtTinhTrang_QLNV.Text = "";
                     txtMaHD_QLNV.Text = "";
                     dtpNgayVL_QLNV.Value = DateTime.Now;
+
+                    BP.TangMaBangPhuBLL("MANV  ");
+
+                    if (NV.ThemTaiKhoanBLL(manv, "1234", 1) == 1)
+                    {
+                        MessageBox.Show("Đã thêm một tài khoản mới có mã đăng nhập: " + manv + " , mật khẩu : 1234!, vui lòng kiểm tra lại!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("TK.Thêm thất bại!");
+                    }
                 }
                 else
                 {
@@ -958,13 +974,18 @@ namespace GUI
 
         private void btnSua_QLNV_Click(object sender, EventArgs e)
         {
+            if (txtMa_QLNV.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Vui lòng chọn một nhân viên");
+                return;
+            }
             DialogResult dialogResult = MessageBox.Show("Bạn muốn sửa nhân viên?", "Thông báo", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 DateTime dtpNS = dtpNgaySinh_QLNV.Value;
                 DateTime dtpNVL = dtpNgayVL_QLNV.Value;
 
-                if (nv.suaNV(txtTen_QLNV.Text, cbbGioiTinh_QLNV.Text, dtpNS, txtSDT_QLNV.Text, cbbPB_QLNV.SelectedValue.ToString(), cbbChucVu_QLNV.SelectedValue.ToString(), txtMaLuong_QLNV.Text, dtpNVL, txtTinhTrang_QLNV.Text, cbbChedolam_QLNV.Text, txtMaHD_QLNV.Text, fileName, txtMa_QLNV.Text) == 1)
+                if (NV.SuaNhanVienBLL(txtMa_QLNV.Text, txtTen_QLNV.Text, cbbGioiTinh_QLNV.Text, dtpNS, txtSDT_QLNV.Text, cbbPB_QLNV.SelectedValue.ToString(), cbbChucVu_QLNV.SelectedValue.ToString(), txtMaLuong_QLNV.Text, dtpNVL, txtTinhTrang_QLNV.Text, cbbChedolam_QLNV.Text, txtMaHD_QLNV.Text, fileName) == 1)
                 {
                     MessageBox.Show("Sửa thành công!");
                     dataGridViewNhanSu.DataSource = nv.loadDSNV();
@@ -992,11 +1013,16 @@ namespace GUI
 
         private void btnXoa_QLNV_Click(object sender, EventArgs e)
         {
+            if (txtMa_QLNV.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Vui lòng chọn một nhân viên");
+                return;
+            }
             DialogResult dialogResult = MessageBox.Show("Bạn muốn xóa nhân viên?", "Thông báo", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
 
-                if (nv.xoaNV(txtMa_QLNV.Text) == 1)
+                if (NV.XoaNhanVienBLL(txtMa_QLNV.Text) == 1)
                 {
                     MessageBox.Show("Xóa thành công!");
                     dataGridViewNhanSu.DataSource = nv.loadDSNV();

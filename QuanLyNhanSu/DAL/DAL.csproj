@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChamCongItem.cs" />
     <Compile Include="ChiTietThongBaoItem.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DALBangPhu.cs" />
@@ -55,6 +56,10 @@
     <Compile Include="DALQLNhanVien.cs" />
     <Compile Include="DALQLPhongBan.cs" />
     <Compile Include="DALThongBao.cs" />
+    <Compile Include="DataQuanLyNhanSu.cs">
+      <DependentUpon>DataQuanLyNhanSu.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DataQuanLyNhanSu.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

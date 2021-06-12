@@ -66,5 +66,46 @@ namespace BLL
         {
             return NV.DALHinhNhanVien(ma);
         }
+
+        public int ThemNhanVienBLL(string ma, string ten, string gt, DateTime ngaysinh, string sdt, string maph, string macv, string maluong, DateTime ngayvl, string tinhtrang, string cdlamviec, string mahd, string hinhanh)
+        {
+            int kt = NV.ThemNhanVienDAL(ma, ten, gt, ngaysinh, sdt, maph, macv, maluong, ngayvl, tinhtrang, cdlamviec, mahd, hinhanh);
+            if (kt == 1)
+                return 1;
+            else
+                return 0;
+        }
+
+
+        //xoa
+        public int XoaNhanVienBLL(string manv)
+        {
+            int kt = NV.XoaNhanVienDAL(manv);
+            if (kt == 1)
+                return 1;
+            else
+                return 0;
+        }
+                //sua
+        ////SUA return 0 that bai / return 1 thanh cong
+        public int SuaNhanVienBLL(string manv, string ten, string gt, DateTime ngaysinh, string sdt, string maph, string macv, string maluong, DateTime ngayvl, string tinhtrang, string cdlamviec, string mahd, string hinhanh)
+        {
+            int kt = NV.SuaNhanVienDAL(manv, ten, gt, ngaysinh, sdt, maph, macv, maluong, ngayvl, tinhtrang, cdlamviec, mahd, hinhanh);
+            if (kt == 1)
+                return 1;
+            else
+                return 0;
+        }
+
+        //them tai khoan moi
+        public int ThemTaiKhoanBLL(string manv, string pass, int trangthai)
+        {
+            int kt = NV.ThemTaiKhoanDAL(manv, pass, trangthai);
+            if (kt == 1)
+                return 1;
+            else
+                return 0;
+        }
+
     }////
 }
